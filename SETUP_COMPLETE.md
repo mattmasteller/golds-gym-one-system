@@ -45,12 +45,12 @@ All systems tested and working:
 ```bash
 # On GitHub.com:
 # 1. Go to https://github.com/new
-# 2. Create a PRIVATE repository named "golds-gym-knowledge-transfer"
+# 2. Create a PRIVATE repository named "golds-gym-one-system"
 # 3. Do NOT initialize with README (we already have files)
 # 4. Copy the repository URL
 
 # Then run these commands:
-git remote add origin https://github.com/YOUR_USERNAME/golds-gym-knowledge-transfer.git
+git remote add origin https://github.com/mattmasteller/golds-gym-one-system.git
 git branch -M main
 scripts/git-safe-push.sh -u origin main
 ```

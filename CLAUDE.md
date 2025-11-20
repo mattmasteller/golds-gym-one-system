@@ -78,6 +78,40 @@ Do NOT upload or commit:
 - Raw database dumps with PII
 - Unredacted financial/legal documents with customer data
 
+## Git Workflow with OneDrive Protection
+
+This repository uses Git version control with **automatic OneDrive pause/resume** to prevent sync conflicts.
+
+### Helper Scripts (Recommended)
+
+Use these scripts (located in `scripts/`) for all Git operations:
+
+- `scripts/git-safe-sync.sh "message"` - Complete workflow: add, commit, pull, push
+- `scripts/git-safe-commit.sh "message"` - Stage and commit changes
+- `scripts/git-safe-push.sh` - Push to remote repository
+- `scripts/git-safe-pull.sh` - Pull from remote repository
+
+### How It Works
+
+**Automatic Git Hooks** pause OneDrive during Git operations:
+- `pre-commit` and `pre-push` hooks pause OneDrive (~2 seconds)
+- Git operation executes safely without sync conflicts
+- `post-commit`, `post-merge`, and `post-checkout` hooks resume OneDrive
+
+**OneDrive is only paused for 3-5 seconds** during each Git operation.
+
+### Daily Workflow
+
+```bash
+# Morning: Pull latest changes
+scripts/git-safe-pull.sh
+
+# End of day: Commit and push all changes
+scripts/git-safe-sync.sh "Daily update: new compliance and vendor documents"
+```
+
+See `GIT_WORKFLOW.md` for complete documentation.
+
 ## Working with This Repository
 
 When asked to:
@@ -85,3 +119,4 @@ When asked to:
 - **Organize uploads**: Place materials in the correct folder based on content type
 - **Create documentation artifacts**: Output structured analysis, diagrams, or reports based on collected materials
 - **Identify gaps**: Review folder contents against the expected documentation types in README.md
+- **Commit changes**: Always use `scripts/git-safe-sync.sh "message"` or the helper scripts to ensure OneDrive protection

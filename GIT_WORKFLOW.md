@@ -15,15 +15,15 @@ This repository has **automatic OneDrive pause/resume** built into Git operation
 
 **Daily Sync Workflow:**
 ```bash
-./git-safe-sync.sh "Daily update: new vendor contracts added"
+scripts/git-safe-sync.sh "Daily update: new vendor contracts added"
 ```
 This does: add → commit → pull → push (all with OneDrive protection)
 
 **Individual Operations:**
 ```bash
-./git-safe-commit.sh "Add new infrastructure diagrams"
-./git-safe-push.sh
-./git-safe-pull.sh
+scripts/git-safe-commit.sh "Add new infrastructure diagrams"
+scripts/git-safe-push.sh
+scripts/git-safe-pull.sh
 ```
 
 ### Option 2: Use Regular Git Commands
@@ -39,10 +39,10 @@ git push                       # OneDrive auto-paused during push
 
 | Script | Purpose | Usage |
 |--------|---------|-------|
-| `git-safe-sync.sh` | Complete workflow: add, commit, pull, push | `./git-safe-sync.sh "message"` |
-| `git-safe-commit.sh` | Stage and commit with protection | `./git-safe-commit.sh "message"` |
-| `git-safe-push.sh` | Push to remote with protection | `./git-safe-push.sh` |
-| `git-safe-pull.sh` | Pull from remote with protection | `./git-safe-pull.sh` |
+| `git-safe-sync.sh` | Complete workflow: add, commit, pull, push | `scripts/git-safe-sync.sh "message"` |
+| `git-safe-commit.sh` | Stage and commit with protection | `scripts/git-safe-commit.sh "message"` |
+| `git-safe-push.sh` | Push to remote with protection | `scripts/git-safe-push.sh` |
+| `git-safe-pull.sh` | Pull from remote with protection | `scripts/git-safe-pull.sh` |
 
 ## 🔧 How It Works
 
@@ -69,7 +69,7 @@ The following hooks are installed in `.git/hooks/`:
 
 ### Morning: Pull Latest Changes
 ```bash
-./git-safe-pull.sh
+scripts/git-safe-pull.sh
 ```
 
 ### Throughout the Day
@@ -79,7 +79,7 @@ The following hooks are installed in `.git/hooks/`:
 
 ### End of Day: Commit & Push
 ```bash
-./git-safe-sync.sh "Daily update: added compliance documents and tech diagrams"
+scripts/git-safe-sync.sh "Daily update: added compliance documents and tech diagrams"
 ```
 
 ## 🔍 Checking Status
@@ -121,7 +121,7 @@ open -a "OneDrive"
 # Then:
 git add .
 git rebase --continue
-./git-safe-push.sh
+scripts/git-safe-push.sh
 ```
 
 ### Want to Skip OneDrive Protection
@@ -142,7 +142,11 @@ mv .git/hooks/pre-commit.disabled .git/hooks/pre-commit
 Gold's Gym One System - Documents/
 ├── .git/                    # Git repository
 │   └── hooks/              # Automatic OneDrive protection
-├── git-safe-*.sh           # Helper scripts
+├── scripts/                # Helper scripts
+│   ├── git-safe-sync.sh
+│   ├── git-safe-commit.sh
+│   ├── git-safe-push.sh
+│   └── git-safe-pull.sh
 ├── .gitignore              # Excluded files
 ├── CLAUDE.md               # Claude Code guidance
 ├── GIT_WORKFLOW.md         # This file

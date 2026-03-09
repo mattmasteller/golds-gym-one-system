@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gold's Gym — Phase 0 Deliverables</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #F2C23E;
+    --gold-light: #FFF0B3;
+    --gold-dim: #E6A800;
+    --dark: #1A1A1A;
+    --dark-2: #2D2D2D;
+    --mid: #555;
+    --light: #F7F7F5;
+    --white: #FFFFFF;
+    --border: #E5E2DC;
+    --font-display: 'Bebas Neue', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--light);
+    color: var(--dark);
+    font-size: 15px;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── HEADER ── */
+  header {
+    background: var(--dark);
+    color: var(--white);
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .header-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 52px 40px 48px;
+    position: relative;
+    z-index: 2;
+  }
+  .header-eyebrow {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+  header h1 {
+    font-family: var(--font-display);
+    font-size: clamp(48px, 6vw, 78px);
+    letter-spacing: 0.03em;
+    line-height: 0.95;
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+  header h1 span { color: var(--gold); }
+  .header-sub {
+    font-size: 16px;
+    color: rgba(255,255,255,0.65);
+    max-width: 560px;
+    font-weight: 300;
+  }
+  .header-meta {
+    display: flex;
+    gap: 32px;
+    margin-top: 36px;
+    flex-wrap: wrap;
+  }
+  .meta-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 40px;
+    padding: 8px 18px;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.85);
+  }
+  .meta-pill .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+  .header-bg-text {
+    position: absolute;
+    right: -10px;
+    top: -20px;
+    font-family: var(--font-display);
+    font-size: 260px;
+    color: rgba(255,255,255,0.03);
+    letter-spacing: -0.02em;
+    line-height: 1;
+    pointer-events: none;
+    z-index: 1;
+    user-select: none;
+  }
+
+  /* ── MAIN ── */
+  main {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 56px 40px 80px;
+    flex: 1;
+    width: 100%;
+  }
+
+  .section-intro {
+    font-size: 15px;
+    color: var(--mid);
+    max-width: 640px;
+    margin-bottom: 40px;
+  }
+
+  /* ── CARDS GRID ── */
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  @media (max-width: 700px) {
+    .card-grid { grid-template-columns: 1fr; }
+  }
+
+  .card {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 14px;
+    padding: 32px 28px;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s, transform 0.18s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+  }
+  .card:hover {
+    border-color: var(--gold);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  }
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--gold);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .card:hover::before { opacity: 1; }
+
+  .card-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mid);
+    margin-bottom: 12px;
+  }
+  .card-title {
+    font-family: var(--font-display);
+    font-size: 32px;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    color: var(--dark);
+    margin-bottom: 12px;
+  }
+  .card-desc {
+    font-size: 14px;
+    color: var(--mid);
+    line-height: 1.6;
+    margin-bottom: 24px;
+    flex: 1;
+  }
+  .card-stats {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .card-stat {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--light);
+    border: 1px solid var(--border);
+    border-radius: 40px;
+    padding: 6px 14px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--dark-2);
+  }
+  .card-stat .dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+  .card-arrow {
+    position: absolute;
+    top: 28px;
+    right: 28px;
+    font-size: 20px;
+    color: var(--border);
+    transition: color 0.2s, transform 0.2s;
+  }
+  .card:hover .card-arrow {
+    color: var(--gold);
+    transform: translateX(3px);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--dark);
+    color: rgba(255,255,255,0.45);
+    text-align: center;
+    padding: 28px 40px;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+  footer strong { color: var(--gold); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-bg-text">GOLD'S</div>
+  <div class="header-inner">
+    <div class="header-eyebrow">Gold's Gym · One System Initiative</div>
+    <h1>PHASE 0<br><span>DELIVERABLES</span></h1>
+    <p class="header-sub">Audit &amp; Discovery phase reports for the Gold's Gym digital transformation initiative.</p>
+    <div class="header-meta">
+      <div class="meta-pill"><span class="dot"></span>Phase 0 — Audit &amp; Discovery</div>
+      <div class="meta-pill"><span class="dot"></span>February 2026</div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <p class="section-intro">Select a report below to view the full interactive analysis.</p>
+
+  <div class="card-grid">
+
+    <a href="survey.html" class="card">
+      <span class="card-arrow">&#8594;</span>
+      <div class="card-eyebrow">Stakeholder Research</div>
+      <div class="card-title">NORTH STAR PROJECT<br>SURVEY REPORT</div>
+      <p class="card-desc">Comprehensive analysis of stakeholder survey responses covering technology satisfaction, operational pain points, and strategic priorities across the Gold's Gym organization.</p>
+      <div class="card-stats">
+        <span class="card-stat"><span class="dot"></span>41 Respondents</span>
+        <span class="card-stat"><span class="dot"></span>664 Data Points</span>
+        <span class="card-stat"><span class="dot"></span>16 Departments</span>
+      </div>
+    </a>
+
+    <a href="comps-stacks.html" class="card">
+      <span class="card-arrow">&#8594;</span>
+      <div class="card-eyebrow">Market Intelligence</div>
+      <div class="card-title">COMPETITIVE<br>LANDSCAPE MATRIX</div>
+      <p class="card-desc">Technology stack analysis across major big-box fitness brands and CMS vendors — mapping capabilities, integrations, and platform strategies to inform Gold's Gym's digital transformation.</p>
+      <div class="card-stats">
+        <span class="card-stat"><span class="dot"></span>7 Brands Analyzed</span>
+        <span class="card-stat"><span class="dot"></span>91 Data Points</span>
+        <span class="card-stat"><span class="dot"></span>13 Tech Categories</span>
+      </div>
+    </a>
+
+  </div>
+</main>
+
+<footer>
+  Gold's Gym · One System Initiative &nbsp;·&nbsp; <strong>Phase 0 Deliverables</strong> &nbsp;·&nbsp; February 2026
+</footer>
+
+</body>
+</html>

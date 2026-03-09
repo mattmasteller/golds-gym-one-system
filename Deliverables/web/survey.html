@@ -150,6 +150,24 @@
     color: var(--dark);
     border-bottom-color: var(--gold);
   }
+  .nav-home {
+    font-family: var(--font-body);
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    padding: 16px 20px 16px 0;
+    margin-right: 8px;
+    border-right: 1.5px solid var(--border);
+    white-space: nowrap;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+  }
+  .nav-home:hover { color: var(--gold); }
 
   /* ── MAIN LAYOUT ── */
   main {
@@ -762,6 +780,7 @@
 <!-- NAV -->
 <nav class="sticky-nav">
   <div class="nav-inner">
+    <a class="nav-home" href="index.html">&#8592; All Reports</a>
     <a class="nav-tab active" href="#overview">Overview</a>
     <a class="nav-tab" href="#profile">Franchisee Profile</a>
     <a class="nav-tab" href="#tech">Technology Landscape</a>

@@ -17,8 +17,12 @@
   ];
 
   // Determine current page index from filename
-  var path = window.location.pathname.split('/').pop() || 'index.html';
-  var currentIndex = PAGES.findIndex(function (p) { return p.file === path; });
+  // Normalize by stripping .html so it works with Netlify pretty URLs and local dev
+  var rawPath = window.location.pathname.split('/').pop() || 'index.html';
+  var path = rawPath.replace(/\.html$/, '') || 'index';
+  var currentIndex = PAGES.findIndex(function (p) {
+    return p.file.replace(/\.html$/, '') === path;
+  });
   if (currentIndex === -1) currentIndex = 0;
 
   // 1. Mark visited steps (all pages before current)

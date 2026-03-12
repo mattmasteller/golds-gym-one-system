@@ -1,4 +1,5 @@
 # Gold's Gym Current Technology Stack Assessment
+
 ## System Pre-Scoring & Gap Analysis
 
 **Version:** 1.0
@@ -36,11 +37,13 @@ Gold's Gym's current technology landscape is fragmented across corporate and fra
 | **Back Office** | 3.0/5 | Back office support team is a strength |
 
 **Strengths:**
+
 - Extensive back office support team (cancellations, collections)
 - Familiar to operators (devil they know)
 - Market presence in fitness
 
 **Weaknesses:**
+
 - Silo'd data - each franchise is isolated
 - No brand-level controls or push configuration
 - No real-time revenue visibility for franchisor
@@ -65,11 +68,13 @@ Gold's Gym's current technology landscape is fragmented across corporate and fra
 | **Back Office** | 2.0/5 | Manual processes; no promo scheduling |
 
 **Strengths:**
+
 - Kim (config specialist) knows it well
 - Stable platform
 - Integrated with Motion Vibe
 
 **Weaknesses:**
+
 - Manual processes everywhere (Friday 4pm fire drills)
 - No promotion scheduling - must be day-of
 - Single-tenant architecture - not franchise-ready
@@ -89,11 +94,13 @@ Gold's Gym's current technology landscape is fragmented across corporate and fra
 | **Attribution** | 2.0/5 | Poor ad-to-conversion tracking |
 
 **Strengths:**
+
 - Marketing team is familiar with it
 - Good email marketing tools
 - Strong automation capabilities (if connected)
 
 **Weaknesses:**
+
 - No SMS capability (legal compliance gap)
 - Poor attribution - can't track ad to in-gym conversion
 - Not a CDP - limited audience enrichment
@@ -113,6 +120,7 @@ Gold's Gym's current technology landscape is fragmented across corporate and fra
 | **Scheduling** | 5.0/5 | Excellent substitute mgmt, payroll, analytics |
 
 **Strengths:**
+
 - Comprehensive group exercise management
 - Payroll and substitute management
 - Class performance analytics
@@ -120,6 +128,7 @@ Gold's Gym's current technology landscape is fragmented across corporate and fra
 - Member app gaining traction
 
 **Weaknesses:**
+
 - Not all franchisees have adopted
 - Separate system from core gym management
 - PT booking not enabled for Gold's (only John Reed)
@@ -152,7 +161,7 @@ Gold's Gym's current technology landscape is fragmented across corporate and fra
 |-------------|-----------|-----------|
 | Core Gym Management | Motionsoft | ABC (80%+), Peak, Zenoti, others |
 | CRM | HubSpot | Various (ClubReady, Glean Tap, Gmail) |
-| Website | Central website/Joint Online | Own websites (90%+) |
+| Website | Central website/Join Online | Own websites (90%+) |
 | Mobile App | Motion Vibe app | 20-30+ different Gold's apps published |
 
 **Key Problem:** No unified data lake, no centralized member database, no ability to see franchise revenues or operations in real-time.

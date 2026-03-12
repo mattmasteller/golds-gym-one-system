@@ -49,7 +49,7 @@ From Executive and Franchising meetings, the future Gold's Gym template:
 |-----------|-----------|
 | Motionsoft | ABC (80%+), Peak, Zenoti, others |
 | HubSpot CRM | Various (ClubReady, Glean Tap, Gmail) |
-| Central website/Joint Online | Own websites (90%+) |
+| Central website/Join Online | Own websites (90%+) |
 | Motion Vibe app | 20-30+ different Gold's apps published |
 
 **Key Problem**: No unified data lake, no centralized member database, no ability to see franchise revenues or operations in real-time.
@@ -103,7 +103,7 @@ Change management will be the hardest part. Long-standing franchisees are skepti
 
 ### Theme 5: Website & App as Quick Wins
 
-Joint Online and the new Mobile App are seen as near-term opportunities to build trust and demonstrate value to franchisees before the full system migration.
+Join Online and the new Mobile App are seen as near-term opportunities to build trust and demonstrate value to franchisees before the full system migration.
 
 ---
 
@@ -162,7 +162,7 @@ Before anything else works, data must be clean, consistent, and centralized.
 
 - Unified website with automated promo scheduling
 - Single app for all domestic members
-- Joint Online that scales without 3-week per-franchise implementations
+- Join Online that scales without 3-week per-franchise implementations
 
 ### Priority 4: Franchise Operations Support Model
 
@@ -201,7 +201,7 @@ Simple lookup system that sits above disparate POS systems for international/dom
 
 - 90%+ franchisees have their own websites
 - 20-30+ different Gold's apps in app stores
-- Joint Online backlog of 24 franchise groups
+- Join Online backlog of 24 franchise groups
 - CDP planned for 2026 but data normalization needed first
 
 ### Marketing (Jake)

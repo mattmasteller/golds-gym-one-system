@@ -1,4 +1,5 @@
 # Gold's Gym Stakeholder Interview Summary
+
 ## Department-Specific Requirements & Pain Points
 
 **Date:** December 9-10, 2025
@@ -119,7 +120,7 @@ This document captures stakeholder input from 8 departments during the December 
 
 - 90%+ franchisees have their own websites
 - 20-30+ different Gold's apps in app stores
-- Joint Online backlog of 24 franchise groups
+- Join Online backlog of 24 franchise groups
 - CDP planned for 2026 but data normalization needed first
 
 ### Must Haves
@@ -221,7 +222,7 @@ Change management will be the hardest part. Long-standing franchisees are skepti
 
 ### Theme 5: Website & App as Quick Wins
 
-Joint Online and the new Mobile App are seen as near-term opportunities to build trust and demonstrate value to franchisees before the full system migration.
+Join Online and the new Mobile App are seen as near-term opportunities to build trust and demonstrate value to franchisees before the full system migration.
 
 ---
 

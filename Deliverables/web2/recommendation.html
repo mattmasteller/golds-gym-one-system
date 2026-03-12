@@ -9,6 +9,24 @@
 </head>
 <body>
 
+<nav class="global-nav">
+  <div class="global-stepper">
+    <a href="index.html" class="step" data-page="1"><span class="step-num">1</span><span class="step-label">Summary</span></a>
+    <span class="step-connector"></span>
+    <a href="discovery.html" class="step" data-page="2"><span class="step-num">2</span><span class="step-label">Discovery</span></a>
+    <span class="step-connector"></span>
+    <a href="survey.html" class="step" data-page="3"><span class="step-num">3</span><span class="step-label">Survey</span></a>
+    <span class="step-connector"></span>
+    <a href="comps-stacks.html" class="step" data-page="4"><span class="step-num">4</span><span class="step-label">Market</span></a>
+    <span class="step-connector"></span>
+    <a href="build-assemble-buy.html" class="step" data-page="5"><span class="step-num">5</span><span class="step-label">Approach</span></a>
+    <span class="step-connector"></span>
+    <a href="recommendation.html" class="step" data-page="6"><span class="step-num">6</span><span class="step-label">Recommendation</span></a>
+    <span class="step-connector"></span>
+    <a href="future-work.html" class="step" data-page="7"><span class="step-num">7</span><span class="step-label">Future Work</span></a>
+  </div>
+</nav>
+
 <header>
   <div class="header-bg-text">GOLD'S</div>
   <div class="header-inner">
@@ -24,7 +42,12 @@
 
 <nav class="sticky-nav">
   <div class="nav-inner">
-    <a class="nav-home" href="index.html">&#8592; Home</a>
+    <div class="nav-page-indicator">
+      <a href="build-assemble-buy.html" class="nav-prev-arrow">&#8592;</a>
+      <span class="nav-page-badge">6 / 7</span>
+      <a href="future-work.html" class="nav-next-arrow">&#8594;</a>
+    </div>
+    <span class="nav-divider"></span>
     <a class="nav-tab active" href="#vision">Vision</a>
     <a class="nav-tab" href="#assemble">Assemble Model</a>
     <a class="nav-tab" href="#next-phase">Phase 1 &amp; 2</a>
@@ -473,6 +496,7 @@
   }, { rootMargin: '-20% 0px -70% 0px' });
   sections.forEach(s => observer.observe(s));
 </script>
+<script src="nav.js"></script>
 
 </body>
 </html>

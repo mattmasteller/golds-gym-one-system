@@ -142,7 +142,7 @@ Mike leads as the relationship/sales person. Matt provides technical depth, indu
 
 ### MIKE — Closes with next steps
 
-- Phase 1 & 2: $47,500, 8-12 weeks
+- Phase 1 & 2: $52,500, 8-12 weeks
 - Phase 1 (4-6 weeks): Strategy & Playbook — resolve the 10 strategic questions, including deeper evaluation of which components to keep, replace, or potentially build
 - Phase 2 (4-6 weeks): Architecture & Blueprint — technical design, vendor vs. build analysis for each component
 - "This is a modest investment to get the blueprint right before you commit to vendors and implementation."

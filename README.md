@@ -289,3 +289,11 @@ This repository automatically excludes sensitive files via `.gitignore`:
 **Last Updated:** November 19, 2025
 **Repository:** [github.com/mattmasteller/golds-gym-one-system](https://github.com/mattmasteller/golds-gym-one-system)
 **Project:** Gold's Gym Digital Transformation - Phase 0
+
+
+
+pandoc -s agenda.docx \
+  --wrap=none \
+  --extract-media=images \
+  -t gfm \
+  -o agenda.md

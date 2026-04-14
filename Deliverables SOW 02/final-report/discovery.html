@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gold's Gym — Discovery Findings</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="global-nav">
+  <div class="global-stepper">
+    <a href="index.html" class="step" data-page="1"><span class="step-num">1</span><span class="step-label">Summary</span></a>
+    <span class="step-connector"></span>
+    <a href="discovery.html" class="step" data-page="2"><span class="step-num">2</span><span class="step-label">Discovery</span></a>
+    <span class="step-connector"></span>
+    <a href="survey.html" class="step" data-page="3"><span class="step-num">3</span><span class="step-label">Survey</span></a>
+    <span class="step-connector"></span>
+    <a href="comps-stacks.html" class="step" data-page="4"><span class="step-num">4</span><span class="step-label">Market</span></a>
+    <span class="step-connector"></span>
+    <a href="build-assemble-buy.html" class="step" data-page="5"><span class="step-num">5</span><span class="step-label">Approach</span></a>
+    <span class="step-connector"></span>
+    <a href="recommendation.html" class="step" data-page="6"><span class="step-num">6</span><span class="step-label">Recommendation</span></a>
+    <span class="step-connector"></span>
+    <a href="future-work.html" class="step" data-page="7"><span class="step-num">7</span><span class="step-label">Future Work</span></a>
+  </div>
+</nav>
+
+<header>
+  <div class="header-bg-text">GOLD'S</div>
+  <div class="header-inner">
+    <div class="header-eyebrow">Gold's Gym · One System Initiative</div>
+    <h1>DISCOVERY<br><span>FINDINGS</span></h1>
+    <p class="header-sub">Two days of HQ interviews across 8 departments, a franchisee-wide survey, and onsite walk-throughs with 3 franchise operators paint a clear picture of Gold's technology landscape.</p>
+    <div class="header-meta">
+      <div class="meta-pill"><span class="dot"></span>December 2025 Onsite</div>
+      <div class="meta-pill"><span class="dot"></span>8 Departments</div>
+      <div class="meta-pill"><span class="dot"></span>41 Survey Respondents</div>
+    </div>
+  </div>
+</header>
+
+<nav class="sticky-nav">
+  <div class="nav-inner">
+    <div class="nav-page-indicator">
+      <a href="index.html" class="nav-prev-arrow">&#8592;</a>
+      <span class="nav-page-badge">2 / 7</span>
+      <a href="survey.html" class="nav-next-arrow">&#8594;</a>
+    </div>
+    <span class="nav-divider"></span>
+    <a class="nav-tab active" href="#interviews">Interviews</a>
+    <a class="nav-tab" href="#survey">Survey</a>
+    <a class="nav-tab" href="#walkthroughs">Walk-Throughs</a>
+    <a class="nav-tab" href="#operations">Operations</a>
+  </div>
+</nav>
+
+<main class="page-main">
+
+<!-- ════════════════════════════════════════════════════════════
+     SECTION 01 — STAKEHOLDER INTERVIEWS
+     ════════════════════════════════════════════════════════════ -->
+<section class="section" id="interviews">
+  <div class="section-header">
+    <span class="section-num">01</span>
+    <span class="section-title">STAKEHOLDER INTERVIEWS</span>
+  </div>
+
+  <p class="section-intro">December 9-10, 2025 &mdash; Two days of meetings at Gold's Gym HQ in Dallas/Irving, TX with executive leadership and department heads.</p>
+
+  <!-- Department Cards -->
+  <div class="grid-2" style="margin-bottom: 32px;">
+
+    <div class="dept-card">
+      <div class="dept-name">EXECUTIVE</div>
+      <div class="dept-people">Brad &amp; Danny, co-CEOs</div>
+      <div class="dept-needs">Scalable franchise playbook, asset-light support model, compelling value proposition for franchisee adoption. Franchise growth is the focus &mdash; target 16-25 new gyms per year.</div>
+      <blockquote>"Three years from now, we want to have a much better traditional franchiser playbook... if we're gonna get real blue chip franchise candidates to come into this brand, we have to offer what would be considered table stakes."</blockquote>
+    </div>
+
+    <div class="dept-card">
+      <div class="dept-name">OPERATIONS</div>
+      <div class="dept-people">Robbie / Kim</div>
+      <div class="dept-needs">Promotion scheduling with future dates and auto-expiry, bulk configuration changes across locations, cancellation workflow automation, API reliability.</div>
+      <blockquote>"Friday at 4pm fire drills" &mdash; promos require manual day-of configuration across 48 clubs by 1 person.</blockquote>
+    </div>
+
+    <div class="dept-card">
+      <div class="dept-name">BILLING &amp; FINANCE</div>
+      <div class="dept-people">Melody &amp; team</div>
+      <div class="dept-needs">Real-time visibility into franchise revenues, automated royalty calculation and ACH pull, multiple payment processor support, reconciliation tools.</div>
+      <blockquote>"We're chasing payments via spreadsheets and have no visibility until they self-report."</blockquote>
+    </div>
+
+    <div class="dept-card">
+      <div class="dept-name">MARKETING</div>
+      <div class="dept-people">Jake</div>
+      <div class="dept-needs">SMS capability with compliance, attribution tracking from ad click to conversion, affiliate/referral tracking, CAC reduction tools.</div>
+      <blockquote>"We can't send SMS &mdash; legal blocked it due to compliance gaps." CAC ranges $88-$125 vs. $60-$70 industry benchmark.</blockquote>
+    </div>
+
+    <div class="dept-card">
+      <div class="dept-name">DIGITAL MARKETING</div>
+      <div class="dept-people">Alex &amp; team</div>
+      <div class="dept-needs">Automated Join Online configuration, standardized membership naming, CDP for retargeting and audience management.</div>
+      <blockquote>"24 franchise groups backlogged because each requires 3-week manual onboarding."</blockquote>
+    </div>
+
+    <div class="dept-card">
+      <div class="dept-name">FITNESS</div>
+      <div class="dept-people">Erin / Alexander</div>
+      <div class="dept-needs">Motion Vibe integration (non-negotiable), remote PT session booking, InBody integration for body composition tracking.</div>
+      <blockquote>"PTs can't book sessions unless they're physically in the gym on our network."</blockquote>
+    </div>
+
+    <div class="dept-card">
+      <div class="dept-name">FRANCHISING</div>
+      <div class="dept-people">Kevin &amp; Katie</div>
+      <div class="dept-needs">Travel pass / reciprocity system, franchisee performance dashboards, brand-level controls with franchise overrides.</div>
+      <blockquote>"We've been talking about this for four years now... If we wait two years, they're going to be like, 'We're just going to keep doing our own thing.'"</blockquote>
+    </div>
+
+    <div class="dept-card">
+      <div class="dept-name">IT</div>
+      <div class="dept-people">Rick</div>
+      <div class="dept-needs">API-first architecture, SSO/identity management, multi-factor authentication, integration with existing infrastructure (AWS, Meraki).</div>
+      <blockquote>"Every system is a silo &mdash; data doesn't flow."</blockquote>
+    </div>
+
+  </div>
+
+  <!-- Common Themes -->
+  <div class="panel" style="margin-bottom: 24px;">
+    <div class="panel-title">5 COMMON THEMES</div>
+    <div style="display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 16px;">
+
+      <div class="theme-card">
+        <div class="theme-num">1</div>
+        <div>
+          <div class="theme-title">"WE'RE NOT BEST IN CLASS"</div>
+          <div class="theme-desc">Every department acknowledged Gold's lacks the technology infrastructure expected by sophisticated franchise candidates. Competitors (Crunch, Anytime, Planet) have better playbooks.</div>
+        </div>
+      </div>
+
+      <div class="theme-card">
+        <div class="theme-num">2</div>
+        <div>
+          <div class="theme-title">NEED FOR NORMALIZATION</div>
+          <div class="theme-desc">The #1 technical requirement: standardize naming conventions, GL structures, membership configurations, and processes before any system can work at scale.</div>
+        </div>
+      </div>
+
+      <div class="theme-card">
+        <div class="theme-num">3</div>
+        <div>
+          <div class="theme-title">DON'T WANT TO BUILD A CALL CENTER</div>
+          <div class="theme-desc">Brad was clear: asset-light model with minimal headcount growth. Technology must enable self-service and automation, not large support teams.</div>
+        </div>
+      </div>
+
+      <div class="theme-card">
+        <div class="theme-num">4</div>
+        <div>
+          <div class="theme-title">FRANCHISEES MUST SEE VALUE, NOT MANDATES</div>
+          <div class="theme-desc">Change management will be the hardest part. Long-standing franchisees are skeptical. The new system must be so compelling they experience FOMO.</div>
+        </div>
+      </div>
+
+      <div class="theme-card">
+        <div class="theme-num">5</div>
+        <div>
+          <div class="theme-title">WEBSITE &amp; APP AS QUICK WINS</div>
+          <div class="theme-desc">Join Online and the new Mobile App are near-term opportunities to build trust and demonstrate value before the full system migration.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Quick Wins -->
+  <div class="panel">
+    <div class="panel-title">QUICK WINS IDENTIFIED</div>
+    <table class="data-table" style="margin-top: 12px; border: none;">
+      <thead>
+        <tr><th>Quick Win</th><th>Why It Matters</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Standardize GL/Chart of Accounts</strong></td><td>Foundation for any unified reporting</td></tr>
+        <tr><td><strong>Complete Join Online rollout</strong></td><td>24 franchise groups currently backlogged</td></tr>
+        <tr><td><strong>Enable PT booking in app</strong></td><td>Currently can't book remotely &mdash; major pain point</td></tr>
+        <tr><td><strong>Implement global travel pass</strong></td><td>No reciprocity tracking today (still using paper cards)</td></tr>
+        <tr><td><strong>SMS opt-in compliance</strong></td><td>Blocked by legal &mdash; huge conversion barrier</td></tr>
+        <tr><td><strong>Automate promo scheduling</strong></td><td>Website requires manual updates &mdash; constant errors</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     SECTION 02 — FRANCHISEE SURVEY INSIGHTS
+     ════════════════════════════════════════════════════════════ -->
+<section class="section" id="survey">
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <span class="section-title">FRANCHISEE SURVEY INSIGHTS</span>
+  </div>
+
+  <div class="stat-row">
+    <div class="stat-card">
+      <div class="stat-big">41</div>
+      <div class="stat-label">Respondents</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-big">664</div>
+      <div class="stat-label">Data Points</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-big">16</div>
+      <div class="stat-label">Departments</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-big">2.5/5</div>
+      <div class="stat-label">Avg. Satisfaction</div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-title">HEADLINE FINDINGS</div>
+    <div class="stat-row" style="margin-top: 12px;">
+      <div class="stat-card">
+        <div class="stat-big" style="color: var(--red);">2.5/5</div>
+        <div class="stat-label">Avg. Tech Satisfaction</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-big">#1</div>
+        <div class="stat-label">Pain Point: Website &amp; Join Online</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-big">20-30+</div>
+        <div class="stat-label">Fragmented Mobile Apps</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-big" style="color: var(--red);">0</div>
+        <div class="stat-label">SMS Capability (Blocked)</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top: 24px;">
+    <a href="survey.html" class="cta-btn">View Full Survey Report &#8594;</a>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     SECTION 03 — FRANCHISEE ONSITE WALK-THROUGHS
+     ════════════════════════════════════════════════════════════ -->
+<section class="section" id="walkthroughs">
+  <div class="section-header">
+    <span class="section-num">03</span>
+    <span class="section-title">FRANCHISEE ONSITE WALK-THROUGHS</span>
+  </div>
+
+  <p class="section-intro">Five franchise operators with diverse perspectives &mdash; from 40-year veteran GGFA president to former corporate VP to healthcare industry crossover to entrepreneurial operator pushing precision health &mdash; provided ground-level intelligence on what works and what doesn't.</p>
+
+  <div class="grid-3">
+
+    <div class="profile-card">
+      <div class="profile-name">DON</div>
+      <div class="profile-meta">New York State &middot; 2 clubs &middot; GGFA President</div>
+      <table>
+        <tr><th>Experience</th><td>~40 years in franchise (since 1986)</td></tr>
+        <tr><th>Clubs</th><td>Newburgh (76K sqft, ~13K members) &amp; Middletown (53K sqft)</td></tr>
+        <tr><th>Tech Stack</th><td>ABC + Glean Tap CRM + Motion Vibe</td></tr>
+        <tr><th>Unique</th><td>Building custom AI concierge &amp; member LMS</td></tr>
+      </table>
+      <blockquote>"If I was the franchisor, the first thing we're doing is getting everybody on the same platform."</blockquote>
+    </div>
+
+    <div class="profile-card">
+      <div class="profile-name">JOSH</div>
+      <div class="profile-meta">Washington DC &middot; 6+ clubs &middot; Former Corporate Regional VP</div>
+      <table>
+        <tr><th>Experience</th><td>20 years at Gold's Corporate, now franchisee</td></tr>
+        <tr><th>Clubs</th><td>17K-25K sqft, fitness-floor focused, minimal group X</td></tr>
+        <tr><th>Tech Stack</th><td>ABC + HubSpot CRM + Fitness BI dashboards</td></tr>
+        <tr><th>Perspective</th><td>Strong ABC advocate; simplicity-focused</td></tr>
+      </table>
+      <blockquote>"I don't know how another company would be considered other than ABC because of how many franchisees are already on it."</blockquote>
+    </div>
+
+    <div class="profile-card">
+      <div class="profile-name">MIKE WILLIAMS</div>
+      <div class="profile-meta">Washington State &middot; 6 clubs &middot; 21-year veteran</div>
+      <table>
+        <tr><th>Experience</th><td>16 years at Cigna Healthcare (VP), 21 years franchisee</td></tr>
+        <tr><th>Clubs</th><td>24K-43K sqft, mix of dry and pool clubs</td></tr>
+        <tr><th>Tech Stack</th><td>ABC + Club OS CRM + Corporate website (only one still using it)</td></tr>
+        <tr><th>Role</th><td>Self-described "guinea pig" for corporate initiatives</td></tr>
+      </table>
+      <blockquote>"They haven't figured out how to be a franchisor. And our systems are definitely not geared for franchising."</blockquote>
+    </div>
+
+    <div class="profile-card">
+      <div class="profile-name">KIM</div>
+      <div class="profile-meta">Tampa, FL &middot; 1 club (expanding) &middot; Owner / Operator</div>
+      <table>
+        <tr><th>Experience</th><td>Entrepreneur &amp; lifelong Gold's member; chose franchise for brand nostalgia</td></tr>
+        <tr><th>Clubs</th><td>~30K sqft indoor/outdoor, strength &amp; high-performance focused, ~2,400 members</td></tr>
+        <tr><th>Tech Stack</th><td>Hapana (not ABC) + own website + social media marketing</td></tr>
+        <tr><th>Unique</th><td>$80-100+/mo pricing; building 2-4K sqft recovery &amp; precision health center (DNA/blood testing); high ancillary revenue via wellness wallet</td></tr>
+      </table>
+      <blockquote>"Full control of the app and website has to be solved first &mdash; before any back-end system switch."</blockquote>
+    </div>
+
+    <div class="profile-card">
+      <div class="profile-name">BO &amp; KYLE</div>
+      <div class="profile-meta">Thornton, CO &middot; 3-5 clubs &middot; Ownership Group Operators</div>
+      <table>
+        <tr><th>Experience</th><td>15+ years in Gold&rsquo;s system; operating across Colorado &amp; Wyoming</td></tr>
+        <tr><th>Clubs</th><td>Streamlined, low-labor model; strength-focused with minimal group X and no pool/amenities</td></tr>
+        <tr><th>Tech Stack</th><td>ABC (long-time); piloting/demoing Zenoti</td></tr>
+        <tr><th>Unique</th><td>Low-labor model: vending machines for retail, turnstiles, 24/7 access via front-door lock &amp; scanner; QR code day-pass purchase at the door; social media photo areas with lighting for posing (leaning into Gold&rsquo;s bodybuilding heritage)</td></tr>
+      </table>
+      <blockquote>&ldquo;The streamlined, low-labor model is the future of Gold&rsquo;s.&rdquo;</blockquote>
+    </div>
+
+  </div>
+
+  <!-- Cross-franchise Insights -->
+  <div class="panel" style="margin-top: 24px;">
+    <div class="panel-title">CROSS-FRANCHISE INSIGHTS</div>
+    <div class="grid-2" style="margin-top: 12px;">
+      <div>
+        <ul>
+          <li><strong>ABC is the anchor &mdash; but not universal</strong> &mdash; Don, Josh, Mike, and Bo &amp; Kyle all use ABC Financial. Bo &amp; Kyle are long-time ABC users now actively piloting Zenoti &mdash; their 24/7 access model (front-door lock &amp; scanner) exposes ABC&rsquo;s limitations for unmanned operations. Kim is the exception, running Hapana and resisting a switch until app/website control is solved first. Josh: &ldquo;When we switched to ABC, we found revenue.&rdquo;</li>
+          <li><strong>Website is #1 pain point</strong> &mdash; Don: "Websites are a mess." Mike: "It's been two years of them talking about it." Josh built his own to move faster. Kim owns her own site entirely and considers full control a prerequisite before any platform change.</li>
+          <li><strong>One System support is universal</strong> &mdash; despite different business models, all operators agree that platform unification is necessary for brand growth</li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li><strong>Diverse visions, shared pain</strong> &mdash; Don wants wellness integration, Josh wants simplicity, Mike wants corporate to act like a franchisor, Kim is building a precision health &amp; recovery center with DNA/blood testing. All agree current state is untenable.</li>
+          <li><strong>Franchisee autonomy tension</strong> &mdash; balancing standardization with operator flexibility is the core change management challenge. Kim is the strongest example: $100+/mo pricing, her own tech stack (Hapana), and a premium wellness model that diverges from the standard GG playbook.</li>
+          <li><strong>Urgency</strong> &mdash; Don: "The only thing I'm waiting for Gold's on is executing on the one system project." Mike: "It's been two years of talking."</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     SECTION 04 — OPERATIONAL REVIEW
+     ════════════════════════════════════════════════════════════ -->
+<section class="section" id="operations">
+  <div class="section-header">
+    <span class="section-num">04</span>
+    <span class="section-title">OPERATIONAL REVIEW &amp; SYSTEM ASSESSMENT</span>
+  </div>
+
+  <p class="section-intro">Current system scores reveal significant gaps. Only Motion Vibe (group exercise) scores above 3/5. Core gym management and CRM both fall below minimum acceptable thresholds.</p>
+
+  <!-- System Scores -->
+  <div class="panel" style="margin-bottom: 24px;">
+    <div class="panel-title">CURRENT SYSTEM SCORES</div>
+    <div style="margin-top: 16px;">
+      <div class="score-bar">
+        <span class="sb-label">ABC Fitness</span>
+        <div class="sb-track"><div class="sb-fill" style="width: 46%;"></div></div>
+        <span class="sb-value">2.3</span>
+      </div>
+      <div class="score-bar">
+        <span class="sb-label">Motionsoft</span>
+        <div class="sb-track"><div class="sb-fill" style="width: 40%;"></div></div>
+        <span class="sb-value">2.0</span>
+      </div>
+      <div class="score-bar">
+        <span class="sb-label">HubSpot (CRM)</span>
+        <div class="sb-track"><div class="sb-fill" style="width: 50%;"></div></div>
+        <span class="sb-value">2.5</span>
+      </div>
+      <div class="score-bar">
+        <span class="sb-label">Motion Vibe</span>
+        <div class="sb-track"><div class="sb-fill" style="width: 90%; background: var(--green);"></div></div>
+        <span class="sb-value" style="color: var(--green);">4.5</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tech Fragmentation -->
+  <div class="panel" style="margin-bottom: 24px;">
+    <div class="panel-title">TECHNOLOGY FRAGMENTATION</div>
+    <table class="data-table" style="margin-top: 12px; border: none;">
+      <thead>
+        <tr><th>System Type</th><th>Corporate</th><th>Franchise</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Core Gym Mgmt</strong></td><td>Motionsoft</td><td>ABC (80%+), Peak, Zenoti, others</td></tr>
+        <tr><td><strong>CRM</strong></td><td>HubSpot</td><td>Various (ClubReady, Glean Tap, Gmail)</td></tr>
+        <tr><td><strong>Website</strong></td><td>Central / Join Online</td><td>Own websites (90%+)</td></tr>
+        <tr><td><strong>Mobile App</strong></td><td>Motion Vibe</td><td>20-30+ different Gold's apps</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Pain Points by Department -->
+  <div class="panel" style="margin-bottom: 24px;">
+    <div class="panel-title">PAIN POINTS BY DEPARTMENT</div>
+    <table class="data-table" style="margin-top: 12px; border: none;">
+      <thead>
+        <tr><th>Area</th><th>Pain Point</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Promo/Pricing</strong></td><td>Kim (1 person) manually configures 48 clubs; Friday 4pm fire drills for weekend sales</td></tr>
+        <tr><td><strong>Franchise Billing</strong></td><td>Manual spreadsheets, chase payments, exceptions for every franchise</td></tr>
+        <tr><td><strong>Join Online</strong></td><td>3-week process per franchisee, 24 groups backlogged</td></tr>
+        <tr><td><strong>Cancellations</strong></td><td>Complex state-specific logic, manual workarounds, unreliable APIs</td></tr>
+        <tr><td><strong>PT Booking</strong></td><td>Can't book/alter sessions remotely &mdash; must be in-gym on network</td></tr>
+        <tr><td><strong>Attribution</strong></td><td>Can't track member journey from ad click to in-gym conversion</td></tr>
+        <tr><td><strong>Marketing</strong></td><td>CAC $88-$125 (benchmark: $60-$70); no SMS capability</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Gap Analysis -->
+  <div class="panel">
+    <div class="panel-title">GAP ANALYSIS &mdash; CRITICAL ITEMS</div>
+    <table class="data-table" style="margin-top: 12px; border: none;">
+      <thead>
+        <tr><th>Capability</th><th>Current</th><th>Required</th><th>Severity</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Brand-level controls</td><td>None</td><td>Push config to all locations</td><td style="color: var(--red); font-weight: 600;">Critical</td></tr>
+        <tr><td>Real-time revenue visibility</td><td>Self-reported, delayed</td><td>Transaction-based, real-time</td><td style="color: var(--red); font-weight: 600;">Critical</td></tr>
+        <tr><td>Unified member database</td><td>Siloed by location</td><td>Single member profile</td><td style="color: var(--red); font-weight: 600;">Critical</td></tr>
+        <tr><td>Promo scheduling</td><td>Manual, day-of</td><td>Scheduled, auto-expire</td><td style="color: #CA8A04; font-weight: 600;">High</td></tr>
+        <tr><td>Remote PT booking</td><td>In-gym only</td><td>App/web booking</td><td style="color: #CA8A04; font-weight: 600;">High</td></tr>
+        <tr><td>SMS marketing</td><td>Blocked by legal</td><td>Compliant opt-in system</td><td style="color: #CA8A04; font-weight: 600;">High</td></tr>
+        <tr><td>Travel pass / reciprocity</td><td>Paper cards</td><td>Digital, tracked, settled</td><td style="color: #CA8A04; font-weight: 600;">High</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ── Prev/Next Nav ── -->
+<div class="prev-next-nav">
+  <a href="index.html">
+    <span class="pn-label">&#8592; Previous</span>
+    <span class="pn-title">EXECUTIVE SUMMARY</span>
+  </a>
+  <a href="survey.html" class="next">
+    <span class="pn-label">Next &#8594;</span>
+    <span class="pn-title">SURVEY REPORT</span>
+  </a>
+</div>
+
+</main>
+
+<footer>
+  Gold's Gym · One System Initiative &nbsp;·&nbsp; <strong>Discovery Findings</strong> &nbsp;·&nbsp; February 2026
+</footer>
+
+<script>
+  const navTabs = document.querySelectorAll('.nav-tab');
+  const sections = document.querySelectorAll('.section[id]');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navTabs.forEach(t => t.classList.remove('active'));
+        const id = entry.target.getAttribute('id');
+        const active = document.querySelector(`.nav-tab[href="#${id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  sections.forEach(s => observer.observe(s));
+</script>
+<script src="nav.js"></script>
+
+</body>
+</html>

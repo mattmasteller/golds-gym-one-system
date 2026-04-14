@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gold's Gym — Platform Architecture</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="global-nav">
+  <div class="global-stepper">
+    <a href="index.html" class="step" data-page="1"><span class="step-num">1</span><span class="step-label">Overview</span></a>
+    <span class="step-connector"></span>
+    <a href="problem.html" class="step" data-page="2"><span class="step-num">2</span><span class="step-label">Problem</span></a>
+    <span class="step-connector"></span>
+    <a href="strategy.html" class="step" data-page="3"><span class="step-num">3</span><span class="step-label">Strategy</span></a>
+    <span class="step-connector"></span>
+    <a href="digital-experience.html" class="step" data-page="4"><span class="step-num">4</span><span class="step-label">Experience</span></a>
+    <span class="step-connector"></span>
+    <a href="architecture.html" class="step" data-page="5"><span class="step-num">5</span><span class="step-label">Architecture</span></a>
+    <span class="step-connector"></span>
+    <a href="execution.html" class="step" data-page="6"><span class="step-num">6</span><span class="step-label">Execution</span></a>
+    <span class="step-connector"></span>
+    <a href="roadmap.html" class="step" data-page="7"><span class="step-num">7</span><span class="step-label">Roadmap</span></a>
+  </div>
+</nav>
+
+<header>
+  <div class="header-bg-text">GOLD'S</div>
+  <div class="header-inner">
+    <div class="header-eyebrow">Gold's Gym &middot; Digital Transformation</div>
+    <h1>PLATFORM<br><span>ARCHITECTURE</span></h1>
+    <p class="header-sub">Platform-first design, unified data layer, and the technology decisions that define how Gold's builds its future.</p>
+    <div class="header-meta">
+      <div class="meta-pill"><span class="dot"></span>Convention 2026</div>
+      <div class="meta-pill"><span class="dot"></span>April 2026</div>
+    </div>
+  </div>
+</header>
+
+<nav class="sticky-nav">
+  <div class="nav-inner">
+    <div class="nav-page-indicator">
+      <a href="digital-experience.html" class="nav-prev-arrow">&#8592;</a>
+      <span class="nav-page-badge">5 / 7</span>
+      <a href="execution.html" class="nav-next-arrow">&#8594;</a>
+    </div>
+    <span class="nav-divider"></span>
+    <a class="nav-tab active" href="#options">Solution Options</a>
+    <a class="nav-tab" href="#partners">Partner Problem</a>
+    <a class="nav-tab" href="#platform-first">Platform-First</a>
+    <a class="nav-tab" href="#data">Data Layer</a>
+  </div>
+</nav>
+
+<main class="page-main">
+
+<!-- ════════════════════════════════════════════════════════════
+     SECTION 01 — TECHNOLOGY SOLUTION OPTIONS
+     ════════════════════════════════════════════════════════════ -->
+<section class="section" id="options">
+  <div class="section-header">
+    <span class="section-num">01</span>
+    <span class="section-title">TECHNOLOGY SOLUTION OPTIONS</span>
+  </div>
+
+  <p class="section-intro">For each component of the platform, there are multiple paths to execution. The right choice depends on how critical the component is to Gold's competitive advantage.</p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Approach</th>
+        <th>Speed</th>
+        <th>Control</th>
+        <th>Cost</th>
+        <th>Best For</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>White Label</strong></td>
+        <td style="color: var(--green);">Fast</td>
+        <td style="color: var(--red);">Low</td>
+        <td style="color: var(--green);">Low</td>
+        <td>Non-differentiating features</td>
+      </tr>
+      <tr>
+        <td><strong>Vendor Partnership</strong></td>
+        <td style="color: var(--green);">Fast</td>
+        <td style="color: var(--gold);">Medium</td>
+        <td style="color: var(--gold);">Medium</td>
+        <td>Category-specific capabilities (CRM, billing, etc.)</td>
+      </tr>
+      <tr>
+        <td><strong>Custom Build</strong></td>
+        <td style="color: var(--red);">Slow</td>
+        <td style="color: var(--green);">High</td>
+        <td style="color: var(--red);">High</td>
+        <td>Core differentiators (data layer, integrations)</td>
+      </tr>
+      <tr>
+        <td><strong>In-House Development</strong></td>
+        <td style="color: var(--red);">Slow</td>
+        <td style="color: var(--green);">Full</td>
+        <td style="color: var(--red);">Highest</td>
+        <td>Consumer experience (website, app)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout-box" style="margin-top: 24px;">
+    <div class="callout-title">THE HYBRID APPROACH</div>
+    <p><strong>Own what matters, outsource what doesn't.</strong> The Assemble strategy uses all four approaches strategically: custom-build the integration and data layer (the competitive moat), partner with best-in-class vendors for category capabilities, and use white-label solutions for commodity features. This is the hybrid model &mdash; maximum value at minimum organizational cost.</p>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     SECTION 02 — THE PARTNER PROBLEM
+     ════════════════════════════════════════════════════════════ -->
+<section class="section" id="partners">
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <span class="section-title">THE PARTNER PROBLEM</span>
+  </div>
+
+  <p class="section-intro">Too many vendors operating independently creates chaos. The solution is not fewer vendors &mdash; it's one owner of the integration strategy.</p>
+
+  <div class="stat-row">
+    <div class="stat-card">
+      <div class="stat-big">6-7</div>
+      <div class="stat-label">Current Vendors</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-big">20+</div>
+      <div class="stat-label">Separate Applications</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-big">0</div>
+      <div class="stat-label">Central Integration Owner</div>
+    </div>
+  </div>
+
+  <div class="grid-2" style="margin-top: 24px;">
+    <div class="panel">
+      <div class="panel-title">THE ISSUES</div>
+      <ul>
+        <li><strong>Multiple consumer-facing apps</strong> &mdash; fragmented brand experience</li>
+        <li><strong>Fragmented data</strong> &mdash; no single view of the member</li>
+        <li><strong>Poor handoffs</strong> &mdash; data drops between systems</li>
+        <li><strong>Vendor-driven roadmap</strong> &mdash; Gold's waits for vendor priorities</li>
+        <li><strong>No accountability</strong> &mdash; no one owns the end-to-end experience</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <div class="panel-title">THE SOLUTION</div>
+      <ul>
+        <li><strong>One integration owner</strong> &mdash; Gold's controls how systems connect</li>
+        <li><strong>Central strategy</strong> &mdash; vendors serve the platform, not the reverse</li>
+        <li><strong>No direct-to-consumer partner apps</strong> &mdash; all experiences through Gold's platform</li>
+        <li><strong>Standard APIs</strong> &mdash; consistent integration requirements for all vendors</li>
+        <li><strong>Data flows to Gold's</strong> &mdash; every vendor feeds the central data layer</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout-box" style="margin-top: 24px;">
+    <p><strong>Too many partners without control creates chaos.</strong> The Assemble strategy doesn't reduce the number of vendors &mdash; it establishes who owns the connections between them. That owner is Gold's.</p>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     SECTION 03 — PLATFORM-FIRST ARCHITECTURE
+     ════════════════════════════════════════════════════════════ -->
+<section class="section" id="platform-first">
+  <div class="section-header">
+    <span class="section-num">03</span>
+    <span class="section-title">PLATFORM-FIRST ARCHITECTURE</span>
+  </div>
+
+  <p class="section-intro">The core platform is owned by Gold's Gym. Vendors integrate <em>into</em> it. Data flows <em>into</em> the central layer. The platform is the foundation &mdash; everything else is a module.</p>
+
+  <div class="panel" style="margin-bottom: 24px; text-align: center; padding: 40px 28px;">
+    <div class="panel-title" style="margin-bottom: 24px;">ARCHITECTURE CONCEPT</div>
+
+    <!-- Simplified visual architecture diagram using HTML/CSS -->
+    <div style="display: flex; flex-direction: column; gap: 16px; max-width: 800px; margin: 0 auto;">
+
+      <!-- Consumer Layer -->
+      <div style="background: var(--gold-light); border: 1.5px solid var(--gold); border-radius: 12px; padding: 16px;">
+        <div style="font-family: 'Bebas Neue', sans-serif; font-size: 16px; letter-spacing: 0.08em; color: var(--dark); margin-bottom: 8px;">CONSUMER EXPERIENCE LAYER</div>
+        <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+          <span style="background: white; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 500;">Website</span>
+          <span style="background: white; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 500;">Mobile App</span>
+          <span style="background: white; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 500;">Digital Products</span>
+          <span style="background: white; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 500;">In-Club Tech</span>
+        </div>
+      </div>
+
+      <!-- Arrow -->
+      <div style="text-align: center; font-size: 20px; color: var(--gold);">&#9660;</div>
+
+      <!-- Integration Layer -->
+      <div style="background: var(--dark); border-radius: 12px; padding: 16px; color: white;">
+        <div style="font-family: 'Bebas Neue', sans-serif; font-size: 16px; letter-spacing: 0.08em; margin-bottom: 8px;">INTEGRATION &amp; API LAYER <span style="color: var(--gold);">(GOLD'S OWNS)</span></div>
+        <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+          <span style="background: var(--dark-2); padding: 8px 16px; border-radius: 8px; font-size: 13px;">APIs</span>
+          <span style="background: var(--dark-2); padding: 8px 16px; border-radius: 8px; font-size: 13px;">Middleware</span>
+          <span style="background: var(--dark-2); padding: 8px 16px; border-radius: 8px; font-size: 13px;">Event Bus</span>
+          <span style="background: var(--dark-2); padding: 8px 16px; border-radius: 8px; font-size: 13px;">Auth &amp; Identity</span>
+        </div>
+      </div>
+
+      <!-- Arrow -->
+      <div style="text-align: center; font-size: 20px; color: var(--gold);">&#9660;</div>
+
+      <!-- Data Layer -->
+      <div style="background: var(--gold); border-radius: 12px; padding: 16px;">
+        <div style="font-family: 'Bebas Neue', sans-serif; font-size: 16px; letter-spacing: 0.08em; color: var(--dark); margin-bottom: 8px;">UNIFIED DATA LAYER <span style="opacity: 0.7;">(GOLD'S OWNS)</span></div>
+        <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+          <span style="background: rgba(255,255,255,0.8); padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 500; color: var(--dark);">Data Lake</span>
+          <span style="background: rgba(255,255,255,0.8); padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 500; color: var(--dark);">BI &amp; Analytics</span>
+          <span style="background: rgba(255,255,255,0.8); padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 500; color: var(--dark);">AI / ML</span>
+          <span style="background: rgba(255,255,255,0.8); padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 500; color: var(--dark);">KPI Engine</span>
+        </div>
+      </div>
+
+      <!-- Arrow -->
+      <div style="text-align: center; font-size: 20px; color: var(--mid);">&#9650;</div>
+
+      <!-- Vendor Layer -->
+      <div style="background: var(--light); border: 1.5px solid var(--border); border-radius: 12px; padding: 16px;">
+        <div style="font-family: 'Bebas Neue', sans-serif; font-size: 16px; letter-spacing: 0.08em; color: var(--dark); margin-bottom: 8px;">BEST-IN-CLASS VENDORS <span style="opacity: 0.5;">(PLUG IN)</span></div>
+        <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+          <span style="background: white; padding: 8px 16px; border-radius: 8px; font-size: 13px; border: 1px solid var(--border);">Member Mgmt</span>
+          <span style="background: white; padding: 8px 16px; border-radius: 8px; font-size: 13px; border: 1px solid var(--border);">CRM / CDP</span>
+          <span style="background: white; padding: 8px 16px; border-radius: 8px; font-size: 13px; border: 1px solid var(--border);">Scheduling</span>
+          <span style="background: white; padding: 8px 16px; border-radius: 8px; font-size: 13px; border: 1px solid var(--border);">POS</span>
+          <span style="background: white; padding: 8px 16px; border-radius: 8px; font-size: 13px; border: 1px solid var(--border);">Marketing</span>
+          <span style="background: white; padding: 8px 16px; border-radius: 8px; font-size: 13px; border: 1px solid var(--border);">Gate Control</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="callout-box">
+    <div class="callout-title">THE KEY PRINCIPLE</div>
+    <p><strong>Vendors plug into us, not the other way around.</strong> The platform defines the standards. Vendors conform to them. Data flows into Gold's central layer. If a vendor can't meet the integration requirements, it doesn't participate. This is what makes the Assemble model work &mdash; Gold's owns the architecture, vendors provide the functionality.</p>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     SECTION 04 — UNIFIED DATA LAYER
+     ════════════════════════════════════════════════════════════ -->
+<section class="section" id="data">
+  <div class="section-header">
+    <span class="section-num">04</span>
+    <span class="section-title">MEMBER MANAGEMENT &amp; UNIFIED DATA LAYER</span>
+  </div>
+
+  <div class="grid-2">
+    <div class="panel">
+      <div class="panel-title">MEMBER MANAGEMENT STRATEGY</div>
+      <p style="margin-bottom: 12px;">Simplify the core while maintaining flexibility at the edges.</p>
+      <ul>
+        <li><strong>Reduce systems</strong> &mdash; fewer platforms, less complexity</li>
+        <li><strong>Support 80% of use cases</strong> &mdash; standardize the core member lifecycle</li>
+        <li><strong>Plug-and-play</strong> &mdash; modular integrations for specialized needs</li>
+        <li><strong>Competitive RFP</strong> &mdash; evaluate best-in-class member management systems</li>
+      </ul>
+      <div style="margin-top: 16px;">
+        <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--mid); margin-bottom: 4px;">Current System Score</div>
+        <div class="score-bar">
+          <span class="sb-label" style="min-width: 0; font-size: 12px;">2.2/5</span>
+          <div class="sb-track"><div class="sb-fill" style="width: 44%; background: var(--red);"></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">UNIFIED DATA LAYER</div>
+      <p style="margin-bottom: 12px;">Data becomes the backbone of the business.</p>
+      <ul>
+        <li><strong>Central data layer</strong> &mdash; single source of truth across all locations</li>
+        <li><strong>KPI reporting</strong> &mdash; real-time dashboards for franchisees and corporate</li>
+        <li><strong>Personalization</strong> &mdash; member experiences driven by data, not guesswork</li>
+        <li><strong>AI-ready</strong> &mdash; structured data that enables machine learning and automation</li>
+      </ul>
+      <div style="margin-top: 16px;">
+        <div style="font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--mid); margin-bottom: 4px;">Target Capability</div>
+        <div class="score-bar">
+          <span class="sb-label" style="min-width: 0; font-size: 12px;">5/5</span>
+          <div class="sb-track"><div class="sb-fill" style="width: 100%; background: var(--green);"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout-box" style="margin-top: 24px;">
+    <p><strong>Standardize the core, flex at the edges.</strong> The member management system handles the 80% &mdash; joins, billing, check-ins, basic operations. The remaining 20% is handled by specialized vendors that plug into the platform. The data layer ties it all together into a single, queryable view of the business.</p>
+  </div>
+</section>
+
+<!-- ── Prev/Next Nav ── -->
+<div class="prev-next-nav">
+  <a href="digital-experience.html">
+    <span class="pn-label">&#8592; Previous</span>
+    <span class="pn-title">DIGITAL EXPERIENCE</span>
+  </a>
+  <a href="execution.html" class="next">
+    <span class="pn-label">Next &#8594;</span>
+    <span class="pn-title">EXECUTION PLAN</span>
+  </a>
+</div>
+
+</main>
+
+<footer>
+  Gold's Gym &middot; Digital Transformation &nbsp;&middot;&nbsp; <strong>Platform Architecture</strong> &nbsp;&middot;&nbsp; April 2026
+</footer>
+
+<script>
+  const navTabs = document.querySelectorAll('.nav-tab');
+  const sections = document.querySelectorAll('.section[id]');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navTabs.forEach(t => t.classList.remove('active'));
+        const id = entry.target.getAttribute('id');
+        const active = document.querySelector(`.nav-tab[href="#${id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  sections.forEach(s => observer.observe(s));
+</script>
+<script src="nav.js"></script>
+
+</body>
+</html>

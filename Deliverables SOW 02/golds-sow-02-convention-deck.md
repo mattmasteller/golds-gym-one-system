@@ -674,3 +674,73 @@ Content:
 
 Key Message:\
 "This is how Gold's Gym scales into the future."
+
+---
+
+## Implementation Mapping: Convention Deck → Web Deliverable
+
+The convention deck slides were built into a standalone 7-page web deliverable located at `Deliverables SOW 02/convention-deck/`. The deliverable reuses the same design system (styles.css, nav.js, component patterns) as the Phase 0 final report (`Deliverables SOW 02/final-report/`).
+
+### Slide-to-Page Mapping
+
+| Slide | Title | Page | Section | Coverage |
+|-------|-------|------|---------|----------|
+| 1 | Title Slide | index.html | Header/Hero | Full |
+| 2 | Leaders in Strength, Bodybuilding & Human Performance | index.html | 02 - Brand Identity | Full |
+| 3 | One Platform Built For The New Vision | index.html | 03 - One Platform | Full |
+| 4 | The Current System Is Extremely Fragmented | problem.html | 01 - Fragmentation | Full |
+| 5 | The Franchisee of Today Operates Like an Entrepreneur | problem.html | 02 - Franchisee Reality | Full |
+| 6 | Assemble Strategy = Own Data Layer + Consumer Experience | strategy.html | 01 - Assemble Model | Full |
+| 7 | Consumer Touchpoints Across the Journey | strategy.html | 02 - Consumer Journey | Full |
+| 8 | Own the Website and Consumer App Experience | strategy.html | 03 - Own the Front Door | Full |
+| 9 | Website Strategy | digital-experience.html | 01 - Website Strategy | Full |
+| 10 | App Strategy | digital-experience.html | 02 - App Strategy | Full |
+| 11 | Digital Products Outside the Four Walls | digital-experience.html | 03 - Digital Products | Full |
+| 12 | Website and App Must Be Cohesive | digital-experience.html | 04 - Unified Experience | Full |
+| 13 | Technology Solution Options | architecture.html | 01 - Solution Options | Full |
+| 14 | The Partner Problem | architecture.html | 02 - Partner Problem | Full |
+| 15 | Platform First Architecture | architecture.html | 03 - Platform-First | Full |
+| 16 | Member Management Strategy | architecture.html | 04 - Data Layer (left panel) | Full |
+| 17 | Unified Data Layer | architecture.html | 04 - Data Layer (right panel) | Full |
+| 18 | Franchisor as a Revenue Engine | execution.html | 01 - Revenue Engine | Full |
+| 19 | Organizational Expansion | execution.html | 02 - Organization | Full |
+| 20 | Vendor SOP and Participation | execution.html | 03 - Vendor Governance | Full |
+| 21 | Architecture and Data Maps | architecture.html | 03 - Platform-First | Partial |
+| 22 | Vendor Landscape | execution.html | 04 - Vendor Landscape | Partial |
+| 23 | Market Insights and Commercial Strategy | execution.html | 04 - Vendor Landscape (bottom) | Partial |
+| 24 | Strategic Roadmap | roadmap.html | 01 - Roadmap | Full |
+| 25 | Closing | roadmap.html | 02 - Closing | Full |
+
+### Partial Coverage Notes
+
+**Slide 21 — Architecture and Data Maps:**
+A conceptual HTML/CSS layered architecture diagram was built showing four layers (consumer experience, integration/API, unified data, best-in-class vendors). The source slide envisions detailed system architecture diagrams and data flow maps showing specific vendor-to-vendor connections and data pipelines. More detailed diagrams (SVG or image-based) should be added when the architecture is finalized.
+
+**Slide 22 — Vendor Landscape:**
+Six categories are included with current vendors and top contenders (Member Management, CRM/CDP, Mobile App, Website, Data/Analytics, Marketing). The source calls for "Top 3 vendors per category" with evaluation of fit, strengths, and gaps. The current implementation lists contenders and evaluation focus areas but does not include detailed per-vendor strength/gap assessments. This should be expanded as vendor evaluation data becomes available.
+
+**Slide 23 — Market Insights and Commercial Strategy:**
+Covered at a strategic level with commercial opportunities (volume leverage, vendor funding, competitive bids, partnership models) and risk factors (lock-in, migration, contracts, adoption). The source mentions specific vendor contract insights, detailed pricing models, and funding/incentive details. These are data-dependent items that should be populated from actual vendor conversations and market research.
+
+### Web Deliverable File Structure
+
+```
+Deliverables SOW 02/convention-deck/
+  index.html              — Vision, brand identity, one platform (slides 1-3)
+  problem.html            — Fragmentation, franchisee reality (slides 4-5)
+  strategy.html           — Assemble model, consumer journey, front door (slides 6-8)
+  digital-experience.html — Website, app, digital products, cohesion (slides 9-12)
+  architecture.html       — Solution options, partner problem, platform-first, data layer (slides 13-17, 21)
+  execution.html          — Revenue engine, org, vendor governance, vendor landscape (slides 18-20, 22-23)
+  roadmap.html            — Strategic roadmap, closing (slides 24-25)
+  styles.css              — Design system (copied from Phase 0 final report)
+  nav.js                  — Navigation with updated 7-page PAGES array
+```
+
+### Cross-Links to Phase 0 Report
+
+The convention deck links back to the Phase 0 final report (`../final-report/`) in the following locations:
+- problem.html → Phase 0 Survey Report (survey.html)
+- strategy.html → Phase 0 Build v Assemble v Buy (build-assemble-buy.html)
+- execution.html → Phase 0 Competitive Landscape Matrix (comps-stacks.html)
+- roadmap.html → Phase 0 Executive Summary (index.html)

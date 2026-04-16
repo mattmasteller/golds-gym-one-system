@@ -51,6 +51,7 @@
     <a class="nav-tab active" href="#revenue">Revenue Engine</a>
     <a class="nav-tab" href="#org">Organization</a>
     <a class="nav-tab" href="#governance">Vendor Governance</a>
+    <a class="nav-tab" href="#rubric">Vendor RFP</a>
     <a class="nav-tab" href="#landscape">Vendor Landscape</a>
   </div>
 </nav>
@@ -249,11 +250,98 @@
 </section>
 
 <!-- ════════════════════════════════════════════════════════════
-     SECTION 04 — VENDOR LANDSCAPE
+     SECTION 04 — VENDOR RFP RUBRIC
+     ════════════════════════════════════════════════════════════ -->
+<section class="section" id="rubric">
+  <div class="section-header">
+    <span class="section-num">04</span>
+    <span class="section-title">VENDOR RFP EVALUATION RUBRIC</span>
+  </div>
+
+  <p class="section-intro">A standardized scoring framework applied consistently across all vendor conversations. Every vendor is evaluated against the same criteria to ensure objective, apples-to-apples comparison.</p>
+
+  <table class="data-table">
+    <thead>
+      <tr><th>Criteria</th><th>Weight</th><th>What We're Evaluating</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>API &amp; Integration Quality</strong></td>
+        <td style="font-weight: 600;">25%</td>
+        <td>RESTful API maturity, webhook support, real-time data sync, documentation quality, sandbox availability</td>
+      </tr>
+      <tr>
+        <td><strong>Data Ownership &amp; Portability</strong></td>
+        <td style="font-weight: 600;">20%</td>
+        <td>Data export capabilities, migration support, contractual data ownership terms, no vendor lock-in</td>
+      </tr>
+      <tr>
+        <td><strong>Franchise Support Model</strong></td>
+        <td style="font-weight: 600;">15%</td>
+        <td>Multi-location architecture, corporate vs. franchisee controls, onboarding at scale, training resources</td>
+      </tr>
+      <tr>
+        <td><strong>Core Feature Completeness</strong></td>
+        <td style="font-weight: 600;">15%</td>
+        <td>Member lifecycle coverage (join, billing, check-in, freeze, cancel), POS, scheduling, reporting</td>
+      </tr>
+      <tr>
+        <td><strong>Commercial Terms</strong></td>
+        <td style="font-weight: 600;">10%</td>
+        <td>Pricing model, volume discounts, migration incentives, co-marketing funds, revenue sharing</td>
+      </tr>
+      <tr>
+        <td><strong>Platform Reliability &amp; SLA</strong></td>
+        <td style="font-weight: 600;">10%</td>
+        <td>Uptime guarantees, support response times, incident management, scalability track record</td>
+      </tr>
+      <tr>
+        <td><strong>Innovation &amp; Roadmap</strong></td>
+        <td style="font-weight: 600;">5%</td>
+        <td>AI/ML capabilities, mobile-first design, product velocity, willingness to co-develop</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="grid-2" style="margin-top: 24px;">
+    <div class="panel">
+      <div class="panel-title">NON-NEGOTIABLES</div>
+      <ul>
+        <li>All member data owned by Gold's &mdash; not the vendor</li>
+        <li>Full API access with real-time sync capability</li>
+        <li>Multi-location franchise architecture (not bolted-on)</li>
+        <li>Contractual data export and migration plan</li>
+        <li>U.S. market coverage and support</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <div class="panel-title">MEETING SHORT LIST</div>
+      <ul>
+        <li><strong>ABC</strong> &mdash; incumbent, upgraded platform evaluation</li>
+        <li><strong>Zenoti</strong> &mdash; modern franchise-native architecture</li>
+        <li><strong>Perfect Gym</strong> (Sports Alliance) &mdash; global scale, API-first</li>
+        <li><strong>Exerp</strong> &mdash; enterprise fitness management</li>
+        <li><strong>Hapana</strong> &mdash; modern fitness platform</li>
+        <li><strong>Fitness Force</strong> &mdash; <em>international consideration</em></li>
+      </ul>
+      <div style="margin-top: 8px; font-size: 12px; color: var(--mid);">Vendor meetings targeting first week of May 2026</div>
+    </div>
+  </div>
+
+  <div class="callout-box" style="margin-top: 24px;">
+    <p><strong>Same rubric, every conversation.</strong> This framework ensures that no matter which vendor we're sitting with, we're asking the same questions, scoring against the same criteria, and making decisions with comparable data. The rubric is a living document &mdash; it will be refined as we learn from each demo.</p>
+    <div style="margin-top: 16px;">
+      <a href="member-mgmt-one-pager.html" class="cta-btn">View Full Vendor Evaluation One-Pager &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     SECTION 05 — VENDOR LANDSCAPE
      ════════════════════════════════════════════════════════════ -->
 <section class="section" id="landscape">
   <div class="section-header">
-    <span class="section-num">04</span>
+    <span class="section-num">05</span>
     <span class="section-title">VENDOR LANDSCAPE &amp; COMMERCIAL STRATEGY</span>
   </div>
 
@@ -267,13 +355,13 @@
       <tr>
         <td><strong>Member Management</strong></td>
         <td>ABC / Motionsoft</td>
-        <td>ABC (upgraded), Jonas, Daxko</td>
+        <td>ABC (upgraded), Zenoti, Perfect Gym, Exerp, Hapana</td>
         <td>API quality, franchise support, billing flexibility</td>
       </tr>
       <tr>
         <td><strong>CRM / CDP</strong></td>
         <td>HubSpot (corporate only)</td>
-        <td>HubSpot, Salesforce, segment + specialized</td>
+        <td>HubSpot (retain), evaluate Segment + specialized</td>
         <td>Franchise-level access, attribution, automation</td>
       </tr>
       <tr>
@@ -299,6 +387,12 @@
         <td>Varies by franchisee</td>
         <td>SOCi, Yext, localized platforms</td>
         <td>Multi-location management, local + corporate</td>
+      </tr>
+      <tr>
+        <td><strong>PT &amp; Wellness</strong></td>
+        <td>Demotu, Apex-MD</td>
+        <td>Demotu (retain), evaluate integration depth</td>
+        <td>Data flow into intelligence layer, personalized recommendations</td>
       </tr>
     </tbody>
   </table>

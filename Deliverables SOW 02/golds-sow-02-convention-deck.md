@@ -706,8 +706,11 @@ The convention deck slides were built into a standalone 7-page web deliverable l
 | 19 | Organizational Expansion | execution.html | 02 - Organization | Full |
 | 20 | Vendor SOP and Participation | execution.html | 03 - Vendor Governance | Full |
 | 21 | Architecture and Data Maps | architecture.html | 03 - Platform-First | Partial |
-| 22 | Vendor Landscape | execution.html | 04 - Vendor Landscape | Partial |
-| 23 | Market Insights and Commercial Strategy | execution.html | 04 - Vendor Landscape (bottom) | Partial |
+| 22 | Vendor Landscape | execution.html | 05 - Vendor Landscape + 06 - Vendor Taxonomy | Partial |
+| 23 | Market Insights and Commercial Strategy | execution.html | 05 - Vendor Landscape (bottom) + 07 - Implementation & Resourcing | Partial |
+| — | Vendor Taxonomy (SOW 02 deliverable) | execution.html | 06 - Vendor Taxonomy | Populated from prior art; data-layer row defers to Section 07 + appendix |
+| — | Unified Data Layer (SOW 02 deliverable) | execution.html + data-platform-appendix.html | 07 - Unified Data Layer | Full — concise summary in deck; deep-dive in companion appendix |
+| — | Implementation & Resourcing Plan (SOW 02 deliverable) | execution.html | 08 - Implementation & Resourcing | Skeleton (timeline complete, costs/team softened to ranges) |
 | 24 | Strategic Roadmap | roadmap.html | 01 - Roadmap | Full |
 | 25 | Closing | roadmap.html | 02 - Closing | Full |
 
@@ -717,10 +720,16 @@ The convention deck slides were built into a standalone 7-page web deliverable l
 A conceptual HTML/CSS layered architecture diagram was built showing four layers (consumer experience, integration/API, unified data, best-in-class vendors). The source slide envisions detailed system architecture diagrams and data flow maps showing specific vendor-to-vendor connections and data pipelines. More detailed diagrams (SVG or image-based) should be added when the architecture is finalized.
 
 **Slide 22 — Vendor Landscape:**
-Six categories are included with current vendors and top contenders (Member Management, CRM/CDP, Mobile App, Website, Data/Analytics, Marketing). The source calls for "Top 3 vendors per category" with evaluation of fit, strengths, and gaps. The current implementation lists contenders and evaluation focus areas but does not include detailed per-vendor strength/gap assessments. This should be expanded as vendor evaluation data becomes available.
+Six categories are included with current vendors and top contenders (Member Management, CRM/CDP, Mobile App, Website, Data/Analytics, Marketing). The source calls for "Top 3 vendors per category" with evaluation of fit, strengths, and gaps. The current implementation lists contenders and evaluation focus areas but does not include detailed per-vendor strength/gap assessments. **Section 06 (Vendor Taxonomy)** extends this with a 7-category × attribute matrix (implementation cost, operational cost, team/resources, implementation effort) — placeholder cells pending vendor data.
 
 **Slide 23 — Market Insights and Commercial Strategy:**
-Covered at a strategic level with commercial opportunities (volume leverage, vendor funding, competitive bids, partnership models) and risk factors (lock-in, migration, contracts, adoption). The source mentions specific vendor contract insights, detailed pricing models, and funding/incentive details. These are data-dependent items that should be populated from actual vendor conversations and market research.
+Covered at a strategic level with commercial opportunities (volume leverage, vendor funding, competitive bids, partnership models) and risk factors (lock-in, migration, contracts, adoption). The source mentions specific vendor contract insights, detailed pricing models, and funding/incentive details. These are data-dependent items that should be populated from actual vendor conversations and market research. **Section 07 (Implementation & Resourcing)** adds the time/money/people view: a May→Sept selection-to-kickoff timeline, internal team and external partner blocks, and a per-category budget-range table.
+
+**Sections 06, 07 & 08 (SOW 02 milestone — Platforms / Vendor List / Resourcing, week of May 4–8 2026):**
+These three sections fulfill SOW 02 deliverable categories viii (Vendor Target List for RFI/RFP) and ix (Implementation Wave / Timeline / Resources). Section 06 (Vendor Taxonomy) is populated from Phase 0 prior art (Competitive Tech Stack Matrix, Vendor Evaluation Framework, Current System Assessment). Section 07 (Unified Data Layer) provides a neutral framing of the four credible platforms (Microsoft Fabric, Databricks, Snowflake, AWS Redshift) plus decision criteria and a Gold's-tier sizing band; full deep-dive lives in `data-platform-appendix.html`. Section 08 (Implementation & Resourcing) carries timeline + asset-light staffing structure + RFP-defined budget ranges with the $52,500 SOW 02 strategy investment anchored as the current spend.
+
+**`data-platform-appendix.html` (companion appendix):**
+New companion page modeled on `member-mgmt-one-pager.html`. Twelve sections covering executive summary, four platforms in scope, billing-model deep-dives, cost components side-by-side, platform cost ranges by tier, team composition / staffing, total cost of ownership, differentiator matrix, neutral strategic considerations (when each platform is advantaged), DirectLake call-out, ten open sizing questions, and methodology / sources. All dollar figures presented as ranges; pricing snapshot is April 2026.
 
 ### Web Deliverable File Structure
 
@@ -731,7 +740,8 @@ Deliverables SOW 02/convention-deck/
   strategy.html           — Assemble model, consumer journey, front door (slides 6-8)
   digital-experience.html — Website, app, digital products, cohesion (slides 9-12)
   architecture.html       — Solution options, partner problem, platform-first, data layer (slides 13-17, 21)
-  execution.html          — Revenue engine, org, vendor governance, vendor landscape (slides 18-20, 22-23)
+  execution.html               — Revenue engine, org, vendor governance, RFP rubric, vendor landscape, vendor taxonomy, unified data layer, implementation & resourcing (slides 18-20, 22-23, plus SOW 02 vendor-list / data-layer / resourcing deliverable)
+  data-platform-appendix.html  — Companion deep-dive: 4-platform analysis (Fabric / Databricks / Snowflake / Redshift), TCO ranges by tier, team composition, differentiator matrix, open sizing questions
   roadmap.html            — Strategic roadmap, closing (slides 24-25)
   styles.css              — Design system (copied from Phase 0 final report)
   nav.js                  — Navigation with updated 7-page PAGES array

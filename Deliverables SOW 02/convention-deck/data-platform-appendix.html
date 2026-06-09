@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gold's Gym — Data Platform Appendix</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  @media print {
+    body { font-size: 11px; }
+    .page-main { max-width: 100%; padding: 16px; }
+    .panel { break-inside: avoid; }
+    header { padding: 24px 0; }
+    .header-bg-text { display: none; }
+    .no-print { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header style="padding: 48px 0 32px;">
+  <div class="header-bg-text">GOLD'S</div>
+  <div class="header-inner">
+    <div class="header-eyebrow">Gold's Gym &middot; Digital Transformation &middot; Appendix</div>
+    <h1>UNIFIED DATA LAYER<br><span>PLATFORM ANALYSIS</span></h1>
+    <p class="header-sub">Budgetary comparison of four enterprise data platforms &mdash; Microsoft Fabric, Databricks, Snowflake, and AWS Redshift &mdash; framed against Gold's Gym workload profile, existing technology footprint, and team composition. Cost figures are presented as ranges; final ranges narrow as sizing questions are answered.</p>
+    <div class="header-meta">
+      <div class="meta-pill"><span class="dot"></span>April 2026</div>
+      <div class="meta-pill"><span class="dot"></span>Companion to Execution Plan &middot; Section 07</div>
+    </div>
+  </div>
+</header>
+
+<main class="page-main">
+
+<!-- ── EXECUTIVE SUMMARY ── -->
+<section class="section">
+  <div class="section-header">
+    <span class="section-num">01</span>
+    <span class="section-title">EXECUTIVE SUMMARY</span>
+  </div>
+
+  <p class="section-intro">Four platforms are credible candidates for Gold's unified data layer. Each uses a different billing model, has a different operational profile, and demands a different team skill mix. Platform cost alone rarely determines the right choice &mdash; <strong>staffing is typically the largest single line item at medium and large scale</strong>, and platform selection directly drives required skill set and team size.</p>
+
+  <div class="callout-box">
+    <div class="callout-title">KEY ASSUMPTIONS</div>
+    <ul style="padding-left: 18px;">
+      <li><strong>Workload mix:</strong> analytics / BI + data engineering / ETL with moderate ML</li>
+      <li><strong>Concurrency:</strong> moderate (10&ndash;50 users / pipelines)</li>
+      <li><strong>Region:</strong> US data centers (US East 1 / Azure US West 2 used as reference)</li>
+      <li><strong>Pricing:</strong> list / pay-as-you-go unless commitment / reserved noted</li>
+      <li><strong>Staffing:</strong> US national salary midpoints + ~25% benefits load</li>
+    </ul>
+  </div>
+
+  <p style="margin-top: 16px;">Three reference tiers are used throughout this analysis. Gold's profile (~400 US locations in scope, member transactions, app and web analytics, operational reporting) sits in the <strong>Medium tier</strong> &mdash; likely toward the <strong>lower end</strong> of the band given the US-only scope. TCO figures in this report should be read with that in mind: anchor expectations on the lower half of each Medium-tier range until ingestion and storage volumes are measured against actual workloads.</p>
+
+  <div class="grid-3" style="margin-top: 16px;">
+    <div class="panel">
+      <div class="panel-title">SMALL</div>
+      <p style="font-size: 13px;">&le; 1 TB stored<br>&le; 100 GB/day ingest<br>1&ndash;2 FTE</p>
+    </div>
+    <div class="panel" style="border-top: 3px solid var(--gold);">
+      <div class="panel-title">MEDIUM &mdash; GOLD'S TIER</div>
+      <p style="font-size: 13px;">1&ndash;50 TB stored<br>100 GB&ndash;1 TB/day ingest<br>3&ndash;4 FTE</p>
+    </div>
+    <div class="panel">
+      <div class="panel-title">LARGE</div>
+      <p style="font-size: 13px;">50&ndash;500 TB stored<br>1&ndash;10 TB/day ingest<br>5&ndash;8 FTE</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── PLATFORMS EVALUATED ── -->
+<section class="section">
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <span class="section-title">PLATFORMS EVALUATED</span>
+  </div>
+
+  <div class="grid-2">
+    <div class="panel" style="border-top: 3px solid var(--gold);">
+      <div class="panel-title">MICROSOFT FABRIC</div>
+      <p style="font-size: 13px;">Capacity-based platform unifying Spark notebooks, data pipelines, Lakehouse, Data Warehouse, Power BI reports, and real-time analytics under a single pooled allocation. Sold as an Azure SKU.</p>
+      <p style="margin-top: 8px; font-size: 12px; color: var(--mid);"><strong>Best for:</strong> Microsoft / Azure-integrated organizations with significant Power BI investment.</p>
+    </div>
+    <div class="panel" style="border-top: 3px solid var(--gold);">
+      <div class="panel-title">DATABRICKS</div>
+      <p style="font-size: 13px;">Spark-native unified analytics platform spanning data engineering, data warehousing, ML, and streaming. Available on AWS, Azure, and GCP. Customer pays Databricks for the platform layer plus the underlying cloud provider for VM infrastructure.</p>
+      <p style="margin-top: 8px; font-size: 12px; color: var(--mid);"><strong>Best for:</strong> ML / AI-heavy workloads, Spark-distributed processing, real-time streaming at scale.</p>
+    </div>
+  </div>
+
+  <div class="grid-2" style="margin-top: 16px;">
+    <div class="panel" style="border-top: 3px solid var(--gold);">
+      <div class="panel-title">SNOWFLAKE</div>
+      <p style="font-size: 13px;">Cloud-native SQL data platform with consumption-based credit billing. Auto-suspending virtual warehouses, automatic clustering, and a strong ecosystem of partner integrations. Available on AWS, Azure, and GCP.</p>
+      <p style="margin-top: 8px; font-size: 12px; color: var(--mid);"><strong>Best for:</strong> Multi-cloud portability, SQL-first analytics, low operational overhead.</p>
+    </div>
+    <div class="panel" style="border-top: 3px solid var(--gold);">
+      <div class="panel-title">AWS REDSHIFT</div>
+      <p style="font-size: 13px;">AWS-native columnar data warehouse with two deployment models &mdash; Provisioned (fixed clusters, node-hour billing) and Serverless (RPU-hour, idle = $0). Decoupled compute and storage with RA3 nodes.</p>
+      <p style="margin-top: 8px; font-size: 12px; color: var(--mid);"><strong>Best for:</strong> AWS-native organizations with steady, predictable analytical workloads.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── BILLING MODELS ── -->
+<section class="section">
+  <div class="section-header">
+    <span class="section-num">03</span>
+    <span class="section-title">HOW EACH PLATFORM BILLS</span>
+  </div>
+
+  <p class="section-intro">Understanding the billing unit is critical before comparing dollar amounts. The four platforms use entirely different models &mdash; comparing one calculator to another without normalizing units leads to material misestimation.</p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Platform</th>
+        <th>Compute Billing Unit</th>
+        <th>What's Included</th>
+        <th>Storage</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Microsoft Fabric</strong></td>
+        <td>Capacity Unit (CU) per hour &middot; F-SKU sizes F2&ndash;F2048</td>
+        <td>All Fabric workloads share pooled CU allocation</td>
+        <td>OneLake separate &middot; ~$23/TB-month</td>
+      </tr>
+      <tr>
+        <td><strong>Databricks</strong></td>
+        <td>DBU + cloud VM (dual-layer) &middot; rates vary by workload type</td>
+        <td>DBU = Databricks layer only; VM billed separately by cloud provider</td>
+        <td>Object storage (S3 / ADLS / GCS) &middot; ~$21&ndash;23/TB-month</td>
+      </tr>
+      <tr>
+        <td><strong>Snowflake</strong></td>
+        <td>Credits (per-second warehouse billing) &middot; $2&ndash;$4 per credit by edition</td>
+        <td>Compute + serverless features (Snowpipe, automatic clustering)</td>
+        <td>Compressed storage &middot; ~$23/TB-month</td>
+      </tr>
+      <tr>
+        <td><strong>AWS Redshift</strong></td>
+        <td>Node-hours (Provisioned) or RPU-hours (Serverless) &middot; ~$0.38/RPU-hour</td>
+        <td>Compute only; managed storage billed separately</td>
+        <td>Redshift Managed Storage &middot; ~$24/TB-month</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="grid-2" style="margin-top: 16px;">
+    <div class="panel">
+      <div class="panel-title">DISCOUNT MECHANICS</div>
+      <ul>
+        <li><strong>Fabric:</strong> Reserved 1-year ~41% savings vs. PAYG</li>
+        <li><strong>Databricks:</strong> 20&ndash;40% off DBU commitments (annual / multi-year); stackable with cloud marketplace commits (AWS EDP, Azure MACC)</li>
+        <li><strong>Snowflake:</strong> 20&ndash;30% off via Capacity Plans; 25&ndash;45% at high volume (100K+ credits/yr)</li>
+        <li><strong>Redshift:</strong> 1-yr Reserved ~40% off &middot; 3-yr Reserved up to ~75% off</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <div class="panel-title">BILLING NUANCES TO KNOW</div>
+      <ul>
+        <li><strong>Databricks:</strong> Pricing only the Databricks calculator routinely underestimates total spend by 50&ndash;200% &mdash; VM costs are the missing layer</li>
+        <li><strong>Fabric:</strong> Below F64, Power BI consumers each need a Pro license (~$14/user/month); F64+ includes viewer licensing</li>
+        <li><strong>Snowflake:</strong> Actual bills typically run 25&ndash;40% higher than warehouse-only estimates due to cloud services, automatic clustering, and egress</li>
+        <li><strong>Redshift:</strong> Serverless idle = $0; Provisioned bills continuously</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── COST COMPONENTS ── -->
+<section class="section">
+  <div class="section-header">
+    <span class="section-num">04</span>
+    <span class="section-title">COST COMPONENTS SIDE-BY-SIDE</span>
+  </div>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Component</th>
+        <th>Fabric</th>
+        <th>Databricks</th>
+        <th>Snowflake</th>
+        <th>Redshift</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Storage</strong></td>
+        <td>OneLake ~$23/TB-mo</td>
+        <td>S3/ADLS/GCS ~$21&ndash;23/TB-mo</td>
+        <td>~$23/TB-mo (compressed)</td>
+        <td>RMS ~$24/TB-mo</td>
+      </tr>
+      <tr>
+        <td><strong>Ingestion</strong></td>
+        <td>Pipelines use CUs &middot; ADF separate</td>
+        <td>Billed as job compute (DBUs)</td>
+        <td>Snowpipe 0.0037 credits/GB (Dec 2025 simplified pricing)</td>
+        <td>Free from S3 / Kinesis &middot; Glue charges for ETL</td>
+      </tr>
+      <tr>
+        <td><strong>Intra-region egress</strong></td>
+        <td>Free (same Fabric region)</td>
+        <td>Free (same AZ)</td>
+        <td>Free</td>
+        <td>Free</td>
+      </tr>
+      <tr>
+        <td><strong>Cross-region (US)</strong></td>
+        <td>~$0.02/GB</td>
+        <td>~$0.02/GB</td>
+        <td>~$0.02/GB</td>
+        <td>~$0.02/GB</td>
+      </tr>
+      <tr>
+        <td><strong>Internet egress</strong></td>
+        <td>Tiered (first 100 GB free)</td>
+        <td>$0.07&ndash;$0.09/GB tiered</td>
+        <td>$0.09&ndash;$0.155/GB &middot; ECO can cut up to 96%</td>
+        <td>$0.07&ndash;$0.09/GB tiered</td>
+      </tr>
+      <tr>
+        <td><strong>Idle compute cost</strong></td>
+        <td>Capacity billed continuously unless paused</td>
+        <td>Auto-terminate &mdash; near-zero when off</td>
+        <td>Auto-suspend &mdash; zero when idle</td>
+        <td>Serverless: zero &middot; Provisioned: continuous</td>
+      </tr>
+      <tr>
+        <td><strong>Support (entry)</strong></td>
+        <td>Azure Standard ~$100/mo</td>
+        <td>Priority ~$2K/mo</td>
+        <td>Business ~$400/mo or 2% of spend</td>
+        <td>Business ~$100/mo or 3% of spend</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ── PLATFORM COST RANGES BY TIER ── -->
+<section class="section">
+  <div class="section-header">
+    <span class="section-num">05</span>
+    <span class="section-title">PLATFORM COST RANGES BY TIER</span>
+  </div>
+
+  <p class="section-intro">Monthly platform-only ranges, excluding staffing. Reserved / commitment pricing typically reduces these figures by 25&ndash;75% depending on platform and term.</p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Platform</th>
+        <th>Small (&le;1 TB)</th>
+        <th>Medium (1&ndash;50 TB) &mdash; Gold's tier</th>
+        <th>Large (50&ndash;500 TB)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Microsoft Fabric (PAYG)</strong></td>
+        <td>~$1.3K&ndash;$3K/mo</td>
+        <td>~$5.5K&ndash;$12K/mo</td>
+        <td>~$20K&ndash;$55K/mo</td>
+      </tr>
+      <tr>
+        <td><strong>Microsoft Fabric (Reserved 1-yr)</strong></td>
+        <td>~$0.8K&ndash;$1.8K/mo</td>
+        <td>~$3.5K&ndash;$8K/mo</td>
+        <td>~$13K&ndash;$37K/mo</td>
+      </tr>
+      <tr>
+        <td><strong>Databricks</strong></td>
+        <td>~$1.5K&ndash;$2.5K/mo</td>
+        <td>~$15K&ndash;$22K/mo</td>
+        <td>~$60K&ndash;$85K/mo</td>
+      </tr>
+      <tr>
+        <td><strong>Snowflake (On-Demand)</strong></td>
+        <td>~$0.6K&ndash;$2.2K/mo</td>
+        <td>~$3.7K&ndash;$11K/mo</td>
+        <td>~$15K&ndash;$65K/mo</td>
+      </tr>
+      <tr>
+        <td><strong>AWS Redshift (Serverless)</strong></td>
+        <td>~$0.2K&ndash;$0.5K/mo</td>
+        <td>~$2K&ndash;$6.5K/mo</td>
+        <td>~$8K&ndash;$35K/mo</td>
+      </tr>
+      <tr>
+        <td><strong>AWS Redshift (3-yr Reserved)</strong></td>
+        <td>~$0.3K&ndash;$0.7K/mo</td>
+        <td>~$2.3K&ndash;$6K/mo</td>
+        <td>~$6K&ndash;$32K/mo</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="margin-top: 16px; font-size: 13px; color: var(--mid);">Ranges assume the assumptions in section 01 (workload mix, concurrency, US region). Variance within a tier is driven primarily by storage volume, ingestion rate, and the mix of compute workload types (interactive vs. batch vs. streaming vs. ML).</p>
+</section>
+
+<!-- ── TEAM COMPOSITION ── -->
+<section class="section">
+  <div class="section-header">
+    <span class="section-num">06</span>
+    <span class="section-title">TEAM COMPOSITION &amp; STAFFING</span>
+  </div>
+
+  <p class="section-intro">Staffing is frequently the largest single budget line at medium and large scale. The platform choice directly influences required team size, skill mix, and ramp time &mdash; especially for organizations that already have invested in a particular cloud or BI ecosystem.</p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Platform</th>
+        <th>Small (1&ndash;2 FTE) &mdash; annual</th>
+        <th>Medium (3&ndash;4 FTE) &mdash; annual</th>
+        <th>Large (5&ndash;8 FTE) &mdash; annual</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Microsoft Fabric</strong></td>
+        <td>~$130K&ndash;$220K</td>
+        <td>~$375K&ndash;$575K</td>
+        <td>~$1.0M&ndash;$1.6M</td>
+      </tr>
+      <tr>
+        <td><strong>Databricks</strong></td>
+        <td>~$200K&ndash;$350K</td>
+        <td>~$550K&ndash;$800K</td>
+        <td>~$1.3M&ndash;$1.9M</td>
+      </tr>
+      <tr>
+        <td><strong>Snowflake</strong></td>
+        <td>~$100K&ndash;$175K</td>
+        <td>~$375K&ndash;$550K</td>
+        <td>~$1.0M&ndash;$1.55M</td>
+      </tr>
+      <tr>
+        <td><strong>AWS Redshift</strong></td>
+        <td>~$120K&ndash;$200K</td>
+        <td>~$375K&ndash;$575K</td>
+        <td>~$1.05M&ndash;$1.6M</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="grid-2" style="margin-top: 24px;">
+    <div class="panel">
+      <div class="panel-title">SKILL PROFILE BY PLATFORM</div>
+      <ul>
+        <li><strong>Fabric:</strong> Azure data engineering, PySpark, Power BI / DAX, Delta Lake, OneLake, Azure DevOps</li>
+        <li><strong>Databricks:</strong> Spark / PySpark, Delta Lake, Unity Catalog, cluster management, MLflow, Databricks SQL</li>
+        <li><strong>Snowflake:</strong> Snowflake admin, warehouse sizing, dbt, data modeling, Fivetran / Airbyte / Snowpipe</li>
+        <li><strong>Redshift:</strong> Redshift admin, query / WLM tuning, AWS ecosystem (S3, Glue, IAM, Lake Formation)</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <div class="panel-title">RAMP TIME CONSIDERATIONS</div>
+      <ul>
+        <li><strong>Fastest upskill</strong> from existing Microsoft / Power BI teams: Fabric</li>
+        <li><strong>Steepest learning curve</strong> &mdash; broadest skill set required: Databricks</li>
+        <li><strong>Lowest ongoing operational burden</strong>: Snowflake (auto-suspend, auto-scale)</li>
+        <li><strong>Reduced DBA headcount over time</strong> with Serverless: Redshift</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── TCO ── -->
+<section class="section">
+  <div class="section-header">
+    <span class="section-num">07</span>
+    <span class="section-title">TOTAL COST OF OWNERSHIP &mdash; ALL-IN</span>
+  </div>
+
+  <p class="section-intro">Combined platform + amortized monthly staffing. These ranges represent what to budget inclusive of people. Gold's tier highlighted.</p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Platform</th>
+        <th>Small &mdash; total monthly TCO</th>
+        <th>Medium &mdash; total monthly TCO &mdash; Gold's</th>
+        <th>Large &mdash; total monthly TCO</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Microsoft Fabric</strong></td>
+        <td>~$12K&ndash;$21K/mo</td>
+        <td><strong>~$34K&ndash;$60K/mo</strong></td>
+        <td>~$96K&ndash;$188K/mo</td>
+      </tr>
+      <tr>
+        <td><strong>Databricks</strong></td>
+        <td>~$17K&ndash;$32K/mo</td>
+        <td><strong>~$61K&ndash;$89K/mo</strong></td>
+        <td>~$168K&ndash;$243K/mo</td>
+      </tr>
+      <tr>
+        <td><strong>Snowflake</strong></td>
+        <td>~$8K&ndash;$17K/mo</td>
+        <td><strong>~$34K&ndash;$57K/mo</strong></td>
+        <td>~$94K&ndash;$194K/mo</td>
+      </tr>
+      <tr>
+        <td><strong>AWS Redshift</strong></td>
+        <td>~$10K&ndash;$18K/mo</td>
+        <td><strong>~$33K&ndash;$62K/mo</strong></td>
+        <td>~$94K&ndash;$184K/mo</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout-box" style="margin-top: 24px;">
+    <p><strong>Read across the Medium row:</strong> three of the four platforms cluster around <strong>$33K&ndash;$62K/month all-in</strong>; Databricks runs noticeably higher due to a more specialized team. Spread within each cell is driven primarily by reserved / commitment terms and local labor markets.</p>
+  </div>
+</section>
+
+<!-- ── DIFFERENTIATOR MATRIX ── -->
+<section class="section">
+  <div class="section-header">
+    <span class="section-num">08</span>
+    <span class="section-title">DIFFERENTIATOR MATRIX</span>
+  </div>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Dimension</th>
+        <th>Fabric</th>
+        <th>Databricks</th>
+        <th>Snowflake</th>
+        <th>Redshift</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>ML / AI workloads</strong></td>
+        <td>Limited (Copilot early-stage)</td>
+        <td>Native (Spark ML, MLflow, model serving)</td>
+        <td>Cortex (credit-based)</td>
+        <td>SageMaker integration (extra cost)</td>
+      </tr>
+      <tr>
+        <td><strong>Real-time / streaming</strong></td>
+        <td>KQL / Real-Time Intelligence</td>
+        <td>Delta Live Tables, Structured Streaming</td>
+        <td>Snowpipe Streaming (near real-time)</td>
+        <td>Kinesis integration (limited native)</td>
+      </tr>
+      <tr>
+        <td><strong>Multi-cloud portability</strong></td>
+        <td>Azure only</td>
+        <td>AWS / Azure / GCP</td>
+        <td>AWS / Azure / GCP</td>
+        <td>AWS only</td>
+      </tr>
+      <tr>
+        <td><strong>Power BI integration</strong></td>
+        <td>Native &mdash; DirectLake mode is Fabric-exclusive</td>
+        <td>Connector + extra licensing</td>
+        <td>Connector + extra licensing</td>
+        <td>Connector + extra licensing</td>
+      </tr>
+      <tr>
+        <td><strong>MACC / cloud commit drawdown</strong></td>
+        <td>Yes (Azure SKU)</td>
+        <td>Partial (via Azure marketplace)</td>
+        <td>Partial (via cloud marketplaces)</td>
+        <td>Yes (AWS-native)</td>
+      </tr>
+      <tr>
+        <td><strong>Operational complexity</strong></td>
+        <td>Medium</td>
+        <td>High</td>
+        <td>Low&ndash;Medium</td>
+        <td>Medium&ndash;Low (Serverless)</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ── STRATEGIC CONSIDERATIONS ── -->
+<section class="section">
+  <div class="section-header">
+    <span class="section-num">09</span>
+    <span class="section-title">STRATEGIC CONSIDERATIONS</span>
+  </div>
+
+  <p class="section-intro">The right platform depends on which dimensions weigh most heavily for the organization. The framings below describe when each platform is materially advantaged &mdash; not which one Gold's should pick.</p>
+
+  <div class="grid-2">
+    <div class="panel" style="border-top: 3px solid var(--gold);">
+      <div class="panel-title">WHEN MICROSOFT FABRIC IS ADVANTAGED</div>
+      <ul>
+        <li>Heavy existing Microsoft / Azure / M365 footprint</li>
+        <li>Active Azure Consumption Commitment (MACC) &mdash; Fabric draws down existing budget rather than creating new spend</li>
+        <li>Power BI is the BI tool of record &mdash; DirectLake mode and bundled viewer licenses (F64+) materially reduce cost vs. competitors</li>
+        <li>Existing analyst / engineer talent is in the Microsoft stack &mdash; fastest upskill path</li>
+        <li>Team size and complexity should be minimized (asset-light operating model)</li>
+      </ul>
+    </div>
+    <div class="panel" style="border-top: 3px solid var(--gold);">
+      <div class="panel-title">WHEN DATABRICKS IS ADVANTAGED</div>
+      <ul>
+        <li>ML / AI is core to product strategy (recommendations, personalization, churn prediction)</li>
+        <li>Spark-distributed processing is required at scale</li>
+        <li>Real-time streaming pipelines are central to the architecture</li>
+        <li>Organization is comfortable funding a specialized platform engineer from day one</li>
+        <li>Multi-cloud portability is a long-term requirement</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="grid-2" style="margin-top: 16px;">
+    <div class="panel" style="border-top: 3px solid var(--gold);">
+      <div class="panel-title">WHEN SNOWFLAKE IS ADVANTAGED</div>
+      <ul>
+        <li>Multi-cloud portability is a hard requirement</li>
+        <li>SQL-first analytics is the dominant workload</li>
+        <li>Operational simplicity is prized &mdash; auto-suspend, auto-scale, minimal admin</li>
+        <li>Analyst-led self-service is core to the data culture</li>
+        <li>BI tool is Tableau, Looker, or another non-Microsoft platform</li>
+      </ul>
+    </div>
+    <div class="panel" style="border-top: 3px solid var(--gold);">
+      <div class="panel-title">WHEN AWS REDSHIFT IS ADVANTAGED</div>
+      <ul>
+        <li>Organization is AWS-native and has an active EDP / commit</li>
+        <li>Workloads are steady, predictable, and SQL-centric</li>
+        <li>3-year reserved commitments are acceptable for cost optimization</li>
+        <li>Existing AWS data engineering team is in place</li>
+        <li>Compute idle cost matters less than steady-state efficiency</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout-box" style="margin-top: 24px; border-left-color: var(--gold); border-left-width: 6px;">
+    <div class="callout-title">FUTURE UPGRADE PATH &mdash; LAYERING DATABRICKS ON FABRIC</div>
+    <p>A pattern worth knowing: organizations that select Fabric as the analytics and data engineering foundation can later layer in <strong>Azure Databricks</strong> (sold through Azure Marketplace) for ML model training and advanced Spark workloads, reading directly from OneLake / Delta Lake. This avoids paying Databricks rates for workloads Fabric handles natively, while preserving the upgrade path as ML / AI maturity grows. It is not a binary choice.</p>
+  </div>
+</section>
+
+<!-- ── DIRECTLAKE CALL-OUT ── -->
+<section class="section">
+  <div class="section-header">
+    <span class="section-num">10</span>
+    <span class="section-title">DIRECTLAKE MODE &mdash; FABRIC-EXCLUSIVE</span>
+  </div>
+
+  <p class="section-intro">DirectLake is a Power BI semantic-model storage mode introduced with Fabric, enabling direct query of OneLake Parquet / Delta tables at near in-memory performance &mdash; without import refresh or DirectQuery latency. It is exclusive to Fabric.</p>
+
+  <div class="grid-2">
+    <div class="panel">
+      <div class="panel-title">WHY IT MATTERS</div>
+      <ul>
+        <li>Eliminates the historic trade-off between import (fast, stale) and DirectQuery (live, slow)</li>
+        <li>Removes data duplication between the lakehouse and the semantic model</li>
+        <li>Reduces refresh time, model size, and compute cost on Power BI workloads</li>
+        <li>Materially advantages Fabric for organizations with significant Power BI investment</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <div class="panel-title">CAVEATS</div>
+      <ul>
+        <li>Only works against OneLake-stored Delta tables &mdash; data must land in Fabric</li>
+        <li>Some advanced semantic-model features still require import or DirectQuery fallback</li>
+        <li>Still maturing as a feature; capability gap with import mode narrows release-by-release</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── OPEN QUESTIONS ── -->
+<section class="section">
+  <div class="section-header">
+    <span class="section-num">11</span>
+    <span class="section-title">OPEN QUESTIONS &mdash; NARROW THE RANGES</span>
+  </div>
+
+  <p class="section-intro">Answering 3&ndash;4 of these will reduce the budget and platform spread by an order of magnitude. The first three (cloud commitments, data volume, BI tool) move the needle the most.</p>
+
+  <ol style="padding-left: 20px; line-height: 1.8;">
+    <li><strong>Data volume and growth rate</strong> &mdash; how many GB / TB stored today, and 12-month projection?</li>
+    <li><strong>Workload mix</strong> &mdash; what % of compute is batch ETL vs. interactive SQL vs. ML training / inference vs. streaming?</li>
+    <li><strong>Concurrency</strong> &mdash; how many simultaneous users / jobs at peak?</li>
+    <li><strong>Existing cloud commitments</strong> &mdash; active AWS EDP, Azure MACC, or Google CUD agreements?</li>
+    <li><strong>Compliance requirements</strong> &mdash; HIPAA, PCI-DSS, SOC 2 Type II, FedRAMP?</li>
+    <li><strong>BI tool</strong> &mdash; Power BI, Tableau, Looker, other?</li>
+    <li><strong>Data freshness</strong> &mdash; near-real-time (&lt; 5 min) required, or hourly / daily acceptable?</li>
+    <li><strong>Team composition today</strong> &mdash; existing cloud engineers / DBAs / data engineers? Retraining vs. net-new?</li>
+    <li><strong>Multi-cloud or single-cloud</strong> &mdash; replicated across providers / regions?</li>
+    <li><strong>Contract term flexibility</strong> &mdash; PAYG for POC vs. 1&ndash;3 year reserved?</li>
+  </ol>
+</section>
+
+<!-- ── SOURCE METHODOLOGY ── -->
+<section class="section">
+  <div class="section-header">
+    <span class="section-num">12</span>
+    <span class="section-title">METHODOLOGY &amp; SOURCES</span>
+  </div>
+
+  <p>Pricing data was compiled from public vendor pricing pages, vendor documentation, third-party FinOps analyses, and recent industry reporting. Snapshot reflects platform pricing as of <strong>April 2026</strong>, including:</p>
+
+  <ul>
+    <li>Snowflake Snowpipe simplified pricing (effective Dec 8, 2025) at 0.0037 credits/GB</li>
+    <li>Snowflake Egress Cost Optimizer (GA April 2025)</li>
+    <li>Microsoft Fabric F-SKU PAYG and Reserved 1-year pricing (US West 2 reference)</li>
+    <li>Power BI Pro / PPU price changes effective April 1, 2025 ($14 / $24 per user / month)</li>
+    <li>Databricks Standard tier deprecation on AWS / GCP (October 2025)</li>
+    <li>AWS Redshift Provisioned (RA3) and Serverless (RPU) US East 1 rates</li>
+    <li>US salary midpoints from Coursera, Built In, levels.fyi, Payscale, and Dice (2026 reference data)</li>
+  </ul>
+
+  <p style="margin-top: 16px; font-size: 13px; color: var(--mid);">All figures are presented as ranges to reflect the inherent variance in real-world deployments. Final budget ranges narrow significantly as the open questions in section 11 are answered.</p>
+</section>
+
+<div class="prev-next-nav no-print">
+  <a href="execution.html#data-layer">
+    <span class="pn-label">&#8592; Back</span>
+    <span class="pn-title">EXECUTION PLAN &middot; DATA LAYER</span>
+  </a>
+  <a href="architecture.html" class="next">
+    <span class="pn-label">Reference &#8594;</span>
+    <span class="pn-title">PLATFORM ARCHITECTURE</span>
+  </a>
+</div>
+
+</main>
+
+<footer>
+  Gold's Gym &middot; Digital Transformation &nbsp;&middot;&nbsp; <strong>Data Platform Appendix</strong> &nbsp;&middot;&nbsp; April 2026
+</footer>
+
+</body>
+</html>

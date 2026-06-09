@@ -53,6 +53,9 @@
     <a class="nav-tab" href="#governance">Vendor Governance</a>
     <a class="nav-tab" href="#rubric">Vendor RFP</a>
     <a class="nav-tab" href="#landscape">Vendor Landscape</a>
+    <a class="nav-tab" href="#vendors-list">Short List &amp; Costs</a>
+    <a class="nav-tab" href="#data-layer">Data Layer</a>
+    <a class="nav-tab" href="#resourcing">Resourcing &amp; Timeline</a>
   </div>
 </nav>
 
@@ -345,7 +348,7 @@
     <span class="section-title">VENDOR LANDSCAPE &amp; COMMERCIAL STRATEGY</span>
   </div>
 
-  <p class="section-intro">Clear options exist in every category. The RFP process will evaluate fit, but the landscape is well-mapped.</p>
+  <p class="section-intro">Clear options exist in every category. This is the broader landscape view &mdash; current state, contenders, and what to evaluate. <a href="#vendors-list" style="color: var(--gold);">Section 06</a> drills down into the same categories with cost ranges and what it takes to stand each one up.</p>
 
   <table class="data-table">
     <thead>
@@ -355,44 +358,44 @@
       <tr>
         <td><strong>Member Management</strong></td>
         <td>ABC / Motionsoft</td>
-        <td>ABC (upgraded), Zenoti, Perfect Gym, Exerp, Hapana</td>
+        <td>ABC (headless path), Zenoti, Perfect Gym, Hapana, Peak</td>
         <td>API quality, franchise support, billing flexibility</td>
       </tr>
       <tr>
-        <td><strong>CRM / CDP</strong></td>
+        <td><strong>CRM</strong></td>
         <td>HubSpot (corporate only)</td>
-        <td>HubSpot (retain), evaluate Segment + specialized</td>
-        <td>Franchise-level access, attribution, automation</td>
+        <td>HubSpot (retain), Salesforce, MMS-bundled CRM</td>
+        <td>Franchise-level access, real-time sync, automation</td>
       </tr>
       <tr>
-        <td><strong>Mobile App</strong></td>
+        <td><strong>Marketing Automation / CDP</strong></td>
+        <td>Varies by franchisee</td>
+        <td>Rudderstack (warehouse-native), Segment (CDP), HubSpot extension</td>
+        <td>Multi-location management, attribution, identity resolution</td>
+      </tr>
+      <tr>
+        <td><strong>Member App</strong></td>
         <td>Motion Vibe (4.5/5 score)</td>
-        <td>Motion Vibe (retain), evaluate alternatives</td>
+        <td>Motion Vibe (retain), 3rd-party (Trainerize / NetPulse-style), MMS-bundled, custom build</td>
         <td>Integration depth, engagement features, roadmap</td>
       </tr>
       <tr>
-        <td><strong>Website Platform</strong></td>
-        <td>Fragmented (~90% non-standard)</td>
-        <td>Custom CMS, headless CMS, managed platform</td>
-        <td>Franchisee flexibility, data integration, SEO</td>
-      </tr>
-      <tr>
-        <td><strong>Data / Analytics</strong></td>
-        <td>Limited / ad hoc</td>
-        <td>Databricks, Snowflake, Azure Fabric</td>
-        <td>Scale, real-time capability, AI/ML support</td>
-      </tr>
-      <tr>
-        <td><strong>Marketing / Automation</strong></td>
-        <td>Varies by franchisee</td>
-        <td>SOCi, Yext, localized platforms</td>
-        <td>Multi-location management, local + corporate</td>
-      </tr>
-      <tr>
-        <td><strong>PT &amp; Wellness</strong></td>
+        <td><strong>Digital Training / PT</strong></td>
         <td>Demotu, Apex-MD</td>
-        <td>Demotu (retain), evaluate integration depth</td>
+        <td>Demotu (retain), PT Enhance, Trainerize</td>
         <td>Data flow into intelligence layer, personalized recommendations</td>
+      </tr>
+      <tr>
+        <td><strong>BI &amp; Analytics</strong></td>
+        <td>Power BI (Microsoft ecosystem)</td>
+        <td>Power BI (retain), Tableau, Looker</td>
+        <td>Self-service analytics, semantic layer, governance</td>
+      </tr>
+      <tr>
+        <td><strong>Unified Data Layer</strong></td>
+        <td>Limited / ad hoc</td>
+        <td>Microsoft Fabric, Databricks, Snowflake, AWS Redshift</td>
+        <td>See <a href="#data-layer" style="color: var(--gold);">Section 07</a> for decision criteria</td>
       </tr>
     </tbody>
   </table>
@@ -401,7 +404,7 @@
     <div class="panel">
       <div class="panel-title">COMMERCIAL OPPORTUNITIES</div>
       <ul>
-        <li><strong>Volume leverage</strong> &mdash; 700+ locations creates significant purchasing power</li>
+        <li><strong>Volume leverage</strong> &mdash; ~400 US locations creates significant purchasing power</li>
         <li><strong>Vendor funding</strong> &mdash; migration incentives, implementation support, co-marketing</li>
         <li><strong>Competitive bids</strong> &mdash; RFP process drives better pricing and terms</li>
         <li><strong>Partnership models</strong> &mdash; revenue sharing, co-development, and strategic alignment</li>
@@ -419,10 +422,272 @@
   </div>
 
   <div class="callout-box" style="margin-top: 24px;">
-    <p><strong>Commercial strategy is as important as technical strategy.</strong> Gold's has significant leverage with 700+ locations. The RFP process will surface the best options, the best pricing, and the best partnership models. This is a buyers' market.</p>
+    <p><strong>Commercial strategy is as important as technical strategy.</strong> Gold's has significant leverage with ~400 US locations in scope. The RFP process will surface the best options, the best pricing, and the best partnership models. This is a buyers' market.</p>
   </div>
 
   <p style="margin-top: 24px; font-size: 14px; color: var(--mid);">For detailed competitive stack analysis across 7 major fitness brands and 13 technology categories, see the <a href="../final-report/comps-stacks.html" style="color: var(--gold);">Phase 0 Competitive Landscape Matrix &rarr;</a></p>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     SECTION 06 — VENDOR SHORT LIST & COST PROFILE
+     ════════════════════════════════════════════════════════════ -->
+<section class="section" id="vendors-list">
+  <div class="section-header">
+    <span class="section-num">06</span>
+    <span class="section-title">VENDOR SHORT LIST &amp; COST PROFILE</span>
+  </div>
+
+  <p class="section-intro">Drilling down from the broader landscape: the table below shows the short list of vendors going to RFI / RFP by category, along with the cost profile (in ranges) and what it takes to stand each one up &mdash; so we can answer &ldquo;who are we talking to, and what does it take?&rdquo; in a single view.</p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Architecture Block</th>
+        <th>Top Vendor Options</th>
+        <th>Implementation Cost</th>
+        <th>Operational Cost</th>
+        <th>Team / Resources</th>
+        <th>Implementation Effort</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Member Management</strong><br><span style="color: var(--mid); font-size: 12px;">incl. POS, gate / access</span></td>
+        <td>ABC Fitness (incumbent &mdash; <strong>2.3/5 Phase 0 score</strong>; headless path), Zenoti, Perfect Gym, Hapana, Peak</td>
+        <td>Medium&ndash;High; vendor-specific, RFP-defined</td>
+        <td>Per-location SaaS + per-transaction; Zenoti includes ACH validation, auto-retries, dunning</td>
+        <td>Vendor mgr + integration engineer + billing analyst (asset-light)</td>
+        <td>Medium&ndash;High; Zenoti spa/salon DNA flagged ("disaster" go-lives documented in third-party reviews); timeline TBD by vendor</td>
+      </tr>
+      <tr>
+        <td><strong>CRM</strong></td>
+        <td>HubSpot (incumbent), Salesforce, MMS-bundled CRM</td>
+        <td>Low&ndash;Medium to expand HubSpot; High for Salesforce greenfield</td>
+        <td>Per-seat + per-contact SaaS</td>
+        <td>Marketing ops + integration engineer</td>
+        <td>HubSpot expand: 1&ndash;3 mo &middot; Salesforce greenfield: 6&ndash;9 mo &middot; <strong>Critical gap:</strong> 48-hr latency to Motionsoft today; SMS blocked by legal</td>
+      </tr>
+      <tr>
+        <td><strong>Marketing Automation / CDP</strong></td>
+        <td>Rudderstack (warehouse-native), Segment (CDP), HubSpot extension</td>
+        <td>Medium</td>
+        <td>Per-location pricing typical for SOCi / Yext</td>
+        <td>Marketing ops + analytics</td>
+        <td>3&ndash;6 mo &middot; CDP foundation depends on Unified Data Layer selection</td>
+      </tr>
+      <tr>
+        <td><strong>Member App</strong></td>
+        <td>Motion Vibe (incumbent &mdash; <strong>4.5/5 Phase 0 score, retain</strong>), 3rd-party (Trainerize / NetPulse-style), MMS-bundled, custom build</td>
+        <td>Low if retained; High for custom build</td>
+        <td>Per-active-member or per-location licensing</td>
+        <td>Product mgr + (mobile dev team if custom)</td>
+        <td>Retain: ongoing &middot; Custom: 9&ndash;12 mo &middot; PT integration exists in Motion Vibe (John Reed pilot) but not enabled for Gold's</td>
+      </tr>
+      <tr>
+        <td><strong>Digital Training / PT</strong></td>
+        <td>Demotu (incumbent), PT Enhance, Trainerize</td>
+        <td>Low&ndash;Medium</td>
+        <td>Per-trainer or per-member</td>
+        <td>PT operations lead</td>
+        <td>2&ndash;4 mo &middot; PT Enhance currently in pilot at Crunch / UFC Gym</td>
+      </tr>
+      <tr>
+        <td><strong>BI &amp; Analytics</strong></td>
+        <td>Power BI (incumbent &mdash; Microsoft ecosystem fit), Tableau, Looker</td>
+        <td><em>Research in progress (Matt)</em></td>
+        <td><em>Research in progress (Matt)</em></td>
+        <td><em>Research in progress (Matt)</em></td>
+        <td><em>Research in progress (Matt)</em></td>
+      </tr>
+      <tr>
+        <td><strong>Unified Data Layer</strong></td>
+        <td>Microsoft Fabric, Databricks, Snowflake, AWS Redshift</td>
+        <td colspan="4">Detailed in <a href="#data-layer" style="color: var(--gold); font-weight: 600;">Section 07 &mdash; Unified Data Layer</a> with full analysis in the <a href="data-platform-appendix.html" style="color: var(--gold); font-weight: 600;">data-platform appendix</a>. Indicative Gold's-tier all-in TCO: $33K&ndash;$89K/month.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout-box" style="margin-top: 24px;">
+    <div class="callout-title">STRATEGIC QUESTION &mdash; BUILD VS. BUY ON AGENTS</div>
+    <p>Every major vendor is now bundling AI agents into their stack. The question for Gold's: <strong>do we pay vendors for their agents, or do we own our own?</strong> Our recommendation is that the brand owns its agents &mdash; member experience, recommendations, and personalization are core IP, not features to rent. This decision affects vendor pricing logic across every category in the table above.</p>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     SECTION 07 — UNIFIED DATA LAYER
+     ════════════════════════════════════════════════════════════ -->
+<section class="section" id="data-layer">
+  <div class="section-header">
+    <span class="section-num">07</span>
+    <span class="section-title">UNIFIED DATA LAYER</span>
+  </div>
+
+  <p class="section-intro">The data layer is the foundation. Every member transaction, app interaction, web event, and operational signal flows through it &mdash; and the choice of platform here shapes what's possible at every layer above (CRM, BI, ML, member experience). This section frames the four platforms in scope and the criteria for selecting among them; the full analysis lives in a companion appendix.</p>
+
+  <div class="panel" style="margin-top: 16px;">
+    <div class="panel-title">PLATFORMS IN SCOPE</div>
+    <table class="data-table" style="border: none; margin: 0;">
+      <thead>
+        <tr>
+          <th>Platform</th>
+          <th>Compute Model</th>
+          <th>Best For</th>
+          <th>Idle Cost</th>
+          <th>Power BI</th>
+          <th>Operational Complexity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Microsoft Fabric</strong></td>
+          <td>Pooled Capacity Units (CUs)</td>
+          <td>Microsoft / Azure-integrated orgs; BI-heavy workloads</td>
+          <td>Capacity billed continuously unless paused</td>
+          <td>Native &mdash; DirectLake mode is Fabric-exclusive</td>
+          <td>Medium</td>
+        </tr>
+        <tr>
+          <td><strong>Databricks</strong></td>
+          <td>DBU + cloud VM (dual-layer)</td>
+          <td>ML / AI + advanced data engineering + streaming</td>
+          <td>Auto-terminate clusters; near-zero when off</td>
+          <td>Connector + extra licensing</td>
+          <td>High</td>
+        </tr>
+        <tr>
+          <td><strong>Snowflake</strong></td>
+          <td>Credits (per-second warehouses)</td>
+          <td>Multi-cloud, SQL-first analytics</td>
+          <td>Auto-suspend; zero when idle</td>
+          <td>Connector + extra licensing</td>
+          <td>Low&ndash;Medium</td>
+        </tr>
+        <tr>
+          <td><strong>AWS Redshift</strong></td>
+          <td>Node-hours (provisioned) or RPU-hours (Serverless)</td>
+          <td>AWS-native orgs; steady SQL analytics</td>
+          <td>Serverless: zero &middot; Provisioned: continuous</td>
+          <td>Connector + extra licensing</td>
+          <td>Medium</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="grid-2" style="margin-top: 24px;">
+    <div class="panel" style="border-top: 3px solid var(--gold);">
+      <div class="panel-title">DECISION CRITERIA</div>
+      <ul>
+        <li><strong>Existing cloud commitment</strong> &mdash; an active Azure MACC, AWS EDP, or Google CUD can swing effective platform cost by 20&ndash;40%</li>
+        <li><strong>BI tool of record</strong> &mdash; Power BI workloads benefit disproportionately from Fabric (DirectLake mode; viewer licenses bundled at F64+)</li>
+        <li><strong>ML / AI workload weight</strong> &mdash; heavy Spark / model training shifts the balance toward Databricks</li>
+        <li><strong>Concurrency &amp; real-time needs</strong> &mdash; streaming and high-concurrency interactive workloads price differently across platforms</li>
+        <li><strong>Team skill profile</strong> &mdash; existing Azure / Power BI engineers vs. Snowflake admins vs. Databricks specialists materially impact ramp time and staffing cost</li>
+        <li><strong>Compliance posture</strong> &mdash; HIPAA, PCI-DSS, SOC 2 may eliminate lower tiers and require specific editions</li>
+      </ul>
+    </div>
+    <div class="panel" style="border-top: 3px solid var(--gold);">
+      <div class="panel-title">INDICATIVE SIZING (GOLD'S FOOTPRINT)</div>
+      <p>Gold's profile &mdash; ~400 US locations, member transactions, app and web analytics, operational reporting &mdash; sits in the <strong>Medium tier</strong> under the comparison framework: 1&ndash;50 TB stored, 100 GB&ndash;1 TB/day ingest, moderate concurrency.</p>
+      <p style="margin-top: 12px;">Indicative all-in monthly TCO at this tier (platform + amortized staffing) ranges roughly <strong>$33K&ndash;$89K/month</strong> across the four platforms, with the spread driven primarily by staffing (specialized engineers) and reserved / commitment terms.</p>
+      <p style="margin-top: 12px; font-size: 12px; color: var(--mid);">Final ranges narrow significantly once 3&ndash;4 of the open sizing questions are answered (data volume, workload mix, existing commitments, BI tool).</p>
+    </div>
+  </div>
+
+  <div class="callout-box" style="margin-top: 24px;">
+    <div class="callout-title">OPEN QUESTIONS BEFORE FINAL SELECTION</div>
+    <p>Platform selection should be driven by answers to a small set of sizing and constraint questions: data volumes today and 12-month projection, workload mix (batch / interactive SQL / ML / streaming), concurrency, existing cloud commitments, compliance requirements, BI tool, real-time freshness needs, team composition, multi-cloud requirements, and contract term flexibility. The full appendix walks through all ten.</p>
+    <div style="margin-top: 16px;">
+      <a href="data-platform-appendix.html" class="cta-btn">View Full Data Platform Analysis &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     SECTION 08 — IMPLEMENTATION & RESOURCING
+     ════════════════════════════════════════════════════════════ -->
+<section class="section" id="resourcing">
+  <div class="section-header">
+    <span class="section-num">08</span>
+    <span class="section-title">IMPLEMENTATION &amp; RESOURCING</span>
+  </div>
+
+  <p class="section-intro">A working timeline from selection through implementation kickoff, the team Gold's needs to assemble, and budget ranges to plan against. The plan answers the three questions: <strong>time, money, people.</strong></p>
+
+  <div class="panel" style="margin-top: 16px;">
+    <div class="panel-title">SELECTION &amp; IMPLEMENTATION TIMELINE</div>
+    <div class="timeline-bar">
+      <div class="tl-phase">
+        <div class="tl-num">May</div>
+        <div class="tl-label">Criteria &amp; RFIs Out</div>
+        <div class="tl-duration">Wk 1&ndash;4</div>
+      </div>
+      <div class="tl-phase">
+        <div class="tl-num">Jun&ndash;Jul</div>
+        <div class="tl-label">RFI Back &amp; Forth</div>
+        <div class="tl-duration">8 weeks</div>
+      </div>
+      <div class="tl-phase">
+        <div class="tl-num">Aug</div>
+        <div class="tl-label">Select &amp; Negotiate</div>
+        <div class="tl-duration">4 weeks</div>
+      </div>
+      <div class="tl-phase active">
+        <div class="tl-num">Sep 1</div>
+        <div class="tl-label">Implementation Kickoff</div>
+        <div class="tl-duration">Phase 1 begins</div>
+      </div>
+    </div>
+    <p style="margin-top: 12px; font-size: 13px; color: var(--mid);">Implementation depth varies by selection. A Zenoti CRM swap is a light lift; a Salesforce greenfield is a multi-quarter build; HubSpot is already in place and continues. Each category will get its own implementation wave.</p>
+  </div>
+
+  <p style="margin-top: 16px; font-size: 13px; color: var(--mid);"><strong>Constraint:</strong> Gold's leadership has anchored on an <strong>asset-light operating model</strong> &mdash; technology must enable self-service and automation rather than supporting large back-office teams. The Assemble model is rated 5/10 on team investment (vs. 8/10 for full Build, 2/10 for pure Buy) per Phase 0 talking points.</p>
+
+  <div class="grid-2" style="margin-top: 16px;">
+    <div class="panel" style="border-top: 3px solid var(--gold);">
+      <div class="panel-title">INTERNAL TEAM (GOLD'S)</div>
+      <ul>
+        <li><strong>Platform / Product Lead</strong> &mdash; 1 &middot; technical oversight of integrated stack</li>
+        <li><strong>Data Architect</strong> &mdash; 1 &middot; owns unified data layer and CDP setup</li>
+        <li><strong>Integration Lead</strong> &mdash; 1 &middot; vendor API coordination, orchestration</li>
+        <li><strong>Vendor Manager</strong> &mdash; 1 &middot; SLA monitoring, escalation, contract mgmt</li>
+        <li><strong>Digital Operations</strong> &mdash; 1&ndash;2 &middot; website, app, marketing tech ops</li>
+      </ul>
+      <div style="margin-top: 8px; font-size: 12px; color: var(--mid);">Headcounts are minimums &mdash; final counts depend on vendor selection and rollout pace.</div>
+    </div>
+    <div class="panel" style="border-top: 3px solid var(--gold);">
+      <div class="panel-title">EXTERNAL PARTNERS</div>
+      <ul>
+        <li><strong>StackHack</strong> &mdash; architecture, integration, data layer (Phase 0 incumbent; Phase 1&ndash;2 scope under contract)</li>
+        <li><em>MMS implementation partner &mdash; TBD via RFP</em></li>
+        <li><em>App development partner &mdash; STRV in place; alternatives evaluated if app strategy shifts</em></li>
+        <li><em>Marketing / brand agency &mdash; TBD; aligned with CRM / CDP selection</em></li>
+        <li><em>Data layer implementation partner &mdash; TBD; tied to Fabric / Databricks / Snowflake decision</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel" style="margin-top: 16px;">
+    <div class="panel-title">BUDGET RANGES (PER CATEGORY, FY26)</div>
+    <table class="data-table" style="border: none; margin: 0;">
+      <thead>
+        <tr><th>Category</th><th>Implementation (one-time)</th><th>Operational (annual)</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Member Management</strong></td><td><em>RFP-defined</em></td><td><em>RFP-defined</em></td><td>Per-location SaaS pricing; vendor-specific costs RFP-defined</td></tr>
+        <tr><td><strong>CRM / Marketing / CDP</strong></td><td><em>RFP-defined</em></td><td><em>RFP-defined</em></td><td>HubSpot retained; expansion priced separately; Salesforce greenfield significantly higher</td></tr>
+        <tr><td><strong>Member App</strong></td><td><em>RFP-defined</em></td><td><em>RFP-defined</em></td><td>Motion Vibe retain = lowest cost; custom build &gt;&gt; license</td></tr>
+        <tr><td><strong>Digital Training / PT</strong></td><td><em>RFP-defined</em></td><td><em>RFP-defined</em></td><td>Demotu retained; PT Enhance under evaluation</td></tr>
+        <tr><td><strong>BI &amp; Analytics</strong></td><td>Power BI continues &mdash; minimal; semantic model / dashboard buildout ~$50K&ndash;$150K</td><td>Pro ~$14/user-mo &middot; PPU ~$24/user-mo &middot; viewer licenses bundled at Fabric F64+</td><td>Capacity scaling tied to data layer selection</td></tr>
+        <tr><td><strong>Unified Data Layer</strong></td><td>Setup + ramp ~$100K&ndash;$500K (selection-dependent)</td><td>Platform-only: ~$2K&ndash;$22K/mo &middot; All-in incl. staffing: ~$33K&ndash;$89K/mo (Medium tier)</td><td>See <a href="#data-layer" style="color: var(--gold); font-weight: 600;">Section 07</a> + <a href="data-platform-appendix.html" style="color: var(--gold); font-weight: 600;">appendix</a> for platform-by-platform breakdown</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout-box" style="margin-top: 24px;">
+    <div class="callout-title">FROM PLAN TO EXECUTION</div>
+    <p><strong>By September 1, vendors are selected and Phase 1 implementation begins.</strong> The path between today and that date is concrete: criteria locked in May, RFIs in market by end of May, evaluation through summer, decisions in August. Resourcing is staged against that timeline so Gold's hires what it needs, when it needs it.</p>
+  </div>
 </section>
 
 <!-- ── Prev/Next Nav ── -->

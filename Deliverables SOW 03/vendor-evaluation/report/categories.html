@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gold's Gym — MMS Vendor Evaluation — Categories</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+
+<style>
+.gate-pass{color:var(--green,#2E7D32);font-weight:700}
+.gate-fail{color:var(--red,#C62828);font-weight:700}
+.gate-unclear{color:var(--amber,#D48800);font-weight:700}
+.provisional-banner{background:#FFF3D6;border:2px solid #D48800;color:#8A5C00;
+  padding:12px 20px;border-radius:8px;font-weight:700;margin:0 0 24px}
+.heat-cell{text-align:center;font-weight:700;border-radius:4px}
+.ev-quote{background:#FAFAF8;border-left:3px solid var(--gold,#F2C23E);
+  padding:10px 14px;margin:8px 0;font-size:13.5px}
+.ev-quote .src{color:#888;font-size:12px;margin-top:4px}
+.ev-quote.contradicts{border-left-color:var(--red,#C62828)}
+.rank-bar-row{display:flex;align-items:center;gap:14px;margin:10px 0}
+.rank-bar-row .vname{width:150px;font-weight:600;font-size:14.5px}
+.rank-bar-track{flex:1;background:#ECEAE4;border-radius:6px;height:30px;position:relative}
+.rank-bar-fill{height:100%;border-radius:6px;display:flex;align-items:center;
+  justify-content:flex-end;padding-right:10px;color:#fff;font-weight:800;font-size:13.5px;
+  min-width:56px}
+.hs-chip{background:var(--gold,#F2C23E);color:#1A1A1A;font-size:10px;font-weight:800;
+  padding:1px 7px;border-radius:9px;margin-left:6px;vertical-align:2px}
+#evSearch{width:100%;padding:10px 14px;font-size:14px;border:1px solid #E5E2DC;
+  border-radius:6px;margin:12px 0}
+.chart-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.chart-box{background:#fff;border:1px solid #E5E2DC;border-radius:8px;padding:16px}
+</style>
+
+</head>
+<body>
+
+<nav class="global-nav">
+  <div class="global-stepper">
+    <a href="index.html" class="step" data-page="1"><span class="step-num">1</span><span class="step-label">Summary</span></a>
+    <span class="step-connector"></span>
+    <a href="methodology.html" class="step" data-page="2"><span class="step-num">2</span><span class="step-label">Methodology</span></a>
+    <span class="step-connector"></span>
+    <a href="threshold-gates.html" class="step" data-page="3"><span class="step-num">3</span><span class="step-label">Gates</span></a>
+    <span class="step-connector"></span>
+    <a href="categories.html" class="step" data-page="4"><span class="step-num">4</span><span class="step-label">Categories</span></a>
+    <span class="step-connector"></span>
+    <a href="business-groups.html" class="step" data-page="5"><span class="step-num">5</span><span class="step-label">Business Groups</span></a>
+    <span class="step-connector"></span>
+    <a href="evidence.html" class="step" data-page="6"><span class="step-num">6</span><span class="step-label">Evidence</span></a>
+  </div>
+</nav>
+
+<header>
+  <div class="header-bg-text">GOLD'S</div>
+  <div class="header-inner">
+    <div class="header-eyebrow">Gold's Gym · One System Initiative · GG-2026-MMS-001</div>
+    <h1>MMS VENDOR EVALUATION<br><span>CATEGORY DEEP-DIVE</span></h1>
+    <p class="header-sub">Item-level scores per category, with high-signal items and layer provenance.</p>
+    <div class="header-meta">
+      <div class="meta-pill"><span class="dot"></span>Membership Management System RFI</div>
+      <div class="meta-pill"><span class="dot"></span>July 2026</div>
+      <div class="meta-pill"><span class="dot"></span>StackHack Labs LLC</div>
+    </div>
+  </div>
+</header>
+
+<nav class="sticky-nav">
+  <div class="nav-inner">
+    <div class="nav-page-indicator">
+      <a href="threshold-gates.html" class="nav-prev-arrow">&#8592;</a>
+      <span class="nav-page-badge">4 / 6</span>
+      <a href="business-groups.html" class="nav-next-arrow">&#8594;</a>
+    </div>
+    <span class="nav-divider"></span>
+    <a class="nav-tab active" href="#radar">Profiles</a><a class="nav-tab" href="#api_integration">API</a><a class="nav-tab" href="#data_ownership">Data</a><a class="nav-tab" href="#franchise_architecture">Franchise</a><a class="nav-tab" href="#core_features">Core</a><a class="nav-tab" href="#commercial_terms">Commercial</a>
+  </div>
+</nav>
+
+<main class="page-main">
+<div class="provisional-banner">PROVISIONAL — item scores pending SME ratification in the review console. Totals may change.</div>
+
+<section class="section" id="radar">
+  <div class="section-header"><span class="section-num">01</span>
+  <span class="section-title">CATEGORY PROFILES</span></div>
+  <div class="chart-box" style="max-width:720px;margin:0 auto">
+    <canvas id="radarChart" height="380"></canvas>
+  </div>
+</section><section class="section" id="api_integration">
+  <div class="section-header">
+    <span class="section-num">02</span>
+    <span class="section-title">API &amp; Integration — 25%</span>
+  </div>
+
+  <p>Zenoti <b>5.00</b> · Fliip <b>5.00</b> · Sport Alliance <b>5.00</b> · Hapana <b>4.75</b> · ABC Fitness <b>4.92</b></p>
+  <table class="data-table"><tr><th>Item</th><th>Zenoti</th><th>Fliip</th><th>Sport Alliance</th><th>Hapana</th><th>ABC Fitness</th></tr><tr><td>API maturity &amp; coverage</td><td>5.0</td><td>5.0</td><td>5.0</td><td>4.8</td><td>4.9</td></tr><tr><td>Webhooks / event coverage</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Real-time sync</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Sandbox environment</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>API documentation quality</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Ecosystem openness / headless, system-of-record<span class="hs-chip">HIGH-SIGNAL</span></td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>API metering / pricing posture<span class="hs-chip">HIGH-SIGNAL</span></td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr></table>
+
+</section><section class="section" id="data_ownership">
+  <div class="section-header">
+    <span class="section-num">03</span>
+    <span class="section-title">Data Ownership &amp; Portability — 20%</span>
+  </div>
+
+  <p>Zenoti <b>0.00</b> · Fliip <b>0.00</b> · Sport Alliance <b>0.00</b> · Hapana <b>0.00</b> · ABC Fitness <b>0.00</b></p>
+  <table class="data-table"><tr><th>Item</th><th>Zenoti</th><th>Fliip</th><th>Sport Alliance</th><th>Hapana</th><th>ABC Fitness</th></tr><tr><td>Contractual data ownership</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Export formats</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Migration tooling / commitment</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Vendor lock-in risk</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Data co-mingling / AI-training terms</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr></table>
+
+</section><section class="section" id="franchise_architecture">
+  <div class="section-header">
+    <span class="section-num">04</span>
+    <span class="section-title">Franchise Architecture — 15%</span>
+  </div>
+
+  <p>Zenoti <b>4.68</b> · Fliip <b>4.18</b> · Sport Alliance <b>3.53</b> · Hapana <b>3.44</b> · ABC Fitness <b>1.94</b></p>
+  <table class="data-table"><tr><th>Item</th><th>Zenoti</th><th>Fliip</th><th>Sport Alliance</th><th>Hapana</th><th>ABC Fitness</th></tr><tr><td>Native multi-tenant design</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Corporate vs. franchisee controls</td><td>4.7</td><td>4.2</td><td>3.5</td><td>3.4</td><td>1.9</td></tr><tr><td>Configuration hierarchy</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Scale &amp; onboarding evidence</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr></table>
+
+</section><section class="section" id="core_features">
+  <div class="section-header">
+    <span class="section-num">05</span>
+    <span class="section-title">Core Features — 15%</span>
+  </div>
+
+  <p>Zenoti <b>4.88</b> · Fliip <b>4.67</b> · Sport Alliance <b>4.51</b> · Hapana <b>4.22</b> · ABC Fitness <b>3.98</b></p>
+  <table class="data-table"><tr><th>Item</th><th>Zenoti</th><th>Fliip</th><th>Sport Alliance</th><th>Hapana</th><th>ABC Fitness</th></tr><tr><td>Member lifecycle</td><td>4.9</td><td>4.9</td><td>4.7</td><td>4.7</td><td>4.6</td></tr><tr><td>Plans &amp; pricing</td><td>5.0</td><td>4.6</td><td>4.3</td><td>4.7</td><td>4.2</td></tr><tr><td>Billing &amp; collections</td><td>4.8</td><td>4.5</td><td>4.7</td><td>4.2</td><td>5.0</td></tr><tr><td>Check-in &amp; access control</td><td>5.0</td><td>4.8</td><td>5.0</td><td>4.7</td><td>4.2</td></tr><tr><td>Travel pass</td><td>5.0</td><td>5.0</td><td>4.8</td><td>4.5</td><td>4.2</td></tr><tr><td>POS / retail</td><td>5.0</td><td>5.0</td><td>4.7</td><td>3.7</td><td>4.7</td></tr><tr><td>Operational reporting</td><td>5.0</td><td>5.0</td><td>4.9</td><td>4.8</td><td>4.6</td></tr><tr><td>Member communications</td><td>5.0</td><td>5.0</td><td>5.0</td><td>3.7</td><td>2.1</td></tr><tr><td>CRM / lead management (workbook 5.9)</td><td>5.0</td><td>3.8</td><td>4.4</td><td>3.9</td><td>3.6</td></tr><tr><td>Workforce / personal training (workbook 5.13)</td><td>4.4</td><td>4.5</td><td>3.6</td><td>3.9</td><td>3.2</td></tr><tr><td>Scheduling (workbook 5.14)</td><td>4.5</td><td>4.4</td><td>3.5</td><td>3.6</td><td>3.3</td></tr></table>
+
+</section><section class="section" id="commercial_terms">
+  <div class="section-header">
+    <span class="section-num">06</span>
+    <span class="section-title">Commercial Terms — 10%</span>
+  </div>
+
+  <p>Zenoti <b>0.00</b> · Fliip <b>0.00</b> · Sport Alliance <b>0.00</b> · Hapana <b>0.00</b> · ABC Fitness <b>0.00</b></p>
+  <table class="data-table"><tr><th>Item</th><th>Zenoti</th><th>Fliip</th><th>Sport Alliance</th><th>Hapana</th><th>ABC Fitness</th></tr><tr><td>Pricing transparency</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Term flexibility</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Incentives &amp; volume discounts</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Tech-fee revenue share</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>API economics</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Adjacent-module pricing pressure (bundle lock-in)<span class="hs-chip">HIGH-SIGNAL</span></td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr></table>
+
+</section><section class="section" id="reliability_sla">
+  <div class="section-header">
+    <span class="section-num">07</span>
+    <span class="section-title">Reliability &amp; SLA — 10%</span>
+  </div>
+
+  <p>Zenoti <b>0.00</b> · Fliip <b>0.00</b> · Sport Alliance <b>0.00</b> · Hapana <b>0.00</b> · ABC Fitness <b>0.00</b></p>
+  <table class="data-table"><tr><th>Item</th><th>Zenoti</th><th>Fliip</th><th>Sport Alliance</th><th>Hapana</th><th>ABC Fitness</th></tr><tr><td>Uptime commitment</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Response / resolution by severity</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Maintenance windows</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>DR (RTO/RPO)</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Track record at scale</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr></table>
+
+</section><section class="section" id="innovation_roadmap">
+  <div class="section-header">
+    <span class="section-num">08</span>
+    <span class="section-title">Innovation &amp; Roadmap — 5%</span>
+  </div>
+
+  <p>Zenoti <b>4.87</b> · Fliip <b>3.73</b> · Sport Alliance <b>3.53</b> · Hapana <b>3.93</b> · ABC Fitness <b>3.67</b></p>
+  <table class="data-table"><tr><th>Item</th><th>Zenoti</th><th>Fliip</th><th>Sport Alliance</th><th>Hapana</th><th>ABC Fitness</th></tr><tr><td>AI / ML capability</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Mobile-first (workbook 5.10)</td><td>4.9</td><td>3.7</td><td>3.5</td><td>3.9</td><td>3.7</td></tr><tr><td>Product velocity</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Platform-vs-suite ecosystem strategy<span class="hs-chip">HIGH-SIGNAL</span></td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr></table>
+
+</section><p style='font-size:12.5px;color:#666'>Item scores: unmarked = deterministic rule score · * = LLM-proposed (evidence-cited) · ✓ = SME-ratified.</p>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>GOLD'S GYM — ONE SYSTEM INITIATIVE</div>
+    <div>MMS Vendor Evaluation · Prepared by StackHack Labs LLC · Category Deep-Dive</div>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+
+<script>
+new Chart(document.getElementById('radarChart'), {
+  type: 'radar',
+  data: { labels: ["API & Integration", "Data Ownership & Portability", "Franchise Architecture", "Core Features", "Commercial Terms", "Reliability & SLA", "Innovation & Roadmap"], datasets: [{"label": "Zenoti", "data": [5.0, 0, 4.68, 4.88, 0, 0, 4.87], "borderColor": "#7B4FA6", "backgroundColor": "#7B4FA622", "pointBackgroundColor": "#7B4FA6"}, {"label": "Fliip", "data": [5.0, 0, 4.18, 4.67, 0, 0, 3.73], "borderColor": "#2E7D32", "backgroundColor": "#2E7D3222", "pointBackgroundColor": "#2E7D32"}, {"label": "Sport Alliance", "data": [5.0, 0, 3.53, 4.51, 0, 0, 3.53], "borderColor": "#1A56A7", "backgroundColor": "#1A56A722", "pointBackgroundColor": "#1A56A7"}, {"label": "Hapana", "data": [4.75, 0, 3.44, 4.22, 0, 0, 3.93], "borderColor": "#C62828", "backgroundColor": "#C6282822", "pointBackgroundColor": "#C62828"}, {"label": "ABC Fitness", "data": [4.92, 0, 1.94, 3.98, 0, 0, 3.67], "borderColor": "#E6A800", "backgroundColor": "#E6A80022", "pointBackgroundColor": "#E6A800"}] },
+  options: {
+    responsive: true,
+    scales: { r: { min: 0, max: 5, ticks: { stepSize: 1, font: { family: 'DM Sans' } },
+      pointLabels: { font: { family: 'DM Sans', size: 12 }, color: '#555' } } },
+    plugins: { legend: { labels: { font: { family: 'DM Sans' }, color: '#555' } } }
+  }
+});
+</script>
+</body>
+</html>

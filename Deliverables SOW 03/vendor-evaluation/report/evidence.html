@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gold's Gym — MMS Vendor Evaluation — Evidence</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+
+<style>
+.gate-pass{color:var(--green,#2E7D32);font-weight:700}
+.gate-fail{color:var(--red,#C62828);font-weight:700}
+.gate-unclear{color:var(--amber,#D48800);font-weight:700}
+.provisional-banner{background:#FFF3D6;border:2px solid #D48800;color:#8A5C00;
+  padding:12px 20px;border-radius:8px;font-weight:700;margin:0 0 24px}
+.heat-cell{text-align:center;font-weight:700;border-radius:4px}
+.ev-quote{background:#FAFAF8;border-left:3px solid var(--gold,#F2C23E);
+  padding:10px 14px;margin:8px 0;font-size:13.5px}
+.ev-quote .src{color:#888;font-size:12px;margin-top:4px}
+.ev-quote.contradicts{border-left-color:var(--red,#C62828)}
+.rank-bar-row{display:flex;align-items:center;gap:14px;margin:10px 0}
+.rank-bar-row .vname{width:150px;font-weight:600;font-size:14.5px}
+.rank-bar-track{flex:1;background:#ECEAE4;border-radius:6px;height:30px;position:relative}
+.rank-bar-fill{height:100%;border-radius:6px;display:flex;align-items:center;
+  justify-content:flex-end;padding-right:10px;color:#fff;font-weight:800;font-size:13.5px;
+  min-width:56px}
+.hs-chip{background:var(--gold,#F2C23E);color:#1A1A1A;font-size:10px;font-weight:800;
+  padding:1px 7px;border-radius:9px;margin-left:6px;vertical-align:2px}
+#evSearch{width:100%;padding:10px 14px;font-size:14px;border:1px solid #E5E2DC;
+  border-radius:6px;margin:12px 0}
+.chart-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.chart-box{background:#fff;border:1px solid #E5E2DC;border-radius:8px;padding:16px}
+</style>
+
+</head>
+<body>
+
+<nav class="global-nav">
+  <div class="global-stepper">
+    <a href="index.html" class="step" data-page="1"><span class="step-num">1</span><span class="step-label">Summary</span></a>
+    <span class="step-connector"></span>
+    <a href="methodology.html" class="step" data-page="2"><span class="step-num">2</span><span class="step-label">Methodology</span></a>
+    <span class="step-connector"></span>
+    <a href="threshold-gates.html" class="step" data-page="3"><span class="step-num">3</span><span class="step-label">Gates</span></a>
+    <span class="step-connector"></span>
+    <a href="categories.html" class="step" data-page="4"><span class="step-num">4</span><span class="step-label">Categories</span></a>
+    <span class="step-connector"></span>
+    <a href="business-groups.html" class="step" data-page="5"><span class="step-num">5</span><span class="step-label">Business Groups</span></a>
+    <span class="step-connector"></span>
+    <a href="evidence.html" class="step" data-page="6"><span class="step-num">6</span><span class="step-label">Evidence</span></a>
+  </div>
+</nav>
+
+<header>
+  <div class="header-bg-text">GOLD'S</div>
+  <div class="header-inner">
+    <div class="header-eyebrow">Gold's Gym · One System Initiative · GG-2026-MMS-001</div>
+    <h1>MMS VENDOR EVALUATION<br><span>EVIDENCE APPENDIX</span></h1>
+    <p class="header-sub">Full provenance: every cited quote behind every score and gate verdict.</p>
+    <div class="header-meta">
+      <div class="meta-pill"><span class="dot"></span>Membership Management System RFI</div>
+      <div class="meta-pill"><span class="dot"></span>July 2026</div>
+      <div class="meta-pill"><span class="dot"></span>StackHack Labs LLC</div>
+    </div>
+  </div>
+</header>
+
+<nav class="sticky-nav">
+  <div class="nav-inner">
+    <div class="nav-page-indicator">
+      <a href="business-groups.html" class="nav-prev-arrow">&#8592;</a>
+      <span class="nav-page-badge">6 / 6</span>
+      <span class="nav-next-arrow disabled">&#8594;</span>
+    </div>
+    <span class="nav-divider"></span>
+    <a class="nav-tab active" href="#appendix">Appendix</a>
+  </div>
+</nav>
+
+<main class="page-main">
+<div class="provisional-banner">PROVISIONAL — item scores pending SME ratification in the review console. Totals may change.</div>
+<section class="section" id="appendix">
+  <div class="section-header">
+    <span class="section-num">01</span>
+    <span class="section-title">EVIDENCE APPENDIX</span>
+  </div>
+
+  <p>Every quote used to justify a score adjustment or gate verdict, with its exact source.
+  Type to filter.</p>
+  <input id="evSearch" placeholder="Filter by vendor, item, quote text, or source…">
+  <table class="data-table" id="evTable">
+    <tr><th>Vendor</th><th>Item / Gate</th><th>Stance</th><th>Quote</th><th>Source</th><th>Run</th></tr>
+    <tr><td colspan=6>No evidence extracted yet — run extract_evidence.py.</td></tr>
+  </table>
+  <script>
+  document.getElementById('evSearch').addEventListener('input', function() {
+    var q = this.value.toLowerCase();
+    document.querySelectorAll('#evTable tr').forEach(function(tr, i) {
+      if (i === 0) return;
+      tr.style.display = tr.textContent.toLowerCase().includes(q) ? '' : 'none';
+    });
+  });
+  </script>
+
+</section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>GOLD'S GYM — ONE SYSTEM INITIATIVE</div>
+    <div>MMS Vendor Evaluation · Prepared by StackHack Labs LLC · Evidence Appendix</div>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>

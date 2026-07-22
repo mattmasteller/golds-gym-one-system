@@ -1,0 +1,37 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>MMS Evaluation — Data Quality &amp; Coverage (Internal)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{font-family:'DM Sans',-apple-system,sans-serif;margin:0;background:#F7F7F5;color:#1A1A1A}
+header{background:#1A1A1A;color:#fff;padding:28px 40px}
+header h1{margin:0;font-size:26px} header p{color:#F2C23E;margin:6px 0 0;font-size:13px}
+main{max-width:1140px;margin:0 auto;padding:32px 40px}
+h2{border-bottom:3px solid #F2C23E;padding-bottom:6px;margin-top:40px;font-size:20px}
+table{border-collapse:collapse;width:100%;margin:16px 0;background:#fff;font-size:13.5px}
+th,td{border:1px solid #E5E2DC;padding:7px 10px;text-align:left;vertical-align:top}
+th{background:#1A1A1A;color:#fff;font-weight:600}
+tr:nth-child(even) td{background:#FAFAF8}
+.ok{color:#2E7D32;font-weight:700}.warn{color:#D48800;font-weight:700}.err{color:#C62828;font-weight:700}
+.badge{display:inline-block;padding:1px 8px;border-radius:10px;font-size:11.5px;font-weight:700}
+.badge.info{background:#E8F0FE;color:#1A56A7}.badge.warning{background:#FFF3D6;color:#8A5C00}
+.badge.error{background:#FDE3E3;color:#C62828}
+.note{background:#FFF8E6;border-left:4px solid #F2C23E;padding:12px 16px;margin:14px 0;font-size:13.5px}
+</style></head><body>
+<header><h1>Data Quality &amp; Coverage Report</h1>
+<p>GG-2026-MMS-001 · INTERNAL · generated 2026-07-22T16:48:04+00:00 · StackHack Labs</p></header>
+<main>
+    <h2>1. Vendor × artifact coverage</h2>
+    <table><tr><th>Vendor</th><th>workbook</th><th>primary_response</th><th>sla</th><th>collateral</th><th>transcript</th><th>Workbook answers</th><th>Dept scores</th></tr><tr><td><b>ABC Fitness</b></td><td class='ok'>2</td><td class='ok'>2</td><td class=''>—</td><td class=''>—</td><td class=''>—</td><td>287</td><td class='ok'>95</td></tr><tr><td><b>Fliip</b></td><td class='ok'>2</td><td class='ok'>2</td><td class=''>—</td><td class=''>—</td><td class=''>—</td><td>287</td><td class='err'>NONE</td></tr><tr><td><b>Hapana</b></td><td class='ok'>2</td><td class='ok'>6</td><td class=''>—</td><td class=''>—</td><td class=''>—</td><td>287</td><td class='err'>NONE</td></tr><tr><td><b>Sport Alliance</b></td><td class='ok'>2</td><td class='ok'>4</td><td class=''>—</td><td class=''>—</td><td class=''>—</td><td>287</td><td class='ok'>64</td></tr><tr><td><b>Zenoti</b></td><td class='ok'>2</td><td class='ok'>2</td><td class=''>—</td><td class='ok'>4</td><td class=''>—</td><td>287</td><td class='ok'>64</td></tr></table>
+    <div class="note"><b>Known gap:</b> vendors with <span class="err">NONE</span> in "Dept scores"
+    were never scored by the business groups in the department workbook. Their rubric scoring still
+    runs from workbook + narrative sources; the business-group lens excludes them. Escalated as an
+    evaluation-coverage decision for Rick / the Decision Council.</div>
+    <h2>2. Workbook answer completeness &amp; integrity</h2>
+    <table><tr><th>Vendor</th><th>Requirements answered</th><th>Rows with integrity flags</th></tr>
+    <tr><td><b>ABC Fitness</b></td><td>287 / 287 (100%)</td><td class='ok'>0</td></tr><tr><td><b>Fliip</b></td><td>287 / 287 (100%)</td><td class='warn'>1</td></tr><tr><td><b>Hapana</b></td><td>287 / 287 (100%)</td><td class='ok'>0</td></tr><tr><td><b>Sport Alliance</b></td><td>287 / 287 (100%)</td><td class='ok'>0</td></tr><tr><td><b>Zenoti</b></td><td>287 / 287 (100%)</td><td class='ok'>0</td></tr></table>
+    <h2>3. Department workbook coverage</h2>
+    <table><tr><th>Tab</th><th>Requirements</th><th>Must-haves</th><th>Vendors scored</th></tr>
+    <tr><td>Billing and Accounting</td><td>54</td><td>25</td><td class='warn'>2</td></tr><tr><td>Corporate - Partnerships</td><td>24</td><td>0</td><td class='ok'>3</td></tr><tr><td>Franchise - Sales Support</td><td>19</td><td>4</td><td class='ok'>3</td></tr><tr><td>Legal</td><td>1</td><td>0</td><td class='err'>0</td></tr><tr><td>Marketing - Digital</td><td>3</td><td>6</td><td class='warn'>2</td></tr><tr><td>Month End and Accounting</td><td>7</td><td>0</td><td class='err'>0</td></tr><tr><td>OPS - Group Fitness</td><td>15</td><td>24</td><td class='ok'>3</td></tr><tr><td>OPS - Member Services</td><td>28</td><td>43</td><td class='ok'>3</td></tr><tr><td>OPS - Membership and Sales</td><td>29</td><td>32</td><td class='ok'>3</td></tr><tr><td>OPS - Personal Training</td><td>14</td><td>12</td><td class='ok'>3</td></tr><tr><td>ProShop</td><td>14</td><td>6</td><td class='warn'>1</td></tr><tr><td>Reporting</td><td>1</td><td>0</td><td class='err'>0</td></tr><tr><td>Technology</td><td>10</td><td>0</td><td class='warn'>1</td></tr><tr><td>other</td><td>2</td><td>0</td><td class='err'>0</td></tr></table>
+    <h2>4. All data-quality findings</h2>
+    <table><tr><th>Severity</th><th>Stage</th><th>Vendor</th><th>Finding</th><th>Detail</th></tr>
+    <tr><td><span class='badge warning'>warning</span></td><td>ingest_dept_workbook</td><td>Fliip</td><td>no department scores for vendor</td><td>vendor absent from department workbook scoring columns (evaluation-coverage gap; rubric scoring still applies)</td></tr><tr><td><span class='badge warning'>warning</span></td><td>ingest_dept_workbook</td><td>Hapana</td><td>no department scores for vendor</td><td>vendor absent from department workbook scoring columns (evaluation-coverage gap; rubric scoring still applies)</td></tr><tr><td><span class='badge warning'>warning</span></td><td>ingest_narratives</td><td>ABC Fitness</td><td>pages with no extractable text</td><td>ABC_Fitness_RSG_RFI_Companion_final.pdf: 1 page(s) — likely images; consider OCR if these pages matter</td></tr><tr><td><span class='badge warning'>warning</span></td><td>ingest_vendor_workbooks</td><td>Fliip</td><td>altered_requirement_text</td><td>1 row(s)</td></tr><tr><td><span class='badge info'>info</span></td><td>ingest_dept_workbook</td><td>—</td><td>priority value normalized to undecided</td><td>tab &#x27;other&#x27; row 3: &#x27;1&#x27;</td></tr><tr><td><span class='badge info'>info</span></td><td>ingest_dept_workbook</td><td>—</td><td>priority value normalized to undecided</td><td>tab &#x27;other&#x27; row 4: &#x27;1&#x27;</td></tr><tr><td><span class='badge info'>info</span></td><td>ingest_dept_workbook</td><td>—</td><td>unmapped column</td><td>tab &#x27;Month End and Accounting&#x27; column &#x27;Membership and POS System Needs&#x27; (idx 0)</td></tr></table></main></body></html>

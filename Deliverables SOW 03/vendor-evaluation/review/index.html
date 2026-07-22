@@ -1,0 +1,1381 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>MMS Evaluation — SME Review Console (Internal)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"><style>
+body{font-family:'DM Sans',-apple-system,sans-serif;margin:0;background:#F7F7F5;color:#1A1A1A}
+header{background:#1A1A1A;color:#fff;padding:24px 36px;position:sticky;top:0;z-index:5}
+header h1{margin:0;font-size:22px} header p{color:#F2C23E;margin:4px 0 0;font-size:12.5px}
+main{max-width:1240px;margin:0 auto;padding:26px 36px}
+h2{border-bottom:3px solid #F2C23E;padding-bottom:5px;margin-top:34px;font-size:19px}
+.item{background:#fff;border:1px solid #E5E2DC;border-radius:8px;padding:14px 18px;margin:12px 0}
+.item h3{margin:0 0 6px;font-size:15px}
+.hs{background:#F2C23E;color:#1A1A1A;font-size:10.5px;font-weight:800;padding:1px 7px;border-radius:9px;margin-left:8px;vertical-align:2px}
+.scores{display:flex;gap:22px;align-items:center;margin:8px 0;flex-wrap:wrap;font-size:13.5px}
+.scores b{font-size:17px}
+.ev{background:#FAFAF8;border-left:3px solid #F2C23E;padding:8px 12px;margin:6px 0;font-size:12.8px}
+.ev .src{color:#777;font-size:11.5px}
+.ev.contradicts{border-left-color:#C62828}
+input[type=number]{width:70px;padding:5px;font-size:15px;border:1px solid #ccc;border-radius:5px}
+input[type=text]{width:420px;padding:5px;font-size:13px;border:1px solid #ccc;border-radius:5px}
+select{padding:5px;font-size:13px}
+.bar{position:sticky;bottom:0;background:#1A1A1A;padding:12px 36px;text-align:right}
+.bar button{background:#F2C23E;border:0;padding:10px 22px;font-weight:800;font-size:14px;border-radius:6px;cursor:pointer}
+.rationale{font-size:13px;color:#444;margin:4px 0}
+.provisional{color:#D48800;font-weight:700}
+</style></head><body>
+<header><h1>SME Review Console — score ratification</h1>
+<p>GG-2026-MMS-001 · INTERNAL · generated 2026-07-22T16:48:04+00:00 ·
+Reviewer: <input type="text" id="reviewer" placeholder="your name" style="width:160px"></p></header>
+<main>
+<p>For each item: the deterministic Layer-A score, the LLM's evidence-cited proposal, and a field
+to ratify or override. When done, click <b>Download ratified_scores.csv</b>, save it into the
+<code>review/</code> folder, and run <code>python build_review_console.py --ingest</code>.</p>
+<h2 style='font-size:24px;background:#F2C23E;padding:8px 14px'>ABC Fitness</h2><h2>API &amp; Integration</h2>
+<div class="item" data-kind="item" data-vendor="ABC Fitness" data-key="api_maturity_coverage">
+  <h3>API maturity &amp; coverage</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>4.9167</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::1::api_maturity_coverage" min="0" max="5" step="0.1"
+      value="4.9167"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::1::api_maturity_coverage"
+    value=""></div>
+</div><h2>Core Features</h2>
+<div class="item" data-kind="item" data-vendor="ABC Fitness" data-key="billing_collections">
+  <h3>Billing &amp; collections</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>5.0</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::1::billing_collections" min="0" max="5" step="0.1"
+      value="5.0"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::1::billing_collections"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="ABC Fitness" data-key="checkin_access">
+  <h3>Check-in &amp; access control</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>4.2</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::1::checkin_access" min="0" max="5" step="0.1"
+      value="4.2"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::1::checkin_access"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="ABC Fitness" data-key="communications">
+  <h3>Member communications</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>2.1429</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::1::communications" min="0" max="5" step="0.1"
+      value="2.1429"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::1::communications"
+    value=""></div>
+</div><h2>Franchise Architecture</h2>
+<div class="item" data-kind="item" data-vendor="ABC Fitness" data-key="corp_franchisee_controls">
+  <h3>Corporate vs. franchisee controls</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>1.9412</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::1::corp_franchisee_controls" min="0" max="5" step="0.1"
+      value="1.9412"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::1::corp_franchisee_controls"
+    value=""></div>
+</div><h2>Core Features</h2>
+<div class="item" data-kind="item" data-vendor="ABC Fitness" data-key="crm_lead_mgmt">
+  <h3>CRM / lead management (workbook 5.9)</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>3.625</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::1::crm_lead_mgmt" min="0" max="5" step="0.1"
+      value="3.625"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::1::crm_lead_mgmt"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="ABC Fitness" data-key="member_lifecycle">
+  <h3>Member lifecycle</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>4.5714</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::1::member_lifecycle" min="0" max="5" step="0.1"
+      value="4.5714"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::1::member_lifecycle"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="ABC Fitness" data-key="operational_reporting">
+  <h3>Operational reporting</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>4.6</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::1::operational_reporting" min="0" max="5" step="0.1"
+      value="4.6"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::1::operational_reporting"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="ABC Fitness" data-key="plans_pricing">
+  <h3>Plans &amp; pricing</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>4.2222</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::1::plans_pricing" min="0" max="5" step="0.1"
+      value="4.2222"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::1::plans_pricing"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="ABC Fitness" data-key="pos_retail">
+  <h3>POS / retail</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>4.6667</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::1::pos_retail" min="0" max="5" step="0.1"
+      value="4.6667"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::1::pos_retail"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="ABC Fitness" data-key="scheduling">
+  <h3>Scheduling (workbook 5.14)</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>3.3488</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::1::scheduling" min="0" max="5" step="0.1"
+      value="3.3488"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::1::scheduling"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="ABC Fitness" data-key="travel_pass">
+  <h3>Travel pass</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>4.1667</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::1::travel_pass" min="0" max="5" step="0.1"
+      value="4.1667"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::1::travel_pass"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="ABC Fitness" data-key="workforce_pt">
+  <h3>Workforce / personal training (workbook 5.13)</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>3.1935</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::1::workforce_pt" min="0" max="5" step="0.1"
+      value="3.1935"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::1::workforce_pt"
+    value=""></div>
+</div><h2>Innovation &amp; Roadmap</h2>
+<div class="item" data-kind="item" data-vendor="ABC Fitness" data-key="mobile_first">
+  <h3>Mobile-first (workbook 5.10)</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>3.6667</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::1::mobile_first" min="0" max="5" step="0.1"
+      value="3.6667"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::1::mobile_first"
+    value=""></div>
+</div><h2>Threshold gates — ABC Fitness</h2>
+<div class="item" data-kind="gate" data-vendor="ABC Fitness" data-key="gate_data_ownership">
+  <h3>Full data ownership (contractual)</h3>
+  <div class="scores">
+    <span>LLM verdict: <b>—</b></span>
+    <span>Ratified: <select name="score::1::gate_data_ownership"><option value='pass' >pass</option><option value='fail' >fail</option><option value='unclear' selected>unclear</option></select></span>
+  </div>
+  
+  <div>Note: <input type="text" name="note::1::gate_data_ownership"
+    value=""></div>
+</div>
+<div class="item" data-kind="gate" data-vendor="ABC Fitness" data-key="gate_realtime_api">
+  <h3>Real-time API access (REST + webhooks)</h3>
+  <div class="scores">
+    <span>LLM verdict: <b>—</b></span>
+    <span>Ratified: <select name="score::1::gate_realtime_api"><option value='pass' >pass</option><option value='fail' >fail</option><option value='unclear' selected>unclear</option></select></span>
+  </div>
+  
+  <div>Note: <input type="text" name="note::1::gate_realtime_api"
+    value=""></div>
+</div>
+<div class="item" data-kind="gate" data-vendor="ABC Fitness" data-key="gate_franchise_arch">
+  <h3>Multi-location franchise architecture (native)</h3>
+  <div class="scores">
+    <span>LLM verdict: <b>—</b></span>
+    <span>Ratified: <select name="score::1::gate_franchise_arch"><option value='pass' >pass</option><option value='fail' >fail</option><option value='unclear' selected>unclear</option></select></span>
+  </div>
+  
+  <div>Note: <input type="text" name="note::1::gate_franchise_arch"
+    value=""></div>
+</div>
+<div class="item" data-kind="gate" data-vendor="ABC Fitness" data-key="gate_export_migration">
+  <h3>Documented data export &amp; migration commitment</h3>
+  <div class="scores">
+    <span>LLM verdict: <b>—</b></span>
+    <span>Ratified: <select name="score::1::gate_export_migration"><option value='pass' >pass</option><option value='fail' >fail</option><option value='unclear' selected>unclear</option></select></span>
+  </div>
+  
+  <div>Note: <input type="text" name="note::1::gate_export_migration"
+    value=""></div>
+</div>
+<div class="item" data-kind="gate" data-vendor="ABC Fitness" data-key="gate_us_market">
+  <h3>U.S. market support</h3>
+  <div class="scores">
+    <span>LLM verdict: <b>—</b></span>
+    <span>Ratified: <select name="score::1::gate_us_market"><option value='pass' >pass</option><option value='fail' >fail</option><option value='unclear' selected>unclear</option></select></span>
+  </div>
+  
+  <div>Note: <input type="text" name="note::1::gate_us_market"
+    value=""></div>
+</div>
+<div class="item" data-kind="gate" data-vendor="ABC Fitness" data-key="gate_pos">
+  <h3>POS / retail integrated or tightly coupled</h3>
+  <div class="scores">
+    <span>LLM verdict: <b>—</b></span>
+    <span>Ratified: <select name="score::1::gate_pos"><option value='pass' >pass</option><option value='fail' >fail</option><option value='unclear' selected>unclear</option></select></span>
+  </div>
+  
+  <div>Note: <input type="text" name="note::1::gate_pos"
+    value=""></div>
+</div>
+<div class="item" data-kind="gate" data-vendor="ABC Fitness" data-key="gate_open_ecosystem">
+  <h3>Open ecosystem / headless compatibility</h3>
+  <div class="scores">
+    <span>LLM verdict: <b>—</b></span>
+    <span>Ratified: <select name="score::1::gate_open_ecosystem"><option value='pass' >pass</option><option value='fail' >fail</option><option value='unclear' selected>unclear</option></select></span>
+  </div>
+  
+  <div>Note: <input type="text" name="note::1::gate_open_ecosystem"
+    value=""></div>
+</div><h2 style='font-size:24px;background:#F2C23E;padding:8px 14px'>Fliip</h2><h2>API &amp; Integration</h2>
+<div class="item" data-kind="item" data-vendor="Fliip" data-key="api_maturity_coverage">
+  <h3>API maturity &amp; coverage</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>5.0</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::2::api_maturity_coverage" min="0" max="5" step="0.1"
+      value="5.0"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::2::api_maturity_coverage"
+    value=""></div>
+</div><h2>Core Features</h2>
+<div class="item" data-kind="item" data-vendor="Fliip" data-key="billing_collections">
+  <h3>Billing &amp; collections</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>4.5385</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::2::billing_collections" min="0" max="5" step="0.1"
+      value="4.5385"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::2::billing_collections"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="Fliip" data-key="checkin_access">
+  <h3>Check-in &amp; access control</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>4.8</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::2::checkin_access" min="0" max="5" step="0.1"
+      value="4.8"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::2::checkin_access"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="Fliip" data-key="communications">
+  <h3>Member communications</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>5.0</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::2::communications" min="0" max="5" step="0.1"
+      value="5.0"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::2::communications"
+    value=""></div>
+</div><h2>Franchise Architecture</h2>
+<div class="item" data-kind="item" data-vendor="Fliip" data-key="corp_franchisee_controls">
+  <h3>Corporate vs. franchisee controls</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>4.1765</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::2::corp_franchisee_controls" min="0" max="5" step="0.1"
+      value="4.1765"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::2::corp_franchisee_controls"
+    value=""></div>
+</div><h2>Core Features</h2>
+<div class="item" data-kind="item" data-vendor="Fliip" data-key="crm_lead_mgmt">
+  <h3>CRM / lead management (workbook 5.9)</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>3.75</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::2::crm_lead_mgmt" min="0" max="5" step="0.1"
+      value="3.75"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::2::crm_lead_mgmt"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="Fliip" data-key="member_lifecycle">
+  <h3>Member lifecycle</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>4.8571</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::2::member_lifecycle" min="0" max="5" step="0.1"
+      value="4.8571"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::2::member_lifecycle"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="Fliip" data-key="operational_reporting">
+  <h3>Operational reporting</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>5.0</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::2::operational_reporting" min="0" max="5" step="0.1"
+      value="5.0"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::2::operational_reporting"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="Fliip" data-key="plans_pricing">
+  <h3>Plans &amp; pricing</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>4.5556</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::2::plans_pricing" min="0" max="5" step="0.1"
+      value="4.5556"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::2::plans_pricing"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="Fliip" data-key="pos_retail">
+  <h3>POS / retail</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>5.0</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::2::pos_retail" min="0" max="5" step="0.1"
+      value="5.0"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::2::pos_retail"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="Fliip" data-key="scheduling">
+  <h3>Scheduling (workbook 5.14)</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>4.3953</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::2::scheduling" min="0" max="5" step="0.1"
+      value="4.3953"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::2::scheduling"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="Fliip" data-key="travel_pass">
+  <h3>Travel pass</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>5.0</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::2::travel_pass" min="0" max="5" step="0.1"
+      value="5.0"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::2::travel_pass"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="Fliip" data-key="workforce_pt">
+  <h3>Workforce / personal training (workbook 5.13)</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>4.4839</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::2::workforce_pt" min="0" max="5" step="0.1"
+      value="4.4839"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::2::workforce_pt"
+    value=""></div>
+</div><h2>Innovation &amp; Roadmap</h2>
+<div class="item" data-kind="item" data-vendor="Fliip" data-key="mobile_first">
+  <h3>Mobile-first (workbook 5.10)</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>3.7333</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::2::mobile_first" min="0" max="5" step="0.1"
+      value="3.7333"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::2::mobile_first"
+    value=""></div>
+</div><h2>Threshold gates — Fliip</h2>
+<div class="item" data-kind="gate" data-vendor="Fliip" data-key="gate_data_ownership">
+  <h3>Full data ownership (contractual)</h3>
+  <div class="scores">
+    <span>LLM verdict: <b>—</b></span>
+    <span>Ratified: <select name="score::2::gate_data_ownership"><option value='pass' >pass</option><option value='fail' >fail</option><option value='unclear' selected>unclear</option></select></span>
+  </div>
+  
+  <div>Note: <input type="text" name="note::2::gate_data_ownership"
+    value=""></div>
+</div>
+<div class="item" data-kind="gate" data-vendor="Fliip" data-key="gate_realtime_api">
+  <h3>Real-time API access (REST + webhooks)</h3>
+  <div class="scores">
+    <span>LLM verdict: <b>—</b></span>
+    <span>Ratified: <select name="score::2::gate_realtime_api"><option value='pass' >pass</option><option value='fail' >fail</option><option value='unclear' selected>unclear</option></select></span>
+  </div>
+  
+  <div>Note: <input type="text" name="note::2::gate_realtime_api"
+    value=""></div>
+</div>
+<div class="item" data-kind="gate" data-vendor="Fliip" data-key="gate_franchise_arch">
+  <h3>Multi-location franchise architecture (native)</h3>
+  <div class="scores">
+    <span>LLM verdict: <b>—</b></span>
+    <span>Ratified: <select name="score::2::gate_franchise_arch"><option value='pass' >pass</option><option value='fail' >fail</option><option value='unclear' selected>unclear</option></select></span>
+  </div>
+  
+  <div>Note: <input type="text" name="note::2::gate_franchise_arch"
+    value=""></div>
+</div>
+<div class="item" data-kind="gate" data-vendor="Fliip" data-key="gate_export_migration">
+  <h3>Documented data export &amp; migration commitment</h3>
+  <div class="scores">
+    <span>LLM verdict: <b>—</b></span>
+    <span>Ratified: <select name="score::2::gate_export_migration"><option value='pass' >pass</option><option value='fail' >fail</option><option value='unclear' selected>unclear</option></select></span>
+  </div>
+  
+  <div>Note: <input type="text" name="note::2::gate_export_migration"
+    value=""></div>
+</div>
+<div class="item" data-kind="gate" data-vendor="Fliip" data-key="gate_us_market">
+  <h3>U.S. market support</h3>
+  <div class="scores">
+    <span>LLM verdict: <b>—</b></span>
+    <span>Ratified: <select name="score::2::gate_us_market"><option value='pass' >pass</option><option value='fail' >fail</option><option value='unclear' selected>unclear</option></select></span>
+  </div>
+  
+  <div>Note: <input type="text" name="note::2::gate_us_market"
+    value=""></div>
+</div>
+<div class="item" data-kind="gate" data-vendor="Fliip" data-key="gate_pos">
+  <h3>POS / retail integrated or tightly coupled</h3>
+  <div class="scores">
+    <span>LLM verdict: <b>—</b></span>
+    <span>Ratified: <select name="score::2::gate_pos"><option value='pass' >pass</option><option value='fail' >fail</option><option value='unclear' selected>unclear</option></select></span>
+  </div>
+  
+  <div>Note: <input type="text" name="note::2::gate_pos"
+    value=""></div>
+</div>
+<div class="item" data-kind="gate" data-vendor="Fliip" data-key="gate_open_ecosystem">
+  <h3>Open ecosystem / headless compatibility</h3>
+  <div class="scores">
+    <span>LLM verdict: <b>—</b></span>
+    <span>Ratified: <select name="score::2::gate_open_ecosystem"><option value='pass' >pass</option><option value='fail' >fail</option><option value='unclear' selected>unclear</option></select></span>
+  </div>
+  
+  <div>Note: <input type="text" name="note::2::gate_open_ecosystem"
+    value=""></div>
+</div><h2 style='font-size:24px;background:#F2C23E;padding:8px 14px'>Hapana</h2><h2>API &amp; Integration</h2>
+<div class="item" data-kind="item" data-vendor="Hapana" data-key="api_maturity_coverage">
+  <h3>API maturity &amp; coverage</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>4.75</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::3::api_maturity_coverage" min="0" max="5" step="0.1"
+      value="4.75"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::3::api_maturity_coverage"
+    value=""></div>
+</div><h2>Core Features</h2>
+<div class="item" data-kind="item" data-vendor="Hapana" data-key="billing_collections">
+  <h3>Billing &amp; collections</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>4.2308</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::3::billing_collections" min="0" max="5" step="0.1"
+      value="4.2308"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::3::billing_collections"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="Hapana" data-key="checkin_access">
+  <h3>Check-in &amp; access control</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>4.7</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::3::checkin_access" min="0" max="5" step="0.1"
+      value="4.7"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::3::checkin_access"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="Hapana" data-key="communications">
+  <h3>Member communications</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>3.7143</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::3::communications" min="0" max="5" step="0.1"
+      value="3.7143"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::3::communications"
+    value=""></div>
+</div><h2>Franchise Architecture</h2>
+<div class="item" data-kind="item" data-vendor="Hapana" data-key="corp_franchisee_controls">
+  <h3>Corporate vs. franchisee controls</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>3.4412</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::3::corp_franchisee_controls" min="0" max="5" step="0.1"
+      value="3.4412"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::3::corp_franchisee_controls"
+    value=""></div>
+</div><h2>Core Features</h2>
+<div class="item" data-kind="item" data-vendor="Hapana" data-key="crm_lead_mgmt">
+  <h3>CRM / lead management (workbook 5.9)</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>3.875</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::3::crm_lead_mgmt" min="0" max="5" step="0.1"
+      value="3.875"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::3::crm_lead_mgmt"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="Hapana" data-key="member_lifecycle">
+  <h3>Member lifecycle</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>4.7143</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::3::member_lifecycle" min="0" max="5" step="0.1"
+      value="4.7143"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::3::member_lifecycle"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="Hapana" data-key="operational_reporting">
+  <h3>Operational reporting</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>4.8</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::3::operational_reporting" min="0" max="5" step="0.1"
+      value="4.8"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::3::operational_reporting"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="Hapana" data-key="plans_pricing">
+  <h3>Plans &amp; pricing</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>4.6667</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::3::plans_pricing" min="0" max="5" step="0.1"
+      value="4.6667"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::3::plans_pricing"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="Hapana" data-key="pos_retail">
+  <h3>POS / retail</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>3.6667</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::3::pos_retail" min="0" max="5" step="0.1"
+      value="3.6667"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::3::pos_retail"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="Hapana" data-key="scheduling">
+  <h3>Scheduling (workbook 5.14)</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>3.6047</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::3::scheduling" min="0" max="5" step="0.1"
+      value="3.6047"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::3::scheduling"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="Hapana" data-key="travel_pass">
+  <h3>Travel pass</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>4.5</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::3::travel_pass" min="0" max="5" step="0.1"
+      value="4.5"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::3::travel_pass"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="Hapana" data-key="workforce_pt">
+  <h3>Workforce / personal training (workbook 5.13)</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>3.9355</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::3::workforce_pt" min="0" max="5" step="0.1"
+      value="3.9355"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::3::workforce_pt"
+    value=""></div>
+</div><h2>Innovation &amp; Roadmap</h2>
+<div class="item" data-kind="item" data-vendor="Hapana" data-key="mobile_first">
+  <h3>Mobile-first (workbook 5.10)</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>3.9333</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::3::mobile_first" min="0" max="5" step="0.1"
+      value="3.9333"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::3::mobile_first"
+    value=""></div>
+</div><h2>Threshold gates — Hapana</h2>
+<div class="item" data-kind="gate" data-vendor="Hapana" data-key="gate_data_ownership">
+  <h3>Full data ownership (contractual)</h3>
+  <div class="scores">
+    <span>LLM verdict: <b>—</b></span>
+    <span>Ratified: <select name="score::3::gate_data_ownership"><option value='pass' >pass</option><option value='fail' >fail</option><option value='unclear' selected>unclear</option></select></span>
+  </div>
+  
+  <div>Note: <input type="text" name="note::3::gate_data_ownership"
+    value=""></div>
+</div>
+<div class="item" data-kind="gate" data-vendor="Hapana" data-key="gate_realtime_api">
+  <h3>Real-time API access (REST + webhooks)</h3>
+  <div class="scores">
+    <span>LLM verdict: <b>—</b></span>
+    <span>Ratified: <select name="score::3::gate_realtime_api"><option value='pass' >pass</option><option value='fail' >fail</option><option value='unclear' selected>unclear</option></select></span>
+  </div>
+  
+  <div>Note: <input type="text" name="note::3::gate_realtime_api"
+    value=""></div>
+</div>
+<div class="item" data-kind="gate" data-vendor="Hapana" data-key="gate_franchise_arch">
+  <h3>Multi-location franchise architecture (native)</h3>
+  <div class="scores">
+    <span>LLM verdict: <b>—</b></span>
+    <span>Ratified: <select name="score::3::gate_franchise_arch"><option value='pass' >pass</option><option value='fail' >fail</option><option value='unclear' selected>unclear</option></select></span>
+  </div>
+  
+  <div>Note: <input type="text" name="note::3::gate_franchise_arch"
+    value=""></div>
+</div>
+<div class="item" data-kind="gate" data-vendor="Hapana" data-key="gate_export_migration">
+  <h3>Documented data export &amp; migration commitment</h3>
+  <div class="scores">
+    <span>LLM verdict: <b>—</b></span>
+    <span>Ratified: <select name="score::3::gate_export_migration"><option value='pass' >pass</option><option value='fail' >fail</option><option value='unclear' selected>unclear</option></select></span>
+  </div>
+  
+  <div>Note: <input type="text" name="note::3::gate_export_migration"
+    value=""></div>
+</div>
+<div class="item" data-kind="gate" data-vendor="Hapana" data-key="gate_us_market">
+  <h3>U.S. market support</h3>
+  <div class="scores">
+    <span>LLM verdict: <b>—</b></span>
+    <span>Ratified: <select name="score::3::gate_us_market"><option value='pass' >pass</option><option value='fail' >fail</option><option value='unclear' selected>unclear</option></select></span>
+  </div>
+  
+  <div>Note: <input type="text" name="note::3::gate_us_market"
+    value=""></div>
+</div>
+<div class="item" data-kind="gate" data-vendor="Hapana" data-key="gate_pos">
+  <h3>POS / retail integrated or tightly coupled</h3>
+  <div class="scores">
+    <span>LLM verdict: <b>—</b></span>
+    <span>Ratified: <select name="score::3::gate_pos"><option value='pass' >pass</option><option value='fail' >fail</option><option value='unclear' selected>unclear</option></select></span>
+  </div>
+  
+  <div>Note: <input type="text" name="note::3::gate_pos"
+    value=""></div>
+</div>
+<div class="item" data-kind="gate" data-vendor="Hapana" data-key="gate_open_ecosystem">
+  <h3>Open ecosystem / headless compatibility</h3>
+  <div class="scores">
+    <span>LLM verdict: <b>—</b></span>
+    <span>Ratified: <select name="score::3::gate_open_ecosystem"><option value='pass' >pass</option><option value='fail' >fail</option><option value='unclear' selected>unclear</option></select></span>
+  </div>
+  
+  <div>Note: <input type="text" name="note::3::gate_open_ecosystem"
+    value=""></div>
+</div><h2 style='font-size:24px;background:#F2C23E;padding:8px 14px'>Sport Alliance</h2><h2>API &amp; Integration</h2>
+<div class="item" data-kind="item" data-vendor="Sport Alliance" data-key="api_maturity_coverage">
+  <h3>API maturity &amp; coverage</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>5.0</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::4::api_maturity_coverage" min="0" max="5" step="0.1"
+      value="5.0"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::4::api_maturity_coverage"
+    value=""></div>
+</div><h2>Core Features</h2>
+<div class="item" data-kind="item" data-vendor="Sport Alliance" data-key="billing_collections">
+  <h3>Billing &amp; collections</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>4.7115</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::4::billing_collections" min="0" max="5" step="0.1"
+      value="4.7115"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::4::billing_collections"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="Sport Alliance" data-key="checkin_access">
+  <h3>Check-in &amp; access control</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>5.0</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::4::checkin_access" min="0" max="5" step="0.1"
+      value="5.0"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::4::checkin_access"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="Sport Alliance" data-key="communications">
+  <h3>Member communications</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>5.0</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::4::communications" min="0" max="5" step="0.1"
+      value="5.0"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::4::communications"
+    value=""></div>
+</div><h2>Franchise Architecture</h2>
+<div class="item" data-kind="item" data-vendor="Sport Alliance" data-key="corp_franchisee_controls">
+  <h3>Corporate vs. franchisee controls</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>3.5294</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::4::corp_franchisee_controls" min="0" max="5" step="0.1"
+      value="3.5294"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::4::corp_franchisee_controls"
+    value=""></div>
+</div><h2>Core Features</h2>
+<div class="item" data-kind="item" data-vendor="Sport Alliance" data-key="crm_lead_mgmt">
+  <h3>CRM / lead management (workbook 5.9)</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>4.375</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::4::crm_lead_mgmt" min="0" max="5" step="0.1"
+      value="4.375"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::4::crm_lead_mgmt"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="Sport Alliance" data-key="member_lifecycle">
+  <h3>Member lifecycle</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>4.7143</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::4::member_lifecycle" min="0" max="5" step="0.1"
+      value="4.7143"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::4::member_lifecycle"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="Sport Alliance" data-key="operational_reporting">
+  <h3>Operational reporting</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>4.9</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::4::operational_reporting" min="0" max="5" step="0.1"
+      value="4.9"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::4::operational_reporting"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="Sport Alliance" data-key="plans_pricing">
+  <h3>Plans &amp; pricing</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>4.3333</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::4::plans_pricing" min="0" max="5" step="0.1"
+      value="4.3333"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::4::plans_pricing"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="Sport Alliance" data-key="pos_retail">
+  <h3>POS / retail</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>4.6667</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::4::pos_retail" min="0" max="5" step="0.1"
+      value="4.6667"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::4::pos_retail"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="Sport Alliance" data-key="scheduling">
+  <h3>Scheduling (workbook 5.14)</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>3.5349</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::4::scheduling" min="0" max="5" step="0.1"
+      value="3.5349"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::4::scheduling"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="Sport Alliance" data-key="travel_pass">
+  <h3>Travel pass</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>4.8333</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::4::travel_pass" min="0" max="5" step="0.1"
+      value="4.8333"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::4::travel_pass"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="Sport Alliance" data-key="workforce_pt">
+  <h3>Workforce / personal training (workbook 5.13)</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>3.5806</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::4::workforce_pt" min="0" max="5" step="0.1"
+      value="3.5806"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::4::workforce_pt"
+    value=""></div>
+</div><h2>Innovation &amp; Roadmap</h2>
+<div class="item" data-kind="item" data-vendor="Sport Alliance" data-key="mobile_first">
+  <h3>Mobile-first (workbook 5.10)</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>3.5333</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::4::mobile_first" min="0" max="5" step="0.1"
+      value="3.5333"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::4::mobile_first"
+    value=""></div>
+</div><h2>Threshold gates — Sport Alliance</h2>
+<div class="item" data-kind="gate" data-vendor="Sport Alliance" data-key="gate_data_ownership">
+  <h3>Full data ownership (contractual)</h3>
+  <div class="scores">
+    <span>LLM verdict: <b>—</b></span>
+    <span>Ratified: <select name="score::4::gate_data_ownership"><option value='pass' >pass</option><option value='fail' >fail</option><option value='unclear' selected>unclear</option></select></span>
+  </div>
+  
+  <div>Note: <input type="text" name="note::4::gate_data_ownership"
+    value=""></div>
+</div>
+<div class="item" data-kind="gate" data-vendor="Sport Alliance" data-key="gate_realtime_api">
+  <h3>Real-time API access (REST + webhooks)</h3>
+  <div class="scores">
+    <span>LLM verdict: <b>—</b></span>
+    <span>Ratified: <select name="score::4::gate_realtime_api"><option value='pass' >pass</option><option value='fail' >fail</option><option value='unclear' selected>unclear</option></select></span>
+  </div>
+  
+  <div>Note: <input type="text" name="note::4::gate_realtime_api"
+    value=""></div>
+</div>
+<div class="item" data-kind="gate" data-vendor="Sport Alliance" data-key="gate_franchise_arch">
+  <h3>Multi-location franchise architecture (native)</h3>
+  <div class="scores">
+    <span>LLM verdict: <b>—</b></span>
+    <span>Ratified: <select name="score::4::gate_franchise_arch"><option value='pass' >pass</option><option value='fail' >fail</option><option value='unclear' selected>unclear</option></select></span>
+  </div>
+  
+  <div>Note: <input type="text" name="note::4::gate_franchise_arch"
+    value=""></div>
+</div>
+<div class="item" data-kind="gate" data-vendor="Sport Alliance" data-key="gate_export_migration">
+  <h3>Documented data export &amp; migration commitment</h3>
+  <div class="scores">
+    <span>LLM verdict: <b>—</b></span>
+    <span>Ratified: <select name="score::4::gate_export_migration"><option value='pass' >pass</option><option value='fail' >fail</option><option value='unclear' selected>unclear</option></select></span>
+  </div>
+  
+  <div>Note: <input type="text" name="note::4::gate_export_migration"
+    value=""></div>
+</div>
+<div class="item" data-kind="gate" data-vendor="Sport Alliance" data-key="gate_us_market">
+  <h3>U.S. market support</h3>
+  <div class="scores">
+    <span>LLM verdict: <b>—</b></span>
+    <span>Ratified: <select name="score::4::gate_us_market"><option value='pass' >pass</option><option value='fail' >fail</option><option value='unclear' selected>unclear</option></select></span>
+  </div>
+  
+  <div>Note: <input type="text" name="note::4::gate_us_market"
+    value=""></div>
+</div>
+<div class="item" data-kind="gate" data-vendor="Sport Alliance" data-key="gate_pos">
+  <h3>POS / retail integrated or tightly coupled</h3>
+  <div class="scores">
+    <span>LLM verdict: <b>—</b></span>
+    <span>Ratified: <select name="score::4::gate_pos"><option value='pass' >pass</option><option value='fail' >fail</option><option value='unclear' selected>unclear</option></select></span>
+  </div>
+  
+  <div>Note: <input type="text" name="note::4::gate_pos"
+    value=""></div>
+</div>
+<div class="item" data-kind="gate" data-vendor="Sport Alliance" data-key="gate_open_ecosystem">
+  <h3>Open ecosystem / headless compatibility</h3>
+  <div class="scores">
+    <span>LLM verdict: <b>—</b></span>
+    <span>Ratified: <select name="score::4::gate_open_ecosystem"><option value='pass' >pass</option><option value='fail' >fail</option><option value='unclear' selected>unclear</option></select></span>
+  </div>
+  
+  <div>Note: <input type="text" name="note::4::gate_open_ecosystem"
+    value=""></div>
+</div><h2 style='font-size:24px;background:#F2C23E;padding:8px 14px'>Zenoti</h2><h2>API &amp; Integration</h2>
+<div class="item" data-kind="item" data-vendor="Zenoti" data-key="api_maturity_coverage">
+  <h3>API maturity &amp; coverage</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>5.0</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::5::api_maturity_coverage" min="0" max="5" step="0.1"
+      value="5.0"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::5::api_maturity_coverage"
+    value=""></div>
+</div><h2>Core Features</h2>
+<div class="item" data-kind="item" data-vendor="Zenoti" data-key="billing_collections">
+  <h3>Billing &amp; collections</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>4.8462</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::5::billing_collections" min="0" max="5" step="0.1"
+      value="4.8462"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::5::billing_collections"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="Zenoti" data-key="checkin_access">
+  <h3>Check-in &amp; access control</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>5.0</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::5::checkin_access" min="0" max="5" step="0.1"
+      value="5.0"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::5::checkin_access"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="Zenoti" data-key="communications">
+  <h3>Member communications</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>5.0</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::5::communications" min="0" max="5" step="0.1"
+      value="5.0"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::5::communications"
+    value=""></div>
+</div><h2>Franchise Architecture</h2>
+<div class="item" data-kind="item" data-vendor="Zenoti" data-key="corp_franchisee_controls">
+  <h3>Corporate vs. franchisee controls</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>4.6765</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::5::corp_franchisee_controls" min="0" max="5" step="0.1"
+      value="4.6765"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::5::corp_franchisee_controls"
+    value=""></div>
+</div><h2>Core Features</h2>
+<div class="item" data-kind="item" data-vendor="Zenoti" data-key="crm_lead_mgmt">
+  <h3>CRM / lead management (workbook 5.9)</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>5.0</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::5::crm_lead_mgmt" min="0" max="5" step="0.1"
+      value="5.0"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::5::crm_lead_mgmt"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="Zenoti" data-key="member_lifecycle">
+  <h3>Member lifecycle</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>4.9048</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::5::member_lifecycle" min="0" max="5" step="0.1"
+      value="4.9048"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::5::member_lifecycle"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="Zenoti" data-key="operational_reporting">
+  <h3>Operational reporting</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>5.0</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::5::operational_reporting" min="0" max="5" step="0.1"
+      value="5.0"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::5::operational_reporting"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="Zenoti" data-key="plans_pricing">
+  <h3>Plans &amp; pricing</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>5.0</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::5::plans_pricing" min="0" max="5" step="0.1"
+      value="5.0"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::5::plans_pricing"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="Zenoti" data-key="pos_retail">
+  <h3>POS / retail</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>5.0</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::5::pos_retail" min="0" max="5" step="0.1"
+      value="5.0"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::5::pos_retail"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="Zenoti" data-key="scheduling">
+  <h3>Scheduling (workbook 5.14)</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>4.5349</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::5::scheduling" min="0" max="5" step="0.1"
+      value="4.5349"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::5::scheduling"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="Zenoti" data-key="travel_pass">
+  <h3>Travel pass</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>5.0</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::5::travel_pass" min="0" max="5" step="0.1"
+      value="5.0"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::5::travel_pass"
+    value=""></div>
+</div>
+<div class="item" data-kind="item" data-vendor="Zenoti" data-key="workforce_pt">
+  <h3>Workforce / personal training (workbook 5.13)</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>4.3548</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::5::workforce_pt" min="0" max="5" step="0.1"
+      value="4.3548"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::5::workforce_pt"
+    value=""></div>
+</div><h2>Innovation &amp; Roadmap</h2>
+<div class="item" data-kind="item" data-vendor="Zenoti" data-key="mobile_first">
+  <h3>Mobile-first (workbook 5.10)</h3>
+  <div class="scores">
+    <span>Rule (Layer A): <b>4.8667</b></span>
+    <span>LLM proposed (Layer B): <b>—</b></span>
+    <span>Ratified: <input type="number" name="score::5::mobile_first" min="0" max="5" step="0.1"
+      value="4.8667"></span>
+    <span><span class="provisional">provisional</span></span>
+  </div>
+  
+  
+  <div>Note (required if you override): <input type="text" name="note::5::mobile_first"
+    value=""></div>
+</div><h2>Threshold gates — Zenoti</h2>
+<div class="item" data-kind="gate" data-vendor="Zenoti" data-key="gate_data_ownership">
+  <h3>Full data ownership (contractual)</h3>
+  <div class="scores">
+    <span>LLM verdict: <b>—</b></span>
+    <span>Ratified: <select name="score::5::gate_data_ownership"><option value='pass' >pass</option><option value='fail' >fail</option><option value='unclear' selected>unclear</option></select></span>
+  </div>
+  
+  <div>Note: <input type="text" name="note::5::gate_data_ownership"
+    value=""></div>
+</div>
+<div class="item" data-kind="gate" data-vendor="Zenoti" data-key="gate_realtime_api">
+  <h3>Real-time API access (REST + webhooks)</h3>
+  <div class="scores">
+    <span>LLM verdict: <b>—</b></span>
+    <span>Ratified: <select name="score::5::gate_realtime_api"><option value='pass' >pass</option><option value='fail' >fail</option><option value='unclear' selected>unclear</option></select></span>
+  </div>
+  
+  <div>Note: <input type="text" name="note::5::gate_realtime_api"
+    value=""></div>
+</div>
+<div class="item" data-kind="gate" data-vendor="Zenoti" data-key="gate_franchise_arch">
+  <h3>Multi-location franchise architecture (native)</h3>
+  <div class="scores">
+    <span>LLM verdict: <b>—</b></span>
+    <span>Ratified: <select name="score::5::gate_franchise_arch"><option value='pass' >pass</option><option value='fail' >fail</option><option value='unclear' selected>unclear</option></select></span>
+  </div>
+  
+  <div>Note: <input type="text" name="note::5::gate_franchise_arch"
+    value=""></div>
+</div>
+<div class="item" data-kind="gate" data-vendor="Zenoti" data-key="gate_export_migration">
+  <h3>Documented data export &amp; migration commitment</h3>
+  <div class="scores">
+    <span>LLM verdict: <b>—</b></span>
+    <span>Ratified: <select name="score::5::gate_export_migration"><option value='pass' >pass</option><option value='fail' >fail</option><option value='unclear' selected>unclear</option></select></span>
+  </div>
+  
+  <div>Note: <input type="text" name="note::5::gate_export_migration"
+    value=""></div>
+</div>
+<div class="item" data-kind="gate" data-vendor="Zenoti" data-key="gate_us_market">
+  <h3>U.S. market support</h3>
+  <div class="scores">
+    <span>LLM verdict: <b>—</b></span>
+    <span>Ratified: <select name="score::5::gate_us_market"><option value='pass' >pass</option><option value='fail' >fail</option><option value='unclear' selected>unclear</option></select></span>
+  </div>
+  
+  <div>Note: <input type="text" name="note::5::gate_us_market"
+    value=""></div>
+</div>
+<div class="item" data-kind="gate" data-vendor="Zenoti" data-key="gate_pos">
+  <h3>POS / retail integrated or tightly coupled</h3>
+  <div class="scores">
+    <span>LLM verdict: <b>—</b></span>
+    <span>Ratified: <select name="score::5::gate_pos"><option value='pass' >pass</option><option value='fail' >fail</option><option value='unclear' selected>unclear</option></select></span>
+  </div>
+  
+  <div>Note: <input type="text" name="note::5::gate_pos"
+    value=""></div>
+</div>
+<div class="item" data-kind="gate" data-vendor="Zenoti" data-key="gate_open_ecosystem">
+  <h3>Open ecosystem / headless compatibility</h3>
+  <div class="scores">
+    <span>LLM verdict: <b>—</b></span>
+    <span>Ratified: <select name="score::5::gate_open_ecosystem"><option value='pass' >pass</option><option value='fail' >fail</option><option value='unclear' selected>unclear</option></select></span>
+  </div>
+  
+  <div>Note: <input type="text" name="note::5::gate_open_ecosystem"
+    value=""></div>
+</div>
+</main>
+<div class="bar"><button onclick="exportCSV()">Download ratified_scores.csv</button></div>
+<script>
+function exportCSV(){
+  const rows=[["kind","vendor","key","value","note","reviewer","reviewed_at"]];
+  const reviewer=document.getElementById('reviewer').value||'unknown';
+  const now=new Date().toISOString();
+  document.querySelectorAll('.item').forEach(div=>{
+    const kind=div.dataset.kind, vendor=div.dataset.vendor, key=div.dataset.key;
+    const val=div.querySelector('[name^="score::"]').value;
+    const note=div.querySelector('[name^="note::"]').value;
+    rows.push([kind,vendor,key,val,note,reviewer,now]);
+  });
+  const csv=rows.map(r=>r.map(c=>'"'+String(c).replaceAll('"','""')+'"').join(',')).join('\n');
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
+  a.download='ratified_scores.csv';a.click();
+}
+</script></body></html>

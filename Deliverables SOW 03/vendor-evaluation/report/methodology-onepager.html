@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MMS Vendor Evaluation — Scoring Methodology One-Pager</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#F2C23E;--gold-dim:#E6A800;--dark:#1A1A1A;--mid:#555;--light:#F7F7F5;
+--border:#E5E2DC;--green:#2E7D32;--red:#C62828;--amber:#D48800}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',-apple-system,sans-serif;color:var(--dark);background:#fff;
+font-size:12.5px;line-height:1.45}
+.page{max-width:860px;margin:0 auto;padding:28px 36px}
+.masthead{background:var(--dark);color:#fff;padding:20px 26px;border-radius:8px;position:relative;overflow:hidden}
+.masthead .bg{position:absolute;right:-10px;top:-24px;font-family:'Bebas Neue';font-size:110px;
+color:rgba(242,194,62,.08);letter-spacing:4px}
+.masthead h1{font-family:'Bebas Neue';font-size:30px;letter-spacing:1.5px}
+.masthead h1 span{color:var(--gold)}
+.masthead p{color:#ccc;font-size:12px;margin-top:4px}
+h2{font-family:'Bebas Neue';font-size:19px;letter-spacing:1px;border-bottom:2.5px solid var(--gold);
+padding-bottom:3px;margin:20px 0 10px}
+.cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+.card{border:1px solid var(--border);border-radius:7px;padding:12px 14px;background:var(--light)}
+.card b.t{display:block;font-size:12.5px;margin-bottom:5px;color:var(--dark)}
+.card .tag{display:inline-block;background:var(--gold);color:var(--dark);font-weight:800;
+font-size:10px;padding:1px 8px;border-radius:8px;margin-bottom:6px}
+table{border-collapse:collapse;width:100%;font-size:11.5px;margin:8px 0}
+th,td{border:1px solid var(--border);padding:4px 8px;text-align:left}
+th{background:var(--dark);color:#fff}
+.note{background:#FFF8E6;border-left:4px solid var(--gold);padding:9px 13px;margin:10px 0;font-size:12px}
+.flow{display:flex;gap:8px;align-items:stretch;margin:10px 0}
+.flow .step{flex:1;border:1.5px solid var(--dark);border-radius:7px;padding:10px 12px;position:relative}
+.flow .step .n{font-family:'Bebas Neue';font-size:22px;color:var(--gold-dim)}
+.flow .arrow{align-self:center;font-size:20px;color:var(--mid)}
+.foot{margin-top:18px;padding-top:10px;border-top:1px solid var(--border);color:var(--mid);
+font-size:11px;display:flex;justify-content:space-between}
+@media print{
+  body{font-size:11px}
+  .page{padding:10px 0;max-width:100%}
+  .masthead{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .card,.note,th{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  @page{margin:14mm}
+}
+</style></head><body>
+<div class="page">
+
+<div class="masthead">
+  <div class="bg">GOLD'S</div>
+  <h1>MMS VENDOR EVALUATION — <span>HOW WE SCORE</span></h1>
+  <p>GG-2026-MMS-001 · Empirical, evidence-cited, human-ratified · StackHack Labs LLC · July 2026</p>
+</div>
+
+<h2>The question we answer</h2>
+<p>Five vendors responded to the Membership Management System RFI. Which one is the best fit —
+for the Gold's brand overall and for each business group — and can we <b>prove it</b> rather
+than assert it? Every number in the final report traces to a locked workbook answer, a quoted
+page of a vendor's written response, or a time-stamped moment in a demo recording.</p>
+
+<h2>Three layers, one auditable score</h2>
+<div class="flow">
+  <div class="step"><div class="n">A</div><b>Deterministic rules</b><br>
+  Every vendor filled in the same locked 14-tab workbook using a controlled vocabulary.
+  Each answer maps to a 0–5 base score through a published lookup table — no judgment involved,
+  100% reproducible.</div>
+  <div class="arrow">→</div>
+  <div class="step"><div class="n">B</div><b>AI evidence extraction</b><br>
+  A pinned model (temperature 0, versioned prompts) reads each vendor's written response and
+  demo transcripts. It may propose at most a ±1 adjustment — only with verbatim, page-cited
+  quotes. No citation, no adjustment. Every model call is archived.</div>
+  <div class="arrow">→</div>
+  <div class="step"><div class="n">C</div><b>Human ratification</b><br>
+  Gold's SMEs review each item — base score, AI proposal, and quoted evidence side by side —
+  and ratify or override with a note. <b>No score is final until a person signs it.</b></div>
+</div>
+
+<div class="cols">
+  <div class="card"><span class="tag">WEIGHTS</span>
+    <table><tr><th>Category</th><th>Weight</th></tr><tr><td><b>API &amp; Integration</b></td><td>25%</td></tr><tr><td><b>Data Ownership &amp; Portability</b></td><td>20%</td></tr><tr><td><b>Franchise Architecture</b></td><td>15%</td></tr><tr><td><b>Core Features</b></td><td>15%</td></tr><tr><td><b>Commercial Terms</b></td><td>10%</td></tr><tr><td><b>Reliability &amp; SLA</b></td><td>10%</td></tr><tr><td><b>Innovation &amp; Roadmap</b></td><td>5%</td></tr></table>
+    <p style="font-size:11px;color:var(--mid)">API + Data Ownership = 45%: ecosystem openness
+    and data control are first-class, by design.</p>
+  </div>
+  <div class="card"><span class="tag">LAYER-A LOOKUP</span>
+    <table><tr><th>Support</th><th>Today</th><th>Rdmp dated</th><th>Rdmp undated</th></tr><tr><td>Native</td><td>5</td><td>3</td><td>2</td></tr><tr><td>Configurable</td><td>4</td><td>3</td><td>2</td></tr><tr><td>Via Integration</td><td>3</td><td>2</td><td>1</td></tr><tr><td>Third-Party</td><td>2</td><td>1</td><td>1</td></tr><tr><td>Partial</td><td>2</td><td>1</td><td>1</td></tr><tr><td>Roadmap</td><td>2</td><td>2</td><td>1</td></tr><tr><td>Not Supported</td><td>0</td><td>0</td><td>0</td></tr></table>
+    <p style="font-size:11px;color:var(--mid)">Blank / unrecognized = 0. Item = mean of its rows;
+    category = weighted mean (high-signal items ×2);
+    total = Σ category × weight.</p>
+  </div>
+  <div class="card"><span class="tag">GATES FIRST</span>
+    <b class="t">7 pass/fail thresholds before any weighting</b>
+    <p style="font-size:11.5px">Full data ownership (contractual) · Real-time API access (REST + webhooks) · Multi-location franchise architecture (native) · Documented data export &amp; migration commitment · U.S. market support · POS / retail integrated or tightly coupled · Open ecosystem / headless compatibility.</p>
+    <p style="font-size:11px;color:var(--mid);margin-top:5px">Any fail or unclear verdict
+    escalates to the Decision Council regardless of the weighted score.</p>
+  </div>
+</div>
+
+<h2>Why the result is defensible</h2>
+<div class="cols">
+  <div class="card"><b class="t">Deterministic &amp; re-runnable</b>The entire pipeline re-runs
+  end-to-end to the same numbers. The lookup tables, weights, prompts, and model version are
+  all published in the methodology.</div>
+  <div class="card"><b class="t">Sensitivity-tested</b>We re-run the ranking under ±5pp weight
+  shifts per category, three high-signal multipliers, and each scoring layer alone — and report
+  exactly where (if anywhere) the order changes.</div>
+  <div class="card"><b class="t">Independently checkable</b>An Excel export recomputes every
+  category and total with live spreadsheet formulas, and the evidence appendix links every
+  score to its quotes. Gold's can audit without our tooling.</div>
+</div>
+
+<div class="note"><b>Business-group lens.</b> Alongside the brand-level ranking, department demo
+scores (weighted: Must-have ×3, Nice-to-have ×1) produce a vendor × business-group heat map —
+so Membership Ops, Billing, Marketing, ProShop, and Technology each see their own best fit,
+not just the overall winner.</div>
+
+<div class="foot">
+  <div>GOLD'S GYM — ONE SYSTEM INITIATIVE</div>
+  <div>Prepared by StackHack Labs LLC · INTERNAL — weights not for vendor distribution</div>
+</div>
+
+</div></body></html>

@@ -8,8 +8,8 @@
 
   // Gold's Data Atlas — external tool hosting the canonical data model,
   // detailed architecture / data-flow maps, and user story mapping.
-  // TODO(matt): replace this placeholder with the live Data Atlas URL.
-  var DATA_ATLAS_URL = '#data-atlas-url-tbd';
+  // Password protected, same as this report — credentials shared separately.
+  var DATA_ATLAS_URL = 'https://golds-atlas.stackhack.io/';
 
   var PAGES = [
     { file: 'index.html',              label: 'Overview' },
@@ -24,9 +24,14 @@
 
   document.querySelectorAll('.data-atlas-link').forEach(function (el) {
     el.setAttribute('href', DATA_ATLAS_URL);
-    if (DATA_ATLAS_URL.charAt(0) === '#') {
-      el.setAttribute('title', "Gold's Data Atlas — link coming soon");
-    }
+    el.setAttribute('target', '_blank');
+    el.setAttribute('rel', 'noopener');
+    el.setAttribute('title', "Gold's Data Atlas — password protected");
+    var lock = document.createElement('span');
+    lock.setAttribute('aria-hidden', 'true');
+    lock.style.fontSize = '0.85em';
+    lock.textContent = ' 🔒';
+    el.appendChild(lock);
   });
 
   var rawPath = window.location.pathname.split('/').pop() || 'index.html';

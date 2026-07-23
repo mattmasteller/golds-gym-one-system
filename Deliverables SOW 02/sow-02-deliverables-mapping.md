@@ -26,16 +26,16 @@
 
 ## Gold's Data Atlas dependency
 
-Three deliverable areas (canonical data model, detailed architecture/data-flow maps, user story mapping) are maintained in the external **Gold's Data Atlas** tool. The deck links out from:
+Three deliverable areas (canonical data model, detailed architecture/data-flow maps, user story mapping) are maintained in the external **Gold's Data Atlas** tool at **https://golds-atlas.stackhack.io/** (password protected, same as the report site). The deck links out from:
 
 - `architecture.html` — Stack Map drill-down button + Unified Data Layer panel (canonical data model)
 - `execution.html` §07 — canonical data model CTA
 - `strategy.html` §02 — user stories / journey maps
 - `discovery-insights.html` §04 — user stories per touchpoint
 
-**Open item:** the Atlas URL is a placeholder. Swap the real URL into the `DATA_ATLAS_URL` constant at the top of `final-report/nav.js` (one-line change; all links update automatically).
+The URL is set centrally in the `DATA_ATLAS_URL` constant at the top of `final-report/nav.js`; every Atlas link also carries a lock indicator and a "password protected" note.
 
-## Other open items
+## Open items
 
 1. **Redeploy** golds02.stackhack.io after these changes (new page + nav changes won't be live until then).
 2. **Review** the new `discovery-insights.html` content before treating it as client-final.
@@ -50,3 +50,4 @@ Three deliverable areas (canonical data model, detailed architecture/data-flow m
 - Added Appendix cards (data platform, vendor one-pager, survey) to the `index.html` card grid so companion pages are discoverable.
 - Labeled the blank rubric in `member-mgmt-one-pager.html` as a scoring template (completed during SOW 03 vendor evaluation).
 - **Folder restructure (same day, later):** deleted the SOW 01 Phase 0 copy that occupied `Deliverables SOW 02/final-report/`, renamed `convention-deck/` → `final-report/` to match the SOW 01 convention, and repointed the four Phase 0 cross-links (discovery, comps-stacks, build-assemble-buy, index) to `Deliverables SOW 01/final-report/`.
+- **July 23, 2026:** Data Atlas placeholder replaced with the live URL (https://golds-atlas.stackhack.io/); all Atlas links open in a new tab with a lock indicator and "password protected" notes.

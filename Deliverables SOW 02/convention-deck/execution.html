@@ -15,15 +15,17 @@
     <span class="step-connector"></span>
     <a href="problem.html" class="step" data-page="2"><span class="step-num">2</span><span class="step-label">Problem</span></a>
     <span class="step-connector"></span>
-    <a href="strategy.html" class="step" data-page="3"><span class="step-num">3</span><span class="step-label">Strategy</span></a>
+    <a href="discovery-insights.html" class="step" data-page="3"><span class="step-num">3</span><span class="step-label">Discovery</span></a>
     <span class="step-connector"></span>
-    <a href="digital-experience.html" class="step" data-page="4"><span class="step-num">4</span><span class="step-label">Experience</span></a>
+    <a href="strategy.html" class="step" data-page="4"><span class="step-num">4</span><span class="step-label">Strategy</span></a>
     <span class="step-connector"></span>
-    <a href="architecture.html" class="step" data-page="5"><span class="step-num">5</span><span class="step-label">Architecture</span></a>
+    <a href="digital-experience.html" class="step" data-page="5"><span class="step-num">5</span><span class="step-label">Experience</span></a>
     <span class="step-connector"></span>
-    <a href="execution.html" class="step" data-page="6"><span class="step-num">6</span><span class="step-label">Execution</span></a>
+    <a href="architecture.html" class="step" data-page="6"><span class="step-num">6</span><span class="step-label">Architecture</span></a>
     <span class="step-connector"></span>
-    <a href="roadmap.html" class="step" data-page="7"><span class="step-num">7</span><span class="step-label">Roadmap</span></a>
+    <a href="execution.html" class="step" data-page="7"><span class="step-num">7</span><span class="step-label">Execution</span></a>
+    <span class="step-connector"></span>
+    <a href="roadmap.html" class="step" data-page="8"><span class="step-num">8</span><span class="step-label">Roadmap</span></a>
   </div>
 </nav>
 
@@ -44,7 +46,7 @@
   <div class="nav-inner">
     <div class="nav-page-indicator">
       <a href="architecture.html" class="nav-prev-arrow">&#8592;</a>
-      <span class="nav-page-badge">6 / 7</span>
+      <span class="nav-page-badge">7 / 8</span>
       <a href="roadmap.html" class="nav-next-arrow">&#8594;</a>
     </div>
     <span class="nav-divider"></span>
@@ -494,10 +496,10 @@
       <tr>
         <td><strong>BI &amp; Analytics</strong></td>
         <td>Power BI (incumbent &mdash; Microsoft ecosystem fit), Tableau, Looker</td>
-        <td><em>Research in progress (Matt)</em></td>
-        <td><em>Research in progress (Matt)</em></td>
-        <td><em>Research in progress (Matt)</em></td>
-        <td><em>Research in progress (Matt)</em></td>
+        <td>Low if Power BI retained; semantic model / dashboard buildout ~$50K&ndash;$150K</td>
+        <td>Pro ~$14/user-mo &middot; PPU ~$24/user-mo &middot; viewer licenses bundled at Fabric F64+</td>
+        <td>BI analyst + data engineer (shared with data layer team)</td>
+        <td>2&ndash;4 mo semantic buildout &middot; capacity scaling tied to data layer selection &mdash; full pricing in the <a href="data-platform-appendix.html" style="color: var(--gold); font-weight: 600;">data platform appendix</a></td>
       </tr>
       <tr>
         <td><strong>Unified Data Layer</strong></td>
@@ -599,6 +601,7 @@
     <p>Platform selection should be driven by answers to a small set of sizing and constraint questions: data volumes today and 12-month projection, workload mix (batch / interactive SQL / ML / streaming), concurrency, existing cloud commitments, compliance requirements, BI tool, real-time freshness needs, team composition, multi-cloud requirements, and contract term flexibility. The full appendix walks through all ten.</p>
     <div style="margin-top: 16px;">
       <a href="data-platform-appendix.html" class="cta-btn">View Full Data Platform Analysis &rarr;</a>
+      <a href="#data-atlas-url-tbd" class="cta-btn data-atlas-link" style="margin-left: 12px;">Canonical Data Model &mdash; Gold's Data Atlas &rarr;</a>
     </div>
   </div>
 </section>
@@ -682,6 +685,7 @@
         <tr><td><strong>Unified Data Layer</strong></td><td>Setup + ramp ~$100K&ndash;$500K (selection-dependent)</td><td>Platform-only: ~$2K&ndash;$22K/mo &middot; All-in incl. staffing: ~$33K&ndash;$89K/mo (Medium tier)</td><td>See <a href="#data-layer" style="color: var(--gold); font-weight: 600;">Section 07</a> + <a href="data-platform-appendix.html" style="color: var(--gold); font-weight: 600;">appendix</a> for platform-by-platform breakdown</td></tr>
       </tbody>
     </table>
+    <p style="margin-top: 12px; font-size: 13px; color: var(--mid);"><strong>Current committed spend:</strong> $52,500 &mdash; the SOW 02 strategy &amp; architecture engagement (Phases 1&ndash;2, StackHack) is the only technology investment committed to date. All figures above are planning ranges pending RFP outcomes.</p>
   </div>
 
   <div class="callout-box" style="margin-top: 24px;">

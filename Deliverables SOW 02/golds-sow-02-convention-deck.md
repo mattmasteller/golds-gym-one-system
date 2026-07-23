@@ -679,7 +679,9 @@ Key Message:\
 
 ## Implementation Mapping: Convention Deck → Web Deliverable
 
-The convention deck slides were built into a standalone 7-page web deliverable located at `Deliverables SOW 02/convention-deck/`. The deliverable reuses the same design system (styles.css, nav.js, component patterns) as the Phase 0 final report (`Deliverables SOW 02/final-report/`).
+The convention deck slides were built into a standalone 8-page web deliverable located at `Deliverables SOW 02/convention-deck/`. The deliverable reuses the same design system (styles.css, nav.js, component patterns) as the Phase 0 final report (`Deliverables SOW 02/final-report/`).
+
+**July 2026 SOW-deliverable update:** a new `discovery-insights.html` page (stepper position 3) was added to carry two SOW 02 deliverable areas directly in the deck — (a) onsite HQ session insights (Dec 2025 Dallas sessions, 8 departments, themes, quick wins) and (c) an explicit business-objectives → technology-requirements traceability matrix wired to the RFP rubric. Three deliverable areas — the canonical data model, detailed system architecture / data-flow maps, and user story mapping — live in the external **Gold's Data Atlas** tool; the deck links out to it from architecture.html (Stack Map drill-down + Unified Data Layer panel), execution.html §07, strategy.html §02, and discovery-insights.html §04. The Atlas URL is a placeholder (`#data-atlas-url-tbd`, set centrally in `nav.js` as `DATA_ATLAS_URL`) until the live link is supplied.
 
 ### Slide-to-Page Mapping
 
@@ -705,12 +707,13 @@ The convention deck slides were built into a standalone 7-page web deliverable l
 | 18 | Franchisor as a Revenue Engine | execution.html | 01 - Revenue Engine | Full |
 | 19 | Organizational Expansion | execution.html | 02 - Organization | Full |
 | 20 | Vendor SOP and Participation | execution.html | 03 - Vendor Governance | Full |
-| 21 | Architecture and Data Maps | architecture.html | 03 - Platform-First | Partial |
-| 22 | Vendor Landscape | execution.html | 05 - Vendor Landscape + 06 - Vendor Taxonomy | Partial |
-| 23 | Market Insights and Commercial Strategy | execution.html | 05 - Vendor Landscape (bottom) + 07 - Implementation & Resourcing | Partial |
+| 21 | Architecture and Data Maps | architecture.html (+ Gold's Data Atlas link-out) | 03 - Platform-First | Full — conceptual maps in deck; detailed maps in Data Atlas |
+| 22 | Vendor Landscape | execution.html | 05 - Vendor Landscape + 06 - Vendor Taxonomy | Full — BI & Analytics cost row populated from data-platform appendix |
+| 23 | Market Insights and Commercial Strategy | execution.html | 05 - Vendor Landscape (bottom) + 07 - Implementation & Resourcing | Partial — per-vendor contract/pricing detail pending vendor conversations |
 | — | Vendor Taxonomy (SOW 02 deliverable) | execution.html | 06 - Vendor Taxonomy | Populated from prior art; data-layer row defers to Section 07 + appendix |
 | — | Unified Data Layer (SOW 02 deliverable) | execution.html + data-platform-appendix.html | 07 - Unified Data Layer | Full — concise summary in deck; deep-dive in companion appendix |
-| — | Implementation & Resourcing Plan (SOW 02 deliverable) | execution.html | 08 - Implementation & Resourcing | Skeleton (timeline complete, costs/team softened to ranges) |
+| — | Implementation & Resourcing Plan (SOW 02 deliverable) | execution.html | 08 - Implementation & Resourcing | Full — timeline, staffing, budget ranges, $52,500 committed-spend anchor; per-vendor costs RFP-defined by design |
+| — | HQ Session Insights + Objectives → Requirements (SOW 02 deliverable) | discovery-insights.html | 01-04 | Full — new page, July 2026 |
 | 24 | Strategic Roadmap | roadmap.html | 01 - Roadmap | Full |
 | 25 | Closing | roadmap.html | 02 - Closing | Full |
 
@@ -737,6 +740,7 @@ New companion page modeled on `member-mgmt-one-pager.html`. Twelve sections cove
 Deliverables SOW 02/convention-deck/
   index.html              — Vision, brand identity, one platform (slides 1-3)
   problem.html            — Fragmentation, franchisee reality (slides 4-5)
+  discovery-insights.html — HQ session insights, themes, quick wins, objectives → requirements matrix (SOW 02 deliverable areas a + c)
   strategy.html           — Assemble model, consumer journey, front door (slides 6-8)
   digital-experience.html — Website, app, digital products, cohesion (slides 9-12)
   architecture.html       — Solution options, partner problem, platform-first, data layer (slides 13-17, 21)

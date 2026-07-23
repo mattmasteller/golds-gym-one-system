@@ -1,20 +1,33 @@
 /* ================================================================
    GOLD'S GYM — CONVENTION DECK NAVIGATION
-   Shared across all 7 pages of the convention presentation
+   Shared across all 8 pages of the convention presentation
    ================================================================ */
 
 (function () {
   'use strict';
 
+  // Gold's Data Atlas — external tool hosting the canonical data model,
+  // detailed architecture / data-flow maps, and user story mapping.
+  // TODO(matt): replace this placeholder with the live Data Atlas URL.
+  var DATA_ATLAS_URL = '#data-atlas-url-tbd';
+
   var PAGES = [
     { file: 'index.html',              label: 'Overview' },
     { file: 'problem.html',            label: 'Problem' },
+    { file: 'discovery-insights.html', label: 'Discovery' },
     { file: 'strategy.html',           label: 'Strategy' },
     { file: 'digital-experience.html', label: 'Experience' },
     { file: 'architecture.html',       label: 'Architecture' },
     { file: 'execution.html',          label: 'Execution' },
     { file: 'roadmap.html',            label: 'Roadmap' }
   ];
+
+  document.querySelectorAll('.data-atlas-link').forEach(function (el) {
+    el.setAttribute('href', DATA_ATLAS_URL);
+    if (DATA_ATLAS_URL.charAt(0) === '#') {
+      el.setAttribute('title', "Gold's Data Atlas — link coming soon");
+    }
+  });
 
   var rawPath = window.location.pathname.split('/').pop() || 'index.html';
   var path = rawPath.replace(/\.html$/, '') || 'index';

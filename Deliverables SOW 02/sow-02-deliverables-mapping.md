@@ -2,8 +2,8 @@
 
 **Deliverable:** Gold's Gym Strategy and Architecture Blueprint and Implementation Plan
 **Focus:** The recommended "Assemble Strategy" — findings, recommendations, and support materials
-**Primary artifact:** `Deliverables SOW 02/convention-deck/` — "Digital Strategy + Assemble Architecture" (8-page web deliverable, deployed at https://golds02.stackhack.io/)
-**Supporting reference:** `Deliverables SOW 02/final-report/` — SOW 01 Phase 0 Executive Summary (reference copy, banner-labeled)
+**Primary artifact:** `Deliverables SOW 02/final-report/` — "Digital Strategy + Assemble Architecture" (8-page web deliverable, deployed at https://golds02.stackhack.io/). Renamed from `convention-deck/` in July 2026 to match the SOW 01 folder convention.
+**Supporting reference:** `Deliverables SOW 01/final-report/` — SOW 01 Phase 0 Executive Summary (cross-linked from strategy, execution, roadmap, and discovery-insights pages)
 **Last verified:** July 22, 2026
 
 ---
@@ -33,7 +33,7 @@ Three deliverable areas (canonical data model, detailed architecture/data-flow m
 - `strategy.html` §02 — user stories / journey maps
 - `discovery-insights.html` §04 — user stories per touchpoint
 
-**Open item:** the Atlas URL is a placeholder. Swap the real URL into the `DATA_ATLAS_URL` constant at the top of `convention-deck/nav.js` (one-line change; all links update automatically).
+**Open item:** the Atlas URL is a placeholder. Swap the real URL into the `DATA_ATLAS_URL` constant at the top of `final-report/nav.js` (one-line change; all links update automatically).
 
 ## Other open items
 
@@ -49,4 +49,4 @@ Three deliverable areas (canonical data model, detailed architecture/data-flow m
 - Standardized the member-management Phase 0 score to **2.3/5** across all pages.
 - Added Appendix cards (data platform, vendor one-pager, survey) to the `index.html` card grid so companion pages are discoverable.
 - Labeled the blank rubric in `member-mgmt-one-pager.html` as a scoring template (completed during SOW 03 vendor evaluation).
-- Banner-labeled `Deliverables SOW 02/final-report/` as the SOW 01 Phase 0 reference copy.
+- **Folder restructure (same day, later):** deleted the SOW 01 Phase 0 copy that occupied `Deliverables SOW 02/final-report/`, renamed `convention-deck/` → `final-report/` to match the SOW 01 convention, and repointed the four Phase 0 cross-links (discovery, comps-stacks, build-assemble-buy, index) to `Deliverables SOW 01/final-report/`.

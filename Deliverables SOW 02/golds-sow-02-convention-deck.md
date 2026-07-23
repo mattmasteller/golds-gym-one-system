@@ -679,7 +679,7 @@ Key Message:\
 
 ## Implementation Mapping: Convention Deck → Web Deliverable
 
-The convention deck slides were built into a standalone 8-page web deliverable located at `Deliverables SOW 02/convention-deck/`. The deliverable reuses the same design system (styles.css, nav.js, component patterns) as the Phase 0 final report (`Deliverables SOW 02/final-report/`).
+The convention deck slides were built into a standalone 8-page web deliverable located at `Deliverables SOW 02/final-report/` (folder renamed from `convention-deck/` in July 2026 to match the SOW 01 convention; "convention deck" was the working name from the original convention presentation). The deliverable reuses the same design system (styles.css, nav.js, component patterns) as the SOW 01 Phase 0 final report (`Deliverables SOW 01/final-report/`).
 
 **July 2026 SOW-deliverable update:** a new `discovery-insights.html` page (stepper position 3) was added to carry two SOW 02 deliverable areas directly in the deck — (a) onsite HQ session insights (Dec 2025 Dallas sessions, 8 departments, themes, quick wins) and (c) an explicit business-objectives → technology-requirements traceability matrix wired to the RFP rubric. Three deliverable areas — the canonical data model, detailed system architecture / data-flow maps, and user story mapping — live in the external **Gold's Data Atlas** tool; the deck links out to it from architecture.html (Stack Map drill-down + Unified Data Layer panel), execution.html §07, strategy.html §02, and discovery-insights.html §04. The Atlas URL is a placeholder (`#data-atlas-url-tbd`, set centrally in `nav.js` as `DATA_ATLAS_URL`) until the live link is supplied.
 
@@ -737,7 +737,7 @@ New companion page modeled on `member-mgmt-one-pager.html`. Twelve sections cove
 ### Web Deliverable File Structure
 
 ```
-Deliverables SOW 02/convention-deck/
+Deliverables SOW 02/final-report/
   index.html              — Vision, brand identity, one platform (slides 1-3)
   problem.html            — Fragmentation, franchisee reality (slides 4-5)
   discovery-insights.html — HQ session insights, themes, quick wins, objectives → requirements matrix (SOW 02 deliverable areas a + c)
